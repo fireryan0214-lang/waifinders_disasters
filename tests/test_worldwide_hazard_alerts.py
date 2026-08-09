@@ -25,3 +25,4 @@ def test_full_earthquake_audit_counts_asset_and_context_stages(monkeypatch, tmp_
     assert result["metrics"]["earthquakes_with_customer_asset_matches"] == 1
     assert result["metrics"]["public_context_lookups_succeeded"] == 1
     assert result["records"][0]["approval_status"] == "PENDING_HUMAN_APPROVAL"
+    assert result["records"][0]["status"] == "customer_assets_matched"

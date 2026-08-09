@@ -13,3 +13,30 @@ Run `python scripts/live_incident_exposure.py` after replacing the template with
 To record a human decision, copy an action ID from the current output and run `python scripts/review_live_action.py --action-id "..." --decision APPROVED --reviewer "Name" --note "Verified against official source"`. Refresh the live output and dashboard to show the auditable decision.
 
 Do not put credentials, personal health information, or evacuation lists in this file.
+# Customer asset database
+
+Import the customer inventory into the local spatial database before starting
+live operations:
+
+```sh
+python scripts/asset_store.py inputs/assets.csv
+```
+
+Required columns are `asset_id`, `name`, `asset_type`, `lat`, `lon`,
+`criticality`, and `population_served`; `flood_gauge_id` is optional. The
+database remains local in `data/waifinders_assets.sqlite3`; it is never sent to
+public infrastructure providers.
+
+# Cached public infrastructure
+
+Import a national or regional authoritative Point GeoJSON export when one is
+available:
+
+```sh
+python scripts/public_infrastructure_store.py --import-geojson region.geojson --source "Agency name"
+```
+
+The event pipeline queries this local layer first, then its OpenStreetMap cache,
+and only then a bounded live OpenStreetMap fallback. Queue records report one
+of: `customer_assets_matched`, `public_infrastructure_context_matched`,
+`source_only_event`, or `lookup_unavailable`.

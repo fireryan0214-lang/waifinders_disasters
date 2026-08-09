@@ -13,6 +13,8 @@ from pathlib import Path
 
 import requests
 
+from asset_store import DEFAULT_DB as DEFAULT_ASSET_DB, load_assets as load_assets_from_database, read_csv
+
 ROOT = Path(__file__).parent.parent
 OUT_PATH = ROOT / "outputs" / "disaster_demo" / "live_incident_exposure.json"
 REVIEW_PATH = ROOT / "outputs" / "disaster_demo" / "live_incident_action_reviews.json"
@@ -53,27 +55,14 @@ def geometry_centroid(geometry):
 
 
 def load_assets(path):
+    """Prefer the local spatial customer-asset database; keep CSV as an import fallback."""
+    if Path(path) == DEFAULT_ASSETS:
+        assets, database_status = load_assets_from_database(DEFAULT_ASSET_DB)
+        if database_status == "customer asset database loaded":
+            return assets, database_status
     if not path.exists():
-        return [], f"asset file not found: {path.name}"
-    assets = []
-    with path.open(newline="", encoding="utf-8") as handle:
-        for line_number, row in enumerate(csv.DictReader(handle), start=2):
-            if not row.get("asset_id"):
-                continue
-            try:
-                lat, lon = float(row["lat"]), float(row["lon"])
-            except (KeyError, TypeError, ValueError) as exc:
-                raise ValueError(f"Asset row {line_number} needs numeric lat and lon") from exc
-            criticality = (row.get("criticality") or "medium").lower()
-            if criticality not in CRITICALITY:
-                raise ValueError(f"Asset row {line_number} has invalid criticality: {criticality}")
-            assets.append({
-                "asset_id": row["asset_id"].strip(), "name": (row.get("name") or row["asset_id"]).strip(),
-                "asset_type": (row.get("asset_type") or "facility").strip().lower(), "lat": lat, "lon": lon,
-                "criticality": criticality, "population_served": int(float(row.get("population_served") or 0)),
-                "flood_gauge_id": (row.get("flood_gauge_id") or "").strip(),
-            })
-    return assets, "loaded"
+        return [], f"{database_status}; asset file not found: {path.name}"
+    return read_csv(path), "legacy CSV loaded; import it into the customer asset database"
 
 
 def fetch_json(url, params=None):

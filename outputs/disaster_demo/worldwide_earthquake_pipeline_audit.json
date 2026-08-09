@@ -1,20 +1,17 @@
 {
-  "generated_utc": "2026-08-09T20:11:55.901413+00:00",
+  "generated_utc": "2026-08-09T20:16:33.862362+00:00",
   "mode": "FULL_EARTHQUAKE_PIPELINE_AUDIT",
   "audit_scope": "Every earthquake in the current USGS all-day feed is run through official-feed ingestion, customer-asset exposure matching, public infrastructure context lookup, and the human-review gate.",
   "metrics": {
-    "earthquakes_received": 246,
-    "official_source_records": 246,
+    "earthquakes_received": 247,
+    "official_source_records": 247,
     "customer_assets_loaded": 0,
     "earthquakes_with_customer_asset_matches": 0,
     "customer_asset_actions_created": 0,
     "public_context_lookups_succeeded": 0,
-    "public_context_lookups_failed": 246,
-    "public_context_provider_available": false,
-    "public_context_provider_probes": 1,
-    "public_context_records_blocked_by_provider": 246,
+    "public_context_lookups_failed": 247,
     "public_infrastructure_features_found": 0,
-    "source_only_records": 246,
+    "source_only_records": 247,
     "pipeline_completion_rate": 0.0
   },
   "records": [
@@ -42,7 +39,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -70,7 +67,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -98,7 +95,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -126,7 +123,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -154,7 +151,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -182,7 +179,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -210,7 +207,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -238,7 +235,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -266,7 +263,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -294,7 +291,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -322,7 +319,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -350,7 +347,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -378,7 +375,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -406,7 +403,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -434,7 +431,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -462,7 +459,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -490,7 +487,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -518,7 +515,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -546,7 +543,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -574,7 +571,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -602,7 +599,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -630,7 +627,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -658,7 +655,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -686,7 +683,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -714,7 +711,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -742,7 +739,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -770,7 +767,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -798,7 +795,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -826,7 +823,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -854,7 +851,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -882,7 +879,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -910,7 +907,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -938,7 +935,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -966,7 +963,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -994,7 +991,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1022,7 +1019,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1050,7 +1047,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1078,7 +1075,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1106,7 +1103,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1134,7 +1131,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1162,7 +1159,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1190,7 +1187,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1218,7 +1215,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1246,7 +1243,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1274,7 +1271,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1302,7 +1299,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1330,7 +1327,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1358,7 +1355,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1386,7 +1383,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1414,7 +1411,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1442,7 +1439,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1470,7 +1467,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1498,7 +1495,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1526,7 +1523,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1554,7 +1551,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1582,7 +1579,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1610,7 +1607,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1638,7 +1635,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1666,7 +1663,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1694,7 +1691,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1722,7 +1719,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1750,7 +1747,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1778,7 +1775,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1806,7 +1803,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1834,7 +1831,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1862,7 +1859,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1890,7 +1887,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1918,7 +1915,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1946,7 +1943,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -1974,7 +1971,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2002,7 +1999,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2030,7 +2027,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2058,7 +2055,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2086,7 +2083,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2114,7 +2111,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2142,7 +2139,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2170,7 +2167,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2198,7 +2195,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2226,7 +2223,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2254,7 +2251,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2282,7 +2279,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2310,7 +2307,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2338,7 +2335,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2366,7 +2363,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2394,7 +2391,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2422,7 +2419,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2450,7 +2447,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2478,7 +2475,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2506,7 +2503,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2534,7 +2531,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2562,7 +2559,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2590,7 +2587,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2618,7 +2615,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2646,7 +2643,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2674,7 +2671,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2702,7 +2699,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2730,7 +2727,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2758,7 +2755,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2786,7 +2783,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2814,7 +2811,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2842,7 +2839,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2870,7 +2867,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2898,7 +2895,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2926,7 +2923,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2954,7 +2951,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -2982,7 +2979,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3010,7 +3007,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3038,7 +3035,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3066,7 +3063,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3094,7 +3091,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3122,7 +3119,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3150,7 +3147,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3178,7 +3175,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3206,7 +3203,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3234,7 +3231,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3262,7 +3259,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3290,7 +3287,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3318,7 +3315,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3346,7 +3343,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3374,7 +3371,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3402,7 +3399,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3430,7 +3427,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3458,7 +3455,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3486,7 +3483,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3514,7 +3511,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3542,7 +3539,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3570,7 +3567,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3598,7 +3595,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3626,7 +3623,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3654,7 +3651,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3682,7 +3679,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3710,7 +3707,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3738,7 +3735,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3766,7 +3763,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3794,7 +3791,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3822,7 +3819,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3850,7 +3847,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3878,7 +3875,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3906,7 +3903,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3934,7 +3931,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3962,7 +3959,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -3990,7 +3987,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4018,7 +4015,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4046,7 +4043,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4074,7 +4071,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4102,7 +4099,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4130,7 +4127,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4158,7 +4155,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4186,7 +4183,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4214,7 +4211,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4242,7 +4239,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4270,7 +4267,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4298,7 +4295,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4326,7 +4323,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4354,7 +4351,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4382,7 +4379,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4410,7 +4407,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4438,7 +4435,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4466,7 +4463,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4494,7 +4491,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4522,7 +4519,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4550,7 +4547,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4578,7 +4575,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4606,7 +4603,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4634,7 +4631,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4662,7 +4659,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4690,7 +4687,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4718,7 +4715,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4746,7 +4743,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4774,7 +4771,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4802,7 +4799,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4830,7 +4827,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4858,7 +4855,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4886,7 +4883,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4914,7 +4911,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4942,7 +4939,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4970,7 +4967,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -4998,7 +4995,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5026,7 +5023,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5054,7 +5051,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5082,7 +5079,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5110,7 +5107,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5138,7 +5135,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5166,7 +5163,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5194,7 +5191,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5222,7 +5219,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5250,7 +5247,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5278,7 +5275,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5306,7 +5303,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5334,7 +5331,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5362,7 +5359,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5390,7 +5387,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5418,7 +5415,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5446,7 +5443,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5474,7 +5471,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5502,7 +5499,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5530,7 +5527,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5558,7 +5555,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5586,7 +5583,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5614,7 +5611,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5642,7 +5639,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5670,7 +5667,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5698,7 +5695,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5726,7 +5723,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5754,7 +5751,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5782,7 +5779,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5810,7 +5807,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5838,7 +5835,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5866,7 +5863,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5894,7 +5891,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5922,7 +5919,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5950,7 +5947,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -5978,7 +5975,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6006,7 +6003,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6034,7 +6031,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6062,7 +6059,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6090,7 +6087,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6118,7 +6115,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6146,7 +6143,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6174,7 +6171,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6202,7 +6199,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6230,7 +6227,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6258,7 +6255,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6286,7 +6283,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6314,7 +6311,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6342,7 +6339,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6370,7 +6367,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6398,7 +6395,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6426,7 +6423,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6454,7 +6451,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6482,7 +6479,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6510,7 +6507,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6538,7 +6535,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6566,7 +6563,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6594,7 +6591,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6622,7 +6619,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6650,7 +6647,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6678,7 +6675,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6706,7 +6703,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6734,7 +6731,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6762,7 +6759,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6790,7 +6787,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6818,7 +6815,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6846,7 +6843,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6874,7 +6871,7 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     },
@@ -6902,7 +6899,35 @@
       "public_infrastructure_context": {
         "feature_count": 0,
         "features": [],
-        "note": "Infrastructure provider unavailable: ConnectionError"
+        "note": "Infrastructure lookup unavailable: ConnectionError"
+      },
+      "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
+    },
+    {
+      "alert_id": "usgs-ok2026plrc",
+      "approval_status": "PENDING_HUMAN_APPROVAL",
+      "status": "source_event_alert_only",
+      "event": {
+        "event_id": "usgs-ok2026plrc",
+        "source": "USGS",
+        "hazard": "earthquake",
+        "title": "M 2.7 - 4 km ENE of Wardville, Oklahoma",
+        "occurred_utc": "2026-08-08T20:10:15.400000+00:00",
+        "lat": 34.667,
+        "lon": -95.9815,
+        "severity": 0.0,
+        "match_radius_km": 80.7,
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ok2026plrc",
+        "details": {
+          "magnitude": 2.69,
+          "depth_km": 5.31
+        }
+      },
+      "customer_asset_action_count": 0,
+      "public_infrastructure_context": {
+        "feature_count": 0,
+        "features": [],
+        "note": "Infrastructure lookup unavailable: ConnectionError"
       },
       "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."
     }
