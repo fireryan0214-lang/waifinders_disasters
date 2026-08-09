@@ -208,13 +208,16 @@ for unit_name, pwr in current_power.items():
         plant_units.setdefault(key, []).append(unit_name)
 
 results = []
-matched = 0
+excluded_unmatched = []
 for plant_key, info in PLANT_DATA.items():
     units_matched = plant_units.get(plant_key, [])
-    powers = plant_power.get(plant_key, [100.0])  # default 100% if no NRC match
+    if not units_matched:
+        # A static inventory can include retired, renamed, or otherwise absent
+        # facilities. Never infer that an unmatched unit is at full power.
+        excluded_unmatched.append(plant_key)
+        continue
+    powers = plant_power[plant_key]
     avg_power = sum(powers) / len(powers)
-    if units_matched:
-        matched += 1
 
     s = warn_score(info["cap_mwe"], info["epz_pop"], avg_power)
     results.append({
@@ -225,13 +228,15 @@ for plant_key, info in PLANT_DATA.items():
         "capacity_mwe": info["cap_mwe"],
         "epz_pop_est":  info["epz_pop"],
         "power_pct":    round(avg_power, 1),
-        "nrc_units":    units_matched or ["not_in_nrc_status"],
+        "nrc_units":    units_matched,
+        "nrc_match_status": "matched_current_report",
         "warn_score":   s,
         "warn_tier":    warn_tier(s),
     })
 
 results.sort(key=lambda x: x["warn_score"], reverse=True)
-print(f"  Plants scored: {len(results)}  (NRC power matched: {matched})")
+print(f"  Plants scored: {len(results)}  (matched current NRC report)")
+print(f"  Excluded unmatched inventory entries: {len(excluded_unmatched)}")
 
 tier_counts = {}
 for r in results:
@@ -254,6 +259,7 @@ output = {
     "nrc_fetch_status":    nrc_fetch,
     "fetched_utc":         datetime.now(timezone.utc).isoformat(),
     "plants_scored":       len(results),
+    "excluded_unmatched_inventory": excluded_unmatched,
     "formula": {
         "warn_score":      "0.45 × capacity_norm + 0.35 × epz_pop_norm + 0.20 × power_norm",
         "capacity_norm":   "net_capacity_mwe / 1299 (largest US unit), clamp [0,1]",
@@ -268,10 +274,11 @@ output = {
         "NORMAL_OPERATION":    "< 0.20 — low-capacity or remote plant",
     },
     "claim_boundary": (
-        "WARN_nuclear scores BASELINE proximity risk from licensed operating plants — "
+        "WARN_nuclear scores BASELINE proximity risk from plants matched to the current NRC "
+        "Power Reactor Status Report — "
         "not a real-time incident alert. EPZ population figures are estimates from "
-        "NRC/census data, not modelled plume dispersion. Power output from NRC daily "
-        "status; 100% assumed for plants not in current report. "
+        "NRC/census data, not modelled plume dispersion. Power output is taken only from "
+        "the current NRC daily status report; unmatched inventory records are excluded. "
         "This module does NOT model radiation release, dose rates, or dispersion. "
         "For incident response, use NRC event notification system and state radiological "
         "emergency plans directly. Not validated for emergency management use."

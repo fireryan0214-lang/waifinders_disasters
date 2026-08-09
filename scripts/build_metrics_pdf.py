@@ -62,7 +62,7 @@ story += [
     Paragraph(
         "This document compiles all formulas, feature weights, real-data results, and "
         "validation metrics for the WAIFINDERS multi-hazard scoring system. "
-        "No synthetic data. All scores derived from live USGS, NOAA, and NY DOT feeds.",
+        "No synthetic data. Scores use traceable public-source records, including USGS, NOAA, NY DOT, and NRC feeds.",
         ParagraphStyle("COVER_BODY", parent=BODY, alignment=1, fontSize=10)
     ),
     PageBreak(),
@@ -284,33 +284,64 @@ story += [
         "Harvey note: Rockport gauge went offline before peak surge (documented ~3.96m). "
         "The 0.57m reading is real observed data, not a model failure. Disclosed in Sentinel demo.",
         CLAIM),
+    sp(10),
+
+    Paragraph("4.5 Nuclear Baseline WARN", H2),
+    Paragraph(
+        "Data source: NRC Power Reactor Status Report (daily, public). The August 7, 2026 report "
+        "contained 95 units, which matched 51 plant inventory records. Sixteen unmatched inventory "
+        "records, including retired plants, were excluded rather than assumed to be at power.", BODY),
+    Paragraph("WARN_nuclear = 0.45 x capacity_norm + 0.35 x EPZ_population_norm + 0.20 x power_norm", CODE),
+    sp(4),
+    table([
+        ["Component", "Formula", "Purpose"],
+        ["capacity_norm", "net capacity MWe / 1299, clamp [0,1]", "Relative generation capacity"],
+        ["EPZ_population_norm", "estimated 10-mile EPZ population / 350,000, clamp [0,1]", "Proximity exposure proxy"],
+        ["power_norm", "current NRC power percent / 100, clamp [0,1]", "At-power operating state"],
+    ], col_widths=[1.4*inch, 2.9*inch, 2.2*inch]),
+    sp(4),
+    table([
+        ["Matched plant", "Current power", "Baseline score", "Tier"],
+        ["Limerick, PA", "100%", "0.771", "EMERGENCY_RESPONSE"],
+        ["Seabrook, NH", "100%", "0.733", "EMERGENCY_RESPONSE"],
+        ["Fermi, MI", "100%", "0.725", "EMERGENCY_RESPONSE"],
+    ], col_widths=[2.0*inch, 1.2*inch, 1.5*inch, 1.8*inch]),
+    sp(4),
+    Paragraph(
+        "Interpretation boundary: this is a baseline facility-proximity ranking, not a nuclear incident, "
+        "radiation-release, dose, or plume-dispersion model. It is displayed for planning and is excluded "
+        "from WISE compound-event escalation. Use NRC incident notifications and state radiological plans "
+        "for real incident response.", CLAIM),
     PageBreak(),
 ]
 
 # ── 5. WISE DECISION ENGINE ───────────────────────────────────────────────────
 story += [
     Paragraph("5. WISE — Decision Synthesis Engine", H1), hr(),
-    Paragraph("WISE aggregates all WARN domain scores and PULSE state into a single operational decision.", BODY), sp(),
+    Paragraph("WISE aggregates historical and baseline records into a research scenario tier. It is not a live operational decision. Nuclear baseline proximity is shown separately for planning and is not an incident signal.", BODY), sp(),
 
     Paragraph("5.1 Decision Formula", H2),
-    Paragraph("base_tier = max(tier(WARN_eq), tier(WARN_ts), tier(WARN_flood), tier(WARN_wildfire), tier(PULSE))", CODE),
-    Paragraph("compound_event = (count(hazards with tier &ge; MONITOR) &ge; 2)", CODE),
+    Paragraph("base_tier = max(tier(WARN_eq), tier(WARN_ts), tier(WARN_flood), tier(WARN_wildfire), tier(WARN_hurricane), tier(PULSE))", CODE),
+    Paragraph("compound_event = (count(scenario hazards with tier &ge; MONITOR) &ge; 2)", CODE),
     Paragraph("final_tier = base_tier + 1 if compound_event else base_tier    [capped at EMERGENCY_RESPONSE]", CODE),
     sp(8),
 
     Paragraph("5.2 Session Demo Result", H2),
     table([
         ["Hazard",      "WARN Score", "Tier"],
-        ["Wildfire",    "—",          "NORMAL_OPERATION (not in demo region)"],
-        ["Earthquake",  "0.748",      "MITIGATION_REQUIRED"],
-        ["Tsunami",     "0.960",      "EMERGENCY_RESPONSE"],
+        ["Wildfire",    "-",          "NORMAL_OPERATION (not in demo region)"],
+        ["Earthquake",  "0.399",      "MONITOR"],
+        ["Tsunami",     "0.970",      "EMERGENCY_RESPONSE"],
         ["Flood Surge", "0.549",      "MITIGATION_REQUIRED"],
-        ["PULSE",       "0.38 (RED bridges present)", "NORMAL_OPERATION (base)"],
+        ["Hurricane",   "0.814",      "EMERGENCY_RESPONSE"],
+        ["Nuclear baseline", "0.771",  "Planning only - excluded from decision"],
+        ["PULSE",       "0.10 (RED bridge share)", "MITIGATION_REQUIRED"],
     ], col_widths=[1.2*inch, 1.5*inch, 3.8*inch]),
     sp(6),
     Paragraph(
-        "Final WISE Decision: EMERGENCY_RESPONSE\n"
-        "Compound event: YES — 3 hazards at or above MONITOR threshold.",
+        "Historical WISE Peak: EMERGENCY_RESPONSE\n"
+        "Scenario compound event: YES - 5 hazards at or above MONITOR threshold.\n"
+        "Nuclear baseline: planning only; excluded from compound escalation.",
         ParagraphStyle("RESULT", parent=BODY, fontSize=11, textColor=colors.HexColor("#cc0000"))
     ),
     sp(10),
@@ -377,6 +408,7 @@ story += [
         ["Bridge tsunami zones",     "Coastal proximity proxy only. Not NOAA official inundation maps."],
         ["Bridge flood zones",       "Latitude threshold (< 35°N). Not FEMA FIRM."],
         ["PULSE disaster formula",   "Bridge dataset has no lat/lon — county centroids used. Seismic/tsunami/flood zone assignment is approximate."],
+        ["Nuclear baseline",         "Uses matched NRC power-status units plus static capacity and estimated EPZ population. Not an incident, radiation, dose, or plume model; unmatched inventory records are excluded."],
         ["WISE cost estimates",       "Labeled ILLUSTRATIVE — historical range only. No real procurement data."],
         ["All disaster engines",     "Prototype demonstration only. Not validated for operational use. No peer review yet."],
     ], col_widths=[1.8*inch, 4.7*inch]),

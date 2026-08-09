@@ -1,5 +1,7 @@
 {
-  "generated_utc": "2026-08-09T07:24:52.037522+00:00",
+  "generated_utc": "2026-08-09T07:31:25.757065+00:00",
+  "data_mode": "HISTORICAL_CATALOGUE",
+  "operational_status": "NOT_EVALUATED",
   "wise_decision": "EMERGENCY_RESPONSE",
   "compound_event": true,
   "elevated_hazards": [
@@ -7,7 +9,6 @@
     "tsunami",
     "flood_surge",
     "hurricane",
-    "nuclear",
     "pulse"
   ],
   "hazard_signals": {
@@ -32,8 +33,9 @@
       "tier": "EMERGENCY_RESPONSE"
     },
     "nuclear": {
-      "score": 0.871,
-      "tier": "EMERGENCY_RESPONSE"
+      "score": 0.771,
+      "tier": "EMERGENCY_RESPONSE",
+      "decision_inclusion": false
     }
   },
   "pulse_state": {
@@ -47,17 +49,14 @@
     "note": "Major disaster \u2014 historical range from NOAA damage records"
   },
   "recommended_actions": [
-    "Activate full emergency operations protocol",
-    "Coordinate with municipal, provincial/state, and federal emergency management",
-    "Execute pre-ranked PULSE priority list \u2014 do not wait for damage reports",
-    "Restrict access to PULSE RED-band bridges and tunnels pending inspection",
-    "Issue public emergency notification for all affected communities",
-    "Activate mutual-aid agreements with neighbouring utilities/operators"
+    "Use ranked records for scenario planning and score validation only",
+    "Do not activate operations or issue public notices from catalogue scores",
+    "Use separately labelled official alert feeds for live incident response"
   ],
-  "claim_boundary": "WISE decision is a research prototype combining experimental WARN signals and PULSE infrastructure scores. Not validated for emergency management use. Cost estimates are illustrative only \u2014 no real cost data is embedded.",
+  "claim_boundary": "WISE historical peak is a research prototype combining experimental WARN signals and PULSE infrastructure scores. It is not a live operational status. Nuclear baseline proximity scores are planning-only and are excluded from compound-event escalation. Not validated for emergency management use. Cost estimates are illustrative only \u2014 no real cost data is embedded.",
   "formula": {
-    "base_tier": "max(tier_int) across all hazard signals",
-    "compound_escalation": "+1 tier if 2+ hazards at MONITOR or above",
+    "base_tier": "max(tier_int) across live decision signals; excludes nuclear baseline",
+    "compound_escalation": "+1 tier if 2+ live decision hazards at MONITOR or above",
     "final_tier": "min(EMERGENCY_RESPONSE, base_tier + compound_boost)"
   }
 }

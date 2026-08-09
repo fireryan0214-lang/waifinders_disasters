@@ -239,12 +239,16 @@ class TestOutputFile:
         scores = [p["warn_score"] for p in output["plants"]]
         assert scores == sorted(scores, reverse=True)
 
-    def test_indian_point_is_top_scorer(self, output):
-        top = output["plants"][0]
-        assert "Indian Point" in top["plant"]
+    def test_every_output_plant_is_matched_to_current_report(self, output):
+        assert all(p["nrc_match_status"] == "matched_current_report" for p in output["plants"])
+        assert all(p["nrc_units"] for p in output["plants"])
 
-    def test_indian_point_score_matches_formula(self, output):
-        plant = next(p for p in output["plants"] if "Indian Point" in p["plant"])
+    def test_unmatched_inventory_is_excluded(self, output):
+        assert "Indian Point" in output["excluded_unmatched_inventory"]
+        assert all("Indian Point" not in p["plant"] for p in output["plants"])
+
+    def test_live_plant_score_matches_formula(self, output):
+        plant = output["plants"][0]
         expected = warn_score(plant["capacity_mwe"], plant["epz_pop_est"], plant["power_pct"])
         assert plant["warn_score"] == pytest.approx(expected, abs=0.001)
 

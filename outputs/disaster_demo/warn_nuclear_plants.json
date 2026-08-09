@@ -4,8 +4,26 @@
   "nrc_status_url": "https://www.nrc.gov/reading-rm/doc-collections/event-status/reactor-status/powerreactorstatusforlast365days.txt",
   "nrc_report_date": "8/7/2026 12:00:00 AM",
   "nrc_fetch_status": "live",
-  "fetched_utc": "2026-08-09T07:23:29.651373+00:00",
-  "plants_scored": 67,
+  "fetched_utc": "2026-08-09T07:29:55.277553+00:00",
+  "plants_scored": 51,
+  "excluded_unmatched_inventory": [
+    "Cook",
+    "Duane Arnold",
+    "Fitzpatrick",
+    "Fort Calhoun",
+    "Indian Point",
+    "Joseph M. Farley",
+    "Kewaunee",
+    "Oyster Creek",
+    "Pilgrim",
+    "Rancho Seco",
+    "San Onofre",
+    "Shearon Harris",
+    "St. Lucie",
+    "Three Mile Island",
+    "Vermont Yankee",
+    "Zion"
+  ],
   "formula": {
     "warn_score": "0.45 \u00d7 capacity_norm + 0.35 \u00d7 epz_pop_norm + 0.20 \u00d7 power_norm",
     "capacity_norm": "net_capacity_mwe / 1299 (largest US unit), clamp [0,1]",
@@ -19,22 +37,8 @@
     "MONITOR": "\u2265 0.20 \u2014 moderate baseline risk",
     "NORMAL_OPERATION": "< 0.20 \u2014 low-capacity or remote plant"
   },
-  "claim_boundary": "WARN_nuclear scores BASELINE proximity risk from licensed operating plants \u2014 not a real-time incident alert. EPZ population figures are estimates from NRC/census data, not modelled plume dispersion. Power output from NRC daily status; 100% assumed for plants not in current report. This module does NOT model radiation release, dose rates, or dispersion. For incident response, use NRC event notification system and state radiological emergency plans directly. Not validated for emergency management use.",
+  "claim_boundary": "WARN_nuclear scores BASELINE proximity risk from plants matched to the current NRC Power Reactor Status Report \u2014 not a real-time incident alert. EPZ population figures are estimates from NRC/census data, not modelled plume dispersion. Power output is taken only from the current NRC daily status report; unmatched inventory records are excluded. This module does NOT model radiation release, dose rates, or dispersion. For incident response, use NRC event notification system and state radiological emergency plans directly. Not validated for emergency management use.",
   "plants": [
-    {
-      "plant": "Indian Point",
-      "state": "NY",
-      "lat": 41.27,
-      "lon": -73.95,
-      "capacity_mwe": 1041,
-      "epz_pop_est": 310000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.8706,
-      "warn_tier": "EMERGENCY_RESPONSE"
-    },
     {
       "plant": "Limerick",
       "state": "PA",
@@ -47,6 +51,7 @@
         "Limerick 1",
         "Limerick 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.7708,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -61,6 +66,7 @@
       "nrc_units": [
         "Seabrook 1"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.7326,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -75,6 +81,7 @@
       "nrc_units": [
         "Fermi 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.7247,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -90,21 +97,8 @@
         "Peach Bottom 2",
         "Peach Bottom 3"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6972,
-      "warn_tier": "EMERGENCY_RESPONSE"
-    },
-    {
-      "plant": "San Onofre",
-      "state": "CA",
-      "lat": 33.37,
-      "lon": -117.56,
-      "capacity_mwe": 1127,
-      "epz_pop_est": 104000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.6944,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
     {
@@ -119,6 +113,7 @@
         "Catawba 1",
         "Catawba 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6791,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -134,6 +129,7 @@
         "McGuire 1",
         "McGuire 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6781,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -149,6 +145,7 @@
         "Susquehanna 1",
         "Susquehanna 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6765,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -164,21 +161,8 @@
         "Millstone 2",
         "Millstone 3"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6711,
-      "warn_tier": "EMERGENCY_RESPONSE"
-    },
-    {
-      "plant": "Zion",
-      "state": "IL",
-      "lat": 42.45,
-      "lon": -87.8,
-      "capacity_mwe": 1040,
-      "epz_pop_est": 108000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.6683,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
     {
@@ -193,6 +177,7 @@
         "Nine Mile Point 1",
         "Nine Mile Point 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.668,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -207,6 +192,7 @@
       "nrc_units": [
         "Perry 1"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6598,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -221,6 +207,7 @@
       "nrc_units": [
         "Grand Gulf 1"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6583,
       "warn_tier": "EMERGENCY_RESPONSE"
     },
@@ -238,6 +225,7 @@
         "Vogtle 3",
         "Vogtle 4"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6494,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -253,6 +241,7 @@
         "South Texas 1",
         "South Texas 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6469,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -268,6 +257,7 @@
         "Quad Cities 1",
         "Quad Cities 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6435,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -284,6 +274,7 @@
         "Palo Verde 2",
         "Palo Verde 3"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6415,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -298,6 +289,7 @@
       "nrc_units": [
         "Callaway"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6372,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -313,6 +305,7 @@
         "Salem 1",
         "Salem 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6367,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -327,6 +320,7 @@
       "nrc_units": [
         "Hope Creek 1"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.636,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -342,6 +336,7 @@
         "Comanche Peak 1",
         "Comanche Peak 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6347,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -357,6 +352,7 @@
         "Braidwood 1",
         "Braidwood 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6261,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -372,6 +368,7 @@
         "Watts Bar 1",
         "Watts Bar 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6254,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -387,6 +384,7 @@
         "Byron 1",
         "Byron 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6252,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -401,6 +399,7 @@
       "nrc_units": [
         "Wolf Creek 1"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6227,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -416,6 +415,7 @@
         "Sequoyah 1",
         "Sequoyah 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6197,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -430,6 +430,7 @@
       "nrc_units": [
         "Waterford 3"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6124,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -445,6 +446,7 @@
         "LaSalle 1",
         "LaSalle 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6039,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -459,20 +461,7 @@
       "nrc_units": [
         "Clinton"
       ],
-      "warn_score": 0.6029,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Three Mile Island",
-      "state": "PA",
-      "lat": 40.15,
-      "lon": -76.73,
-      "capacity_mwe": 906,
-      "epz_pop_est": 89000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.6029,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -487,6 +476,7 @@
       "nrc_units": [
         "Columbia Generating Station"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5988,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -502,6 +492,7 @@
         "Diablo Canyon 1",
         "Diablo Canyon 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5963,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -517,21 +508,8 @@
         "Beaver Valley 1",
         "Beaver Valley 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.596,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Cook",
-      "state": "MI",
-      "lat": 41.97,
-      "lon": -86.57,
-      "capacity_mwe": 1030,
-      "epz_pop_est": 24000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.5808,
       "warn_tier": "MITIGATION_REQUIRED"
     },
     {
@@ -547,21 +525,8 @@
         "Browns Ferry 2",
         "Browns Ferry 3"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5799,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Rancho Seco",
-      "state": "CA",
-      "lat": 38.35,
-      "lon": -121.12,
-      "capacity_mwe": 913,
-      "epz_pop_est": 46000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.5623,
       "warn_tier": "MITIGATION_REQUIRED"
     },
     {
@@ -575,35 +540,8 @@
       "nrc_units": [
         "Summer"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5486,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Shearon Harris",
-      "state": "NC",
-      "lat": 35.63,
-      "lon": -79.1,
-      "capacity_mwe": 900,
-      "epz_pop_est": 36000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.5478,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "St. Lucie",
-      "state": "FL",
-      "lat": 27.35,
-      "lon": -80.25,
-      "capacity_mwe": 839,
-      "epz_pop_est": 53000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.5436,
       "warn_tier": "MITIGATION_REQUIRED"
     },
     {
@@ -618,6 +556,7 @@
         "Dresden 2",
         "Dresden 3"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5413,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -633,6 +572,7 @@
         "North Anna 1",
         "North Anna 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5413,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -648,6 +588,7 @@
         "Brunswick 1",
         "Brunswick 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5409,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -662,6 +603,7 @@
       "nrc_units": [
         "Davis-Besse"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5307,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -677,6 +619,7 @@
         "Surry 1",
         "Surry 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5208,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -693,6 +636,7 @@
         "Oconee 2",
         "Oconee 3"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5191,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -708,21 +652,8 @@
         "Calvert Cliffs 1",
         "Calvert Cliffs 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5164,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Fitzpatrick",
-      "state": "NY",
-      "lat": 43.52,
-      "lon": -76.4,
-      "capacity_mwe": 852,
-      "epz_pop_est": 18000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.5132,
       "warn_tier": "MITIGATION_REQUIRED"
     },
     {
@@ -737,6 +668,7 @@
         "Hatch 1",
         "Hatch 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5115,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -752,20 +684,7 @@
         "Farley 1",
         "Farley 2"
       ],
-      "warn_score": 0.5058,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Joseph M. Farley",
-      "state": "AL",
-      "lat": 31.22,
-      "lon": -85.11,
-      "capacity_mwe": 851,
-      "epz_pop_est": 11000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.5058,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -781,6 +700,7 @@
         "Turkey Point 3",
         "Turkey Point 4"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.4981,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -796,6 +716,7 @@
         "Arkansas Nuclear 1",
         "Arkansas Nuclear 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.498,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -810,6 +731,7 @@
       "nrc_units": [
         "Cooper"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.4714,
       "warn_tier": "MITIGATION_REQUIRED"
     },
@@ -824,63 +746,8 @@
       "nrc_units": [
         "Robinson 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.466,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Pilgrim",
-      "state": "MA",
-      "lat": 41.94,
-      "lon": -70.58,
-      "capacity_mwe": 677,
-      "epz_pop_est": 24000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.4585,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Duane Arnold",
-      "state": "IA",
-      "lat": 42.1,
-      "lon": -91.78,
-      "capacity_mwe": 601,
-      "epz_pop_est": 48000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.4562,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Oyster Creek",
-      "state": "NJ",
-      "lat": 39.81,
-      "lon": -74.21,
-      "capacity_mwe": 619,
-      "epz_pop_est": 31000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.4454,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Vermont Yankee",
-      "state": "VT",
-      "lat": 42.78,
-      "lon": -72.52,
-      "capacity_mwe": 620,
-      "epz_pop_est": 16000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.4308,
       "warn_tier": "MITIGATION_REQUIRED"
     },
     {
@@ -894,35 +761,8 @@
       "nrc_units": [
         "Ginna"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.4105,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Fort Calhoun",
-      "state": "NE",
-      "lat": 41.52,
-      "lon": -96.08,
-      "capacity_mwe": 478,
-      "epz_pop_est": 41000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.4066,
-      "warn_tier": "MITIGATION_REQUIRED"
-    },
-    {
-      "plant": "Kewaunee",
-      "state": "WI",
-      "lat": 44.34,
-      "lon": -87.54,
-      "capacity_mwe": 556,
-      "epz_pop_est": 14000,
-      "power_pct": 100.0,
-      "nrc_units": [
-        "not_in_nrc_status"
-      ],
-      "warn_score": 0.4066,
       "warn_tier": "MITIGATION_REQUIRED"
     },
     {
@@ -937,6 +777,7 @@
         "Prairie Island 1",
         "Prairie Island 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.3941,
       "warn_tier": "MONITOR"
     },
@@ -952,6 +793,7 @@
         "Point Beach 1",
         "Point Beach 2"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.3914,
       "warn_tier": "MONITOR"
     },
@@ -966,6 +808,7 @@
       "nrc_units": [
         "Monticello"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.3724,
       "warn_tier": "MONITOR"
     },
@@ -980,6 +823,7 @@
       "nrc_units": [
         "River Bend Station 1"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.356,
       "warn_tier": "MONITOR"
     },
@@ -994,9 +838,10 @@
       "nrc_units": [
         "Palisades"
       ],
+      "nrc_match_status": "matched_current_report",
       "warn_score": 0.2969,
       "warn_tier": "MONITOR"
     }
   ],
-  "blake3": "20e748a2b77257a632ac2f1d1f95dc896f248e0fcc44a01806efd5c04ac66a29"
+  "blake3": "07b69654f249cdc9854add58fd23ef9cf68d07ccf0e5100c5bbd7718fe26e2b5"
 }

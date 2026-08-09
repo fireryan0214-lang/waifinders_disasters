@@ -141,11 +141,13 @@ for hazard, data in [
     ("Earthquake", sigs.get("earthquake",{})),
     ("Tsunami", sigs.get("tsunami",{})),
     ("Flood Surge", sigs.get("flood_surge",{})),
+    ("Hurricane", sigs.get("hurricane",{})),
+    ("Nuclear Baseline", sigs.get("nuclear",{})),
 ]:
     s = float(data.get("score", 0))
     tier = data.get("tier","NORMAL_OPERATION")
     signal_rows += f"""<tr>
-      <td style="padding:8px;font-size:13px;color:#ddd">{hazard}</td>
+      <td style="padding:8px;font-size:13px;color:#ddd">{hazard}{' <span style="font-size:10px;color:#718096">(planning)</span>' if data.get('decision_inclusion') is False else ''}</td>
       <td style="padding:8px">{score_bar(s,tier)}<span style="font-size:11px;color:#aaa">{s:.3f}</span></td>
       <td style="padding:8px">{tier_badge(tier, small=True)}</td>
     </tr>"""
@@ -196,9 +198,9 @@ tr:hover td{{background:#374151}}
     <div class="data-badge">Real data: USGS · NOAA NCEI · NOAA CO-OPS · NY State DOT</div>
   </div>
   <div style="text-align:right">
-    <div style="font-size:11px;color:#718096;margin-bottom:4px">WISE DECISION</div>
+    <div style="font-size:11px;color:#718096;margin-bottom:4px">WISE HISTORICAL PEAK</div>
     <div class="wise-label">{wise_label}</div>
-    <div style="font-size:11px;color:#718096;margin-top:4px">{"Compound event" if wi.get("compound_event") else "Single hazard"} &nbsp;·&nbsp; {wi.get("cost_estimate_illustrative",{}).get("label","")} est.</div>
+    <div style="font-size:11px;color:#718096;margin-top:4px">Historical catalogue · not a live alert</div>
   </div>
 </div>
 
@@ -206,7 +208,7 @@ tr:hover td{{background:#374151}}
 
 <!-- WISE Engine -->
 <div class="wise-box">
-  <h2>WISE — Decision Engine</h2>
+  <h2>WISE — Historical Scenario Engine</h2>
   {compound_note}
   <table>
     <thead><tr><th>HAZARD</th><th style="width:55%">WARN SCORE</th><th>TIER</th></tr></thead>
@@ -312,7 +314,7 @@ tr:hover td{{background:#374151}}
 
 <div class="disclaimer">
   <strong>RESEARCH PROTOTYPE — NOT FOR OPERATIONAL USE</strong><br>
-  All WARN, PULSE, WISE, and Sentinel outputs are experimental. No component has been validated for emergency management, evacuation, public-health, or infrastructure decision use.
+  All WARN, PULSE, WISE, and Sentinel outputs are experimental. WARN catalogues shown here contain historical or baseline records and are not a live alert feed. No component has been validated for emergency management, evacuation, public-health, or infrastructure decision use.
   Hazard zones (seismic, tsunami, flood) are simplified geographic proxies — not authoritative FEMA/USGS/NRCan boundaries.
   PULSE bridge scoring uses publicly available poor_status and year_built fields — no structural engineering assessment.
   Cost estimates are illustrative only; no real repair-cost, traffic, or ridership data is embedded.

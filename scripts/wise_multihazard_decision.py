@@ -23,6 +23,9 @@ OUT_DIR = Path(__file__).parent.parent / "outputs" / "disaster_demo"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 TIER_ORDER = {"NORMAL_OPERATION": 0, "MONITOR": 1, "MITIGATION_REQUIRED": 2, "EMERGENCY_RESPONSE": 3}
+# The built-in WARN catalogues contain historical or baseline records. Their
+# aggregate is useful for scenario planning, never a present-tense alert.
+DATA_MODE = "HISTORICAL_CATALOGUE"
 
 def tier_int(t): return TIER_ORDER.get(t, 0)
 def int_tier(i): return list(TIER_ORDER.keys())[min(i, 3)]
@@ -105,7 +108,7 @@ print(f"  Earthquake WARN:    score={eq_score:.3f}  tier={eq_tier}")
 print(f"  Tsunami WARN:       score={tsun_score:.3f}  tier={tsun_tier}")
 print(f"  Flood Surge WARN:   score={flood_score:.3f}  tier={flood_tier}")
 print(f"  Hurricane WARN:     score={hurr_score:.3f}  tier={hurr_tier}")
-print(f"  Nuclear WARN:       score={nuke_score:.3f}  tier={nuke_tier}")
+print(f"  Nuclear baseline:   score={nuke_score:.3f}  tier={nuke_tier} (planning only; excluded from live decision)")
 print(f"  PULSE infra:        RED={pulse_red} ({pulse_red_pct:.1%})  tier={pulse_tier}")
 
 # ── WISE decision logic ───────────────────────────────────────────────────────
@@ -115,7 +118,6 @@ hazard_tiers = {
     "tsunami":    tsun_tier,
     "flood_surge":flood_tier,
     "hurricane":  hurr_tier,
-    "nuclear":    nuke_tier,
     "pulse":      pulse_tier,
 }
 
@@ -175,9 +177,17 @@ ACTIONS = {
     ],
 }
 
+HISTORICAL_ACTIONS = [
+    "Use ranked records for scenario planning and score validation only",
+    "Do not activate operations or issue public notices from catalogue scores",
+    "Use separately labelled official alert feeds for live incident response",
+]
+
 # ── Output ────────────────────────────────────────────────────────────────────
 decision = {
     "generated_utc": datetime.now(timezone.utc).isoformat(),
+    "data_mode": DATA_MODE,
+    "operational_status": "NOT_EVALUATED",
     "wise_decision": final_tier,
     "compound_event": compound,
     "elevated_hazards": elevated,
@@ -187,7 +197,7 @@ decision = {
         "tsunami":     {"score": round(tsun_score,3),  "tier": tsun_tier},
         "flood_surge": {"score": round(flood_score,3), "tier": flood_tier},
         "hurricane":   {"score": round(hurr_score,3),  "tier": hurr_tier},
-        "nuclear":     {"score": round(nuke_score,3),  "tier": nuke_tier},
+        "nuclear":     {"score": round(nuke_score,3),  "tier": nuke_tier, "decision_inclusion": False},
     },
     "pulse_state": {
         "tier": pulse_tier,
@@ -196,15 +206,17 @@ decision = {
         "red_band_pct": round(pulse_red_pct, 4),
     },
     "cost_estimate_illustrative": cost,
-    "recommended_actions": ACTIONS[final_tier],
+    "recommended_actions": HISTORICAL_ACTIONS if DATA_MODE == "HISTORICAL_CATALOGUE" else ACTIONS[final_tier],
     "claim_boundary": (
-        "WISE decision is a research prototype combining experimental WARN signals "
-        "and PULSE infrastructure scores. Not validated for emergency management use. "
+        "WISE historical peak is a research prototype combining experimental WARN signals "
+        "and PULSE infrastructure scores. It is not a live operational status. Nuclear baseline "
+        "proximity scores are planning-only and are excluded from compound-event escalation. "
+        "Not validated for emergency management use. "
         "Cost estimates are illustrative only — no real cost data is embedded."
     ),
     "formula": {
-        "base_tier": "max(tier_int) across all hazard signals",
-        "compound_escalation": "+1 tier if 2+ hazards at MONITOR or above",
+        "base_tier": "max(tier_int) across live decision signals; excludes nuclear baseline",
+        "compound_escalation": "+1 tier if 2+ live decision hazards at MONITOR or above",
         "final_tier": "min(EMERGENCY_RESPONSE, base_tier + compound_boost)",
     },
 }

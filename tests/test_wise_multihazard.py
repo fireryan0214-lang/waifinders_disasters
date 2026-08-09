@@ -186,3 +186,7 @@ class TestOutputFile:
     def test_nuclear_score_is_bounded(self, output):
         s = output["hazard_signals"]["nuclear"]["score"]
         assert 0.0 <= s <= 1.0
+
+    def test_nuclear_is_planning_only(self, output):
+        assert output["hazard_signals"]["nuclear"]["decision_inclusion"] is False
+        assert "nuclear" not in output["elevated_hazards"]
