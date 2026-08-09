@@ -86,7 +86,7 @@ def process_event(event, asset_action_count=0, allow_live_fallback=True, unavail
     }
 
 
-def build_earthquake_audit(live, earthquakes):
+def build_earthquake_audit(live, earthquakes, probe_live=True):
     """Exercise every current earthquake through asset, context, and action stages.
 
     This is deliberately an audit artefact, not an alert queue.  It lets the
@@ -104,7 +104,7 @@ def build_earthquake_audit(live, earthquakes):
     provider_available = False
     provider_failure = "No earthquake records available for public-context probe."
     probe_context = None
-    if earthquakes:
+    if earthquakes and probe_live:
         try:
             probe_context = infrastructure_near(earthquakes[0])
             provider_available = True
@@ -136,7 +136,7 @@ def build_earthquake_audit(live, earthquakes):
             "public_context_lookups_succeeded": context_ready,
             "public_context_lookups_failed": len(records) - context_ready,
             "public_context_provider_available": provider_available,
-            "public_context_provider_probes": 1 if earthquakes else 0,
+            "public_context_provider_probes": 1 if earthquakes and probe_live else 0,
             "public_context_records_blocked_by_provider": len(records) if not provider_available else 0,
             "public_infrastructure_features_found": public_features,
             "source_only_records": sum(record["status"] == "source_only_event" for record in records),
@@ -155,6 +155,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--initialize", action="store_true", help="Record current events without emitting historical notifications")
     parser.add_argument("--audit-all-earthquakes", action="store_true", help="Run every current earthquake through the complete audit pipeline and write coverage metrics")
+    parser.add_argument("--offline-cache-only", action="store_true", help="For an audit, use preloaded local infrastructure only and do not probe a live public provider")
     args = parser.parse_args()
     live = build()
     relevant = [event for event in live["events"] if event["hazard"] in {"earthquake", "tropical cyclone"}]
@@ -177,7 +178,7 @@ def main():
     OUTPUT.write_text(json.dumps(payload, indent=2))
     print(f"Relevant events: {len(relevant)}; new alerts: {len(alerts)}")
     if args.audit_all_earthquakes:
-        audit = build_earthquake_audit(live, earthquakes)
+        audit = build_earthquake_audit(live, earthquakes, probe_live=not args.offline_cache_only)
         print("Full earthquake audit: " + json.dumps(audit["metrics"], sort_keys=True))
 
 

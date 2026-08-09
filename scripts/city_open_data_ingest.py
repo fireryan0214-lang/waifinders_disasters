@@ -49,6 +49,9 @@ def fetch_arcgis(dataset, limit=None):
     features, offset = [], 0
     while True:
         params = {"where": "1=1", "outFields": "*", "returnGeometry": "true", "f": "geojson", "outSR": 4326, "resultRecordCount": limit}
+        if dataset.get("bbox"):
+            west, south, east, north = dataset["bbox"]
+            params.update({"geometry": f"{west},{south},{east},{north}", "geometryType": "esriGeometryEnvelope", "spatialRel": "esriSpatialRelIntersects", "inSR": 4326})
         # Some otherwise valid public MapServer layers treat resultOffset=0 as
         # an empty query. Only send an offset after the first page.
         if offset:
