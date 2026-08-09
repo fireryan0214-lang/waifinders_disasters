@@ -10,7 +10,10 @@ from live_incident_exposure import ROOT, build
 
 STATE = ROOT / "outputs" / "disaster_demo" / "worldwide_alert_state.json"
 OUTPUT = ROOT / "outputs" / "disaster_demo" / "worldwide_hazard_alerts.json"
-OVERPASS = "https://overpass-api.de/api/interpreter"
+OVERPASS_ENDPOINTS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+]
 
 
 def infrastructure_near(event):
@@ -23,14 +26,25 @@ def infrastructure_near(event):
       way["bridge"="yes"](around:{radius},{event["lat"]},{event["lon"]});
       way["highway"~"motorway|trunk|primary"](around:{radius},{event["lat"]},{event["lon"]});
     );out center tags 100;'''
-    response = requests.post(OVERPASS, data=query, timeout=45)
-    response.raise_for_status()
+    failures = []
+    response = None
+    provider = None
+    for endpoint in OVERPASS_ENDPOINTS:
+        try:
+            candidate = requests.get(endpoint, params={"data": query}, headers={"User-Agent": "WAIFINDERS-Sentinel/0.1"}, timeout=25)
+            candidate.raise_for_status()
+            response, provider = candidate, endpoint
+            break
+        except requests.RequestException as exc:
+            failures.append(f"{endpoint}: {exc.__class__.__name__}")
+    if response is None:
+        raise ConnectionError("; ".join(failures))
     features = []
     for item in response.json().get("elements", []):
         tags = item.get("tags", {})
         kind = "hospital" if tags.get("amenity") == "hospital" else "shelter" if tags.get("emergency") == "shelter" else "substation" if tags.get("power") == "substation" else "bridge" if tags.get("bridge") == "yes" else "major route"
         features.append({"osm_id": f"{item['type']}/{item['id']}", "type": kind, "name": tags.get("name") or tags.get("ref") or "Unnamed public infrastructure", "osm_url": f"https://www.openstreetmap.org/{item['type']}/{item['id']}"})
-    return {"radius_km": radius / 1000, "feature_count": len(features), "features": features}
+    return {"provider": provider, "radius_km": radius / 1000, "feature_count": len(features), "features": features}
 
 
 def main():
@@ -52,7 +66,10 @@ def main():
                 status = "source_event_alert_only"
             alerts.append({"alert_id": event["event_id"], "approval_status": "PENDING_HUMAN_APPROVAL", "status": status, "event": event, "public_infrastructure_context": context, "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action."})
     STATE.write_text(json.dumps({"initialized_utc": datetime.now(timezone.utc).isoformat(), "seen_event_ids": sorted({event["event_id"] for event in relevant})}, indent=2))
-    payload = {"generated_utc": datetime.now(timezone.utc).isoformat(), "mode": "WORLDWIDE_EVENT_ALERTS", "initialization": args.initialize, "relevant_events_seen": len(relevant), "new_alert_count": len(alerts), "alerts": alerts, "claim_boundary": "Decision support only. These are not official warnings and every action requires trained human review."}
+    lookup_successes = sum(alert["status"] == "ready_for_human_review" for alert in alerts)
+    payload = {"generated_utc": datetime.now(timezone.utc).isoformat(), "mode": "WORLDWIDE_EVENT_ALERTS", "initialization": args.initialize, "relevant_events_seen": len(relevant), "new_alert_count": len(alerts), "alerts": alerts,
+        "pipeline_metrics": {"new_events_processed": len(new_events), "infrastructure_lookup_successes": lookup_successes, "infrastructure_lookup_failures": len(alerts) - lookup_successes, "public_features_found": sum(alert["public_infrastructure_context"].get("feature_count", 0) for alert in alerts), "source_event_only_alerts": sum(alert["status"] == "source_event_alert_only" for alert in alerts)},
+        "claim_boundary": "Decision support only. These are not official warnings and every action requires trained human review."}
     OUTPUT.write_text(json.dumps(payload, indent=2))
     print(f"Relevant events: {len(relevant)}; new alerts: {len(alerts)}")
 

@@ -9,6 +9,7 @@ def test_infrastructure_radius_is_bounded(monkeypatch):
     class Response:
         def raise_for_status(self): pass
         def json(self): return {"elements": []}
-    monkeypatch.setattr("build_worldwide_hazard_alerts.requests.post", lambda *args, **kwargs: Response())
+    monkeypatch.setattr("build_worldwide_hazard_alerts.requests.get", lambda *args, **kwargs: Response())
     result = infrastructure_near({"lat": 0, "lon": 0, "match_radius_km": 1000})
     assert result["radius_km"] == 100
+    assert result["provider"]
