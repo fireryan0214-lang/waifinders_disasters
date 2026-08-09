@@ -45,6 +45,10 @@ pulse_data  = load("pulse_disaster_exposure.json")
 # Wildfire WARN — pull from wildfire repo outputs if available
 wildfire_path = Path(__file__).parent.parent / "outputs" / "wildfire" / "sentinel" / "ontario_sentinel_intelligence.json"
 wildfire_data = json.loads(wildfire_path.read_text()) if wildfire_path.exists() else {}
+# Historical WISE must never consume a current operational feed. Live Ontario
+# wildfire output belongs in the separate live WARN/WISE queue.
+if wildfire_data.get("mode", "").startswith("LIVE_"):
+    wildfire_data = {}
 
 # ── Extract peak WARN signals per hazard ──────────────────────────────────────
 def peak_eq_score(data):
@@ -81,7 +85,7 @@ def wildfire_tier(data):
     # Pull from ontario sentinel if available
     fwi = data.get("fire_weather", {}).get("fwi", {})
     tier = fwi.get("warn_tier", "NORMAL_OPERATION")
-    score = float(fwi.get("score", fwi.get("fwi_normalized", 0.0)))
+    score = float(fwi.get("fwi_normalized", 0.0))
     return score, tier
 
 eq_score,    eq_tier    = peak_eq_score(eq_data)
