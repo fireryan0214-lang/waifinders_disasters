@@ -1,0 +1,4042 @@
+{
+  "generated_utc": "2026-08-09T07:46:20.210613+00:00",
+  "mode": "LIVE_DECISION_SUPPORT",
+  "asset_input": {
+    "path": "/private/tmp/waifinders-live-operations/inputs/assets.csv",
+    "status": "asset file not found: assets.csv",
+    "asset_count": 0
+  },
+  "source_refreshes": [
+    {
+      "source": "USGS earthquake feed",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+      "status": "live",
+      "records": 241
+    },
+    {
+      "source": "NWS active alerts",
+      "url": "https://api.weather.gov/alerts/active",
+      "status": "live",
+      "records": 6
+    },
+    {
+      "source": "NHC current storms",
+      "url": "https://www.nhc.noaa.gov/CurrentStorms.json",
+      "status": "live",
+      "records": 0
+    },
+    {
+      "source": "USGS instant water values",
+      "status": "not_configured",
+      "records": 0,
+      "note": "Add flood_gauge_id to assets.csv to enable gauge monitoring."
+    },
+    {
+      "source": "NRC Daily Event Report",
+      "url": "https://www.nrc.gov/public-involve/rss?feed=event",
+      "status": "live",
+      "records": 0,
+      "notifications_fetched": 4,
+      "notifications": [
+        {
+          "title": " 58389 - Henry Ford Hospital ",
+          "link": " https://www.nrc.gov/reading-rm/doc-collections/event-status/event/en.html#en58389 ",
+          "published": ""
+        },
+        {
+          "title": " 58390 - Texas Dept of State Health Services ",
+          "link": " https://www.nrc.gov/reading-rm/doc-collections/event-status/event/en.html#en58390 ",
+          "published": ""
+        },
+        {
+          "title": " 58397 - Susquehanna ",
+          "link": " https://www.nrc.gov/reading-rm/doc-collections/event-status/event/en.html#en58397 ",
+          "published": ""
+        },
+        {
+          "title": " 58391 - NJ Dept. of Env. Protection ",
+          "link": " https://www.nrc.gov/reading-rm/doc-collections/event-status/event/en.html#en58391 ",
+          "published": ""
+        }
+      ],
+      "note": "Notifications are ingested but deliberately not asset-matched until a facility location is verified from an authoritative record."
+    }
+  ],
+  "live_event_count": 247,
+  "events": [
+    {
+      "event_id": "usgs-tx2026pokqol",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 55 km SSW of Whites City, New Mexico",
+      "occurred_utc": "2026-08-09T07:29:07.219000+00:00",
+      "lat": 31.705,
+      "lon": -104.582,
+      "severity": 0.0,
+      "match_radius_km": 51.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pokqol",
+      "details": {
+        "magnitude": 1.7,
+        "depth_km": 3.4006
+      }
+    },
+    {
+      "event_id": "usgs-ci40669226",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 28 km SW of Maricopa, CA",
+      "occurred_utc": "2026-08-09T07:28:34.110000+00:00",
+      "lat": 34.8606666666667,
+      "lon": -119.5955,
+      "severity": 0.0,
+      "match_radius_km": 50.099999999999994,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669226",
+      "details": {
+        "magnitude": 1.67,
+        "depth_km": 9.58
+      }
+    },
+    {
+      "event_id": "usgs-ci40669218",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.8 - 18 km WSW of Johannesburg, CA",
+      "occurred_utc": "2026-08-09T07:18:17.600000+00:00",
+      "lat": 35.323,
+      "lon": -117.8245,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669218",
+      "details": {
+        "magnitude": 0.75,
+        "depth_km": 6.48
+      }
+    },
+    {
+      "event_id": "usgs-ci40669210",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 7 km SE of Bombay Beach, CA",
+      "occurred_utc": "2026-08-09T07:06:38.690000+00:00",
+      "lat": 33.3045,
+      "lon": -115.681333333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669210",
+      "details": {
+        "magnitude": 1.45,
+        "depth_km": 4.75
+      }
+    },
+    {
+      "event_id": "usgs-ci40669202",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 7 km SE of Bombay Beach, CA",
+      "occurred_utc": "2026-08-09T07:05:41.640000+00:00",
+      "lat": 33.3031666666667,
+      "lon": -115.682833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669202",
+      "details": {
+        "magnitude": 1.25,
+        "depth_km": 4.5
+      }
+    },
+    {
+      "event_id": "usgs-nc75414512",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.3 - 9 km WNW of Cobb, CA",
+      "occurred_utc": "2026-08-09T07:05:05.690000+00:00",
+      "lat": 38.8385009765625,
+      "lon": -122.824165344238,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414512",
+      "details": {
+        "magnitude": 0.33,
+        "depth_km": 2.48000001907349
+      }
+    },
+    {
+      "event_id": "usgs-ci40669194",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 17 km ESE of Anza, CA",
+      "occurred_utc": "2026-08-09T07:01:36.770000+00:00",
+      "lat": 33.4743333333333,
+      "lon": -116.515833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669194",
+      "details": {
+        "magnitude": 0.67,
+        "depth_km": 12.86
+      }
+    },
+    {
+      "event_id": "usgs-nc75414507",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 9 km WNW of Cobb, CA",
+      "occurred_utc": "2026-08-09T06:56:54.820000+00:00",
+      "lat": 38.84033203125,
+      "lon": -122.823669433594,
+      "severity": 0.0,
+      "match_radius_km": 54.6,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414507",
+      "details": {
+        "magnitude": 1.82,
+        "depth_km": 2.3199999332428
+      }
+    },
+    {
+      "event_id": "usgs-ci40669186",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 12 km S of Lompoc, CA",
+      "occurred_utc": "2026-08-09T06:56:50.560000+00:00",
+      "lat": 34.5363333333333,
+      "lon": -120.4745,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669186",
+      "details": {
+        "magnitude": 1.58,
+        "depth_km": 3.6
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pojkve",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 9 km NNE of Odessa, Texas",
+      "occurred_utc": "2026-08-09T06:52:12.456000+00:00",
+      "lat": 31.923,
+      "lon": -102.338,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pojkve",
+      "details": {
+        "magnitude": 1.0,
+        "depth_km": 6.826
+      }
+    },
+    {
+      "event_id": "usgs-hv75015337",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 58 km WSW of Hawaiian Ocean View, Hawaii",
+      "occurred_utc": "2026-08-09T06:47:45.960000+00:00",
+      "lat": 18.7999992370605,
+      "lon": -156.245330810547,
+      "severity": 0.0,
+      "match_radius_km": 56.4,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015337",
+      "details": {
+        "magnitude": 1.88,
+        "depth_km": 6.8600001335144
+      }
+    },
+    {
+      "event_id": "usgs-nc75414497",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 8 km NW of Pinnacles, CA",
+      "occurred_utc": "2026-08-09T06:45:09.130000+00:00",
+      "lat": 36.586498260498,
+      "lon": -121.192665100098,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414497",
+      "details": {
+        "magnitude": 1.61,
+        "depth_km": 2.6800000667572
+      }
+    },
+    {
+      "event_id": "usgs-tx2026poiysd",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 40 km ESE of Balmorhea, Texas",
+      "occurred_utc": "2026-08-09T06:38:07.607000+00:00",
+      "lat": 30.886,
+      "lon": -103.337,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026poiysd",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 0
+      }
+    },
+    {
+      "event_id": "usgs-ci40669178",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.9 - 11 km S of Lompoc, CA",
+      "occurred_utc": "2026-08-09T06:37:39.830000+00:00",
+      "lat": 34.5393333333333,
+      "lon": -120.4725,
+      "severity": 0.0,
+      "match_radius_km": 85.8,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669178",
+      "details": {
+        "magnitude": 2.86,
+        "depth_km": 3.89
+      }
+    },
+    {
+      "event_id": "usgs-ci40669170",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 17 km WSW of Johannesburg, CA",
+      "occurred_utc": "2026-08-09T06:31:56.990000+00:00",
+      "lat": 35.3201666666667,
+      "lon": -117.811166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669170",
+      "details": {
+        "magnitude": 1.08,
+        "depth_km": 7.99
+      }
+    },
+    {
+      "event_id": "usgs-nc75414487",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 7 km ESE of Cloverdale, CA",
+      "occurred_utc": "2026-08-09T06:25:47.330000+00:00",
+      "lat": 38.7878341674805,
+      "lon": -122.94083404541,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414487",
+      "details": {
+        "magnitude": 1.09,
+        "depth_km": 3.27999997138977
+      }
+    },
+    {
+      "event_id": "usgs-hv75015317",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.4 - 8 km S of Kapaau, Hawaii",
+      "occurred_utc": "2026-08-09T06:09:57.980000+00:00",
+      "lat": 20.1608333587646,
+      "lon": -155.789169311523,
+      "severity": 0.0,
+      "match_radius_km": 71.7,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015317",
+      "details": {
+        "magnitude": 2.39,
+        "depth_km": 23.6499996185303
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pquynx",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.9 - 87 km SE of Ugashik, Alaska",
+      "occurred_utc": "2026-08-09T06:03:53.448000+00:00",
+      "lat": 57.07,
+      "lon": -156.192,
+      "severity": 0.0,
+      "match_radius_km": 87.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pquynx",
+      "details": {
+        "magnitude": 2.9,
+        "depth_km": 1.8
+      }
+    },
+    {
+      "event_id": "usgs-ci40669162",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.4 - 6 km WNW of Aguanga, CA",
+      "occurred_utc": "2026-08-09T05:57:32.600000+00:00",
+      "lat": 33.455,
+      "lon": -116.926166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669162",
+      "details": {
+        "magnitude": 1.43,
+        "depth_km": 29.39
+      }
+    },
+    {
+      "event_id": "usgs-hv75015312",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.1 - 27 km E of Honaunau-Napoopoo, Hawaii",
+      "occurred_utc": "2026-08-09T05:56:07.370000+00:00",
+      "lat": 19.4231662750244,
+      "lon": -155.606826782227,
+      "severity": 0.0,
+      "match_radius_km": 61.800000000000004,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015312",
+      "details": {
+        "magnitude": 2.06,
+        "depth_km": 36.3600006103516
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pohfwu",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.8 - 18 km SSE of Ackerly, Texas",
+      "occurred_utc": "2026-08-09T05:46:09.544000+00:00",
+      "lat": 32.379,
+      "lon": -101.624,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pohfwu",
+      "details": {
+        "magnitude": 0.8,
+        "depth_km": 4.4939
+      }
+    },
+    {
+      "event_id": "usgs-nc75414477",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 0 km SW of Blackhawk, CA",
+      "occurred_utc": "2026-08-09T05:30:40.980000+00:00",
+      "lat": 37.8186683654785,
+      "lon": -121.90983581543,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414477",
+      "details": {
+        "magnitude": 1.26,
+        "depth_km": 8.69999980926514
+      }
+    },
+    {
+      "event_id": "usgs-nc75414472",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 1 km SSW of Blackhawk, CA",
+      "occurred_utc": "2026-08-09T05:28:27.360000+00:00",
+      "lat": 37.8096656799316,
+      "lon": -121.911666870117,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414472",
+      "details": {
+        "magnitude": 1.14,
+        "depth_km": 1.24000000953674
+      }
+    },
+    {
+      "event_id": "usgs-ci40669154",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 3 km SE of Lake Henshaw, CA",
+      "occurred_utc": "2026-08-09T05:22:59.490000+00:00",
+      "lat": 33.2213333333333,
+      "lon": -116.7405,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669154",
+      "details": {
+        "magnitude": 0.6,
+        "depth_km": 12.94
+      }
+    },
+    {
+      "event_id": "usgs-ci40669146",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 13 km SSW of Lompoc, CA",
+      "occurred_utc": "2026-08-09T05:13:33.420000+00:00",
+      "lat": 34.5286666666667,
+      "lon": -120.488833333333,
+      "severity": 0.0,
+      "match_radius_km": 54.6,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669146",
+      "details": {
+        "magnitude": 1.82,
+        "depth_km": 5.76
+      }
+    },
+    {
+      "event_id": "usgs-ci40669138",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.5 - 11 km SSW of Lompoc, CA",
+      "occurred_utc": "2026-08-09T05:12:24.350000+00:00",
+      "lat": 34.5381666666667,
+      "lon": -120.483166666667,
+      "severity": 0.0,
+      "match_radius_km": 75.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669138",
+      "details": {
+        "magnitude": 2.5,
+        "depth_km": 5.25
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqspby",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 47 km NW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-09T04:52:59.930000+00:00",
+      "lat": 62.237,
+      "lon": -152.13,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqspby",
+      "details": {
+        "magnitude": 1.2,
+        "depth_km": 31.2
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqsgie",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 17 km ESE of Lowell Point, Alaska",
+      "occurred_utc": "2026-08-09T04:42:54.438000+00:00",
+      "lat": 59.989,
+      "lon": -149.175,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqsgie",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 1.4
+      }
+    },
+    {
+      "event_id": "usgs-tx2026poexya",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 45 km NW of Toyah, Texas",
+      "occurred_utc": "2026-08-09T04:36:25.702000+00:00",
+      "lat": 31.637,
+      "lon": -104.084,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026poexya",
+      "details": {
+        "magnitude": 0.6,
+        "depth_km": 0
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqrxvj",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.2 - 8 km N of Anchor Point, Alaska",
+      "occurred_utc": "2026-08-09T04:33:40.583000+00:00",
+      "lat": 59.849,
+      "lon": -151.828,
+      "severity": 0.0,
+      "match_radius_km": 66.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqrxvj",
+      "details": {
+        "magnitude": 2.2,
+        "depth_km": 61.7
+      }
+    },
+    {
+      "event_id": "usgs-uu80147946",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 17 km NE of Milford, Utah",
+      "occurred_utc": "2026-08-09T04:29:10.060000+00:00",
+      "lat": 38.513,
+      "lon": -112.8805,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80147946",
+      "details": {
+        "magnitude": 1.63,
+        "depth_km": 3.08
+      }
+    },
+    {
+      "event_id": "usgs-tx2026poenuv",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 7 km W of Midland, Texas",
+      "occurred_utc": "2026-08-09T04:24:47.650000+00:00",
+      "lat": 31.999,
+      "lon": -102.159,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026poenuv",
+      "details": {
+        "magnitude": 1.6,
+        "depth_km": 0
+      }
+    },
+    {
+      "event_id": "usgs-ci40669130",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 8 km NE of Lake Arrowhead, CA",
+      "occurred_utc": "2026-08-09T04:16:05.560000+00:00",
+      "lat": 34.3053333333333,
+      "lon": -117.134666666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669130",
+      "details": {
+        "magnitude": 1.24,
+        "depth_km": 6.68
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjcr",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.6 - 12 km W of Chambara, Peru",
+      "occurred_utc": "2026-08-09T04:05:44.245000+00:00",
+      "lat": -12.0506,
+      "lon": -75.4906,
+      "severity": 0.31999999999999995,
+      "match_radius_km": 138.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjcr",
+      "details": {
+        "magnitude": 4.6,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-ci40669122",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 19 km ESE of Little Lake, CA",
+      "occurred_utc": "2026-08-09T04:03:07.330000+00:00",
+      "lat": 35.885,
+      "lon": -117.710333333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669122",
+      "details": {
+        "magnitude": 1.04,
+        "depth_km": 8.24
+      }
+    },
+    {
+      "event_id": "usgs-nc75414447",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 5 km ESE of Interlaken, CA",
+      "occurred_utc": "2026-08-09T04:02:24.730000+00:00",
+      "lat": 36.9378318786621,
+      "lon": -121.684669494629,
+      "severity": 0.0,
+      "match_radius_km": 51.6,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414447",
+      "details": {
+        "magnitude": 1.72,
+        "depth_km": 11.4399995803833
+      }
+    },
+    {
+      "event_id": "usgs-uw714074052",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 5 km SSE of Glacier, Washington",
+      "occurred_utc": "2026-08-09T03:55:43.730000+00:00",
+      "lat": 48.852,
+      "lon": -121.907833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714074052",
+      "details": {
+        "magnitude": 1.28,
+        "depth_km": 2.7
+      }
+    },
+    {
+      "event_id": "usgs-nc75414442",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 1 km NW of Pinnacles, CA",
+      "occurred_utc": "2026-08-09T03:49:50.620000+00:00",
+      "lat": 36.5366668701172,
+      "lon": -121.152000427246,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414442",
+      "details": {
+        "magnitude": 1.45,
+        "depth_km": 7.21999979019165
+      }
+    },
+    {
+      "event_id": "usgs-ci40669114",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 2 km W of Santa Fe Springs, CA",
+      "occurred_utc": "2026-08-09T03:47:13.700000+00:00",
+      "lat": 33.9438333333333,
+      "lon": -118.106666666667,
+      "severity": 0.0,
+      "match_radius_km": 53.4,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669114",
+      "details": {
+        "magnitude": 1.78,
+        "depth_km": 5.3
+      }
+    },
+    {
+      "event_id": "usgs-ci40669106",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.4 - 5 km NNE of Lake Henshaw, CA",
+      "occurred_utc": "2026-08-09T03:37:40.060000+00:00",
+      "lat": 33.2876666666667,
+      "lon": -116.742,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669106",
+      "details": {
+        "magnitude": 0.42,
+        "depth_km": 12.91
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjcn",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.9 - 68 km ESE of Atka, Alaska",
+      "occurred_utc": "2026-08-09T03:36:17.166000+00:00",
+      "lat": 51.987,
+      "lon": -173.261,
+      "severity": 0.38000000000000006,
+      "match_radius_km": 147.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjcn",
+      "details": {
+        "magnitude": 4.9,
+        "depth_km": 60.301
+      }
+    },
+    {
+      "event_id": "usgs-ci40669098",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 9 km NE of Coso Junction, CA",
+      "occurred_utc": "2026-08-09T03:35:59.090000+00:00",
+      "lat": 36.0905,
+      "lon": -117.866166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669098",
+      "details": {
+        "magnitude": 0.97,
+        "depth_km": 5.59
+      }
+    },
+    {
+      "event_id": "usgs-ci40669090",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 11 km ENE of Ridgecrest, CA",
+      "occurred_utc": "2026-08-09T03:23:50.150000+00:00",
+      "lat": 35.6485,
+      "lon": -117.561333333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669090",
+      "details": {
+        "magnitude": 1.66,
+        "depth_km": 8.37
+      }
+    },
+    {
+      "event_id": "usgs-ci40669082",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 11 km ENE of Cabazon, CA",
+      "occurred_utc": "2026-08-09T03:17:06.970000+00:00",
+      "lat": 33.9401666666667,
+      "lon": -116.6695,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669082",
+      "details": {
+        "magnitude": 1.25,
+        "depth_km": 10.27
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjcl",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 5.0 - 180 km NW of Sabang, Indonesia",
+      "occurred_utc": "2026-08-09T03:02:07.086000+00:00",
+      "lat": 7.017,
+      "lon": 94.1402,
+      "severity": 0.4,
+      "match_radius_km": 150.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjcl",
+      "details": {
+        "magnitude": 5.0,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-uw714074042",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.4 - 21 km NW of Bandon, Oregon",
+      "occurred_utc": "2026-08-09T02:57:50.220000+00:00",
+      "lat": 43.2776666666667,
+      "lon": -124.559333333333,
+      "severity": 0.0,
+      "match_radius_km": 70.5,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714074042",
+      "details": {
+        "magnitude": 2.35,
+        "depth_km": 21.87
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqonmt",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.6 - 214 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-09T02:51:39.816000+00:00",
+      "lat": 52.028,
+      "lon": 176.048,
+      "severity": 0.0,
+      "match_radius_km": 78.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqonmt",
+      "details": {
+        "magnitude": 2.6,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-nc75414407",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 7 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-09T02:50:27.310000+00:00",
+      "lat": 38.8246650695801,
+      "lon": -122.80233001709,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414407",
+      "details": {
+        "magnitude": 1.13,
+        "depth_km": 2.4300000667572
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pobegl",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 62 km S of Whites City, New Mexico",
+      "occurred_utc": "2026-08-09T02:43:17.861000+00:00",
+      "lat": 31.615,
+      "lon": -104.397,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pobegl",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 3.0953
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqoful",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 54 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-09T02:42:20.217000+00:00",
+      "lat": 62.235,
+      "lon": -152.303,
+      "severity": 0.0,
+      "match_radius_km": 57.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqoful",
+      "details": {
+        "magnitude": 1.9,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-nc75414402",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.6 - 11 km SSW of Tres Pinos, CA",
+      "occurred_utc": "2026-08-09T02:41:19.560000+00:00",
+      "lat": 36.6940002441406,
+      "lon": -121.356498718262,
+      "severity": 0.0,
+      "match_radius_km": 78.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414402",
+      "details": {
+        "magnitude": 2.6,
+        "depth_km": 1.3400000333786
+      }
+    },
+    {
+      "event_id": "usgs-nc75414397",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 12 km SSE of Cantua Creek, CA",
+      "occurred_utc": "2026-08-09T02:36:40.970000+00:00",
+      "lat": 36.4018325805664,
+      "lon": -120.275169372559,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414397",
+      "details": {
+        "magnitude": 1.52,
+        "depth_km": 19.3199996948242
+      }
+    },
+    {
+      "event_id": "usgs-nc75414392",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 7 km ESE of Cloverdale, CA",
+      "occurred_utc": "2026-08-09T02:28:51.650000+00:00",
+      "lat": 38.7718315124512,
+      "lon": -122.950332641602,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414392",
+      "details": {
+        "magnitude": 1.15,
+        "depth_km": 4.40999984741211
+      }
+    },
+    {
+      "event_id": "usgs-nc75414387",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 1 km NNW of The Geysers, CA",
+      "occurred_utc": "2026-08-09T02:26:19.830000+00:00",
+      "lat": 38.7831649780273,
+      "lon": -122.758331298828,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414387",
+      "details": {
+        "magnitude": 1.53,
+        "depth_km": 1.77999997138977
+      }
+    },
+    {
+      "event_id": "usgs-nc75414382",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.9 - 1 km NNW of The Geysers, CA",
+      "occurred_utc": "2026-08-09T02:25:17.080000+00:00",
+      "lat": 38.7841682434082,
+      "lon": -122.758331298828,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414382",
+      "details": {
+        "magnitude": 0.9,
+        "depth_km": 2.08999991416931
+      }
+    },
+    {
+      "event_id": "usgs-uw714074012",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.5 - 11 km SSW of River Road, Washington",
+      "occurred_utc": "2026-08-09T02:20:38.310000+00:00",
+      "lat": 47.972,
+      "lon": -123.171,
+      "severity": 0.0,
+      "match_radius_km": 75.89999999999999,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714074012",
+      "details": {
+        "magnitude": 2.53,
+        "depth_km": 44.54
+      }
+    },
+    {
+      "event_id": "usgs-nc75414352",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 10 km NNE of San Simeon, CA",
+      "occurred_utc": "2026-08-09T02:04:23.700000+00:00",
+      "lat": 35.7234992980957,
+      "lon": -121.144668579102,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414352",
+      "details": {
+        "magnitude": 1.28,
+        "depth_km": 5.69000005722046
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqmsof",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.9 - 84 km ESE of Chignik, Alaska",
+      "occurred_utc": "2026-08-09T01:57:04.575000+00:00",
+      "lat": 56.018,
+      "lon": -157.142,
+      "severity": 0.18,
+      "match_radius_km": 117.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqmsof",
+      "details": {
+        "magnitude": 3.9,
+        "depth_km": 12.7
+      }
+    },
+    {
+      "event_id": "usgs-pr71527908",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.2 - 2 km ESE of Boquer\u00f3n, Puerto Rico",
+      "occurred_utc": "2026-08-09T01:42:16.300000+00:00",
+      "lat": 18.0156666666667,
+      "lon": -67.1508333333333,
+      "severity": 0.0,
+      "match_radius_km": 65.7,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527908",
+      "details": {
+        "magnitude": 2.19,
+        "depth_km": 15.95
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqljkf",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 31 km SSW of Ester, Alaska",
+      "occurred_utc": "2026-08-09T01:16:32.412000+00:00",
+      "lat": 64.572,
+      "lon": -148.2,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqljkf",
+      "details": {
+        "magnitude": 0.6,
+        "depth_km": 10.3
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjc4",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.9 - 237 km E of Levuka, Fiji",
+      "occurred_utc": "2026-08-09T01:09:19.167000+00:00",
+      "lat": -17.848,
+      "lon": -178.453,
+      "severity": 0.38000000000000006,
+      "match_radius_km": 147.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjc4",
+      "details": {
+        "magnitude": 4.9,
+        "depth_km": 589.12
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjc0",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.4 - 17 km ENE of Nurda\u011f\u0131, Turkey",
+      "occurred_utc": "2026-08-09T00:42:18.950000+00:00",
+      "lat": 37.2046,
+      "lon": 36.9229,
+      "severity": 0.2800000000000001,
+      "match_radius_km": 132.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjc0",
+      "details": {
+        "magnitude": 4.4,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqjvxy",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 53 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-09T00:31:00.938000+00:00",
+      "lat": 62.253,
+      "lon": -152.267,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqjvxy",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 3.1
+      }
+    },
+    {
+      "event_id": "usgs-nc75414322",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 5 km WNW of The Geysers, CA",
+      "occurred_utc": "2026-08-09T00:28:13.910000+00:00",
+      "lat": 38.7941665649414,
+      "lon": -122.806335449219,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414322",
+      "details": {
+        "magnitude": 1.56,
+        "depth_km": 2.80999994277954
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqjqpe",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.4 - 235 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-09T00:24:50.051000+00:00",
+      "lat": 51.857,
+      "lon": 176.236,
+      "severity": 0.0,
+      "match_radius_km": 72.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqjqpe",
+      "details": {
+        "magnitude": 2.4,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-ci40669050",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 18 km SSE of Progreso, B.C., MX",
+      "occurred_utc": "2026-08-09T00:06:03.490000+00:00",
+      "lat": 32.4376666666667,
+      "lon": -115.4975,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669050",
+      "details": {
+        "magnitude": 1.59,
+        "depth_km": 11.29
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqjaca",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 35 km ESE of Chenega, Alaska",
+      "occurred_utc": "2026-08-09T00:05:49.263000+00:00",
+      "lat": 59.966,
+      "lon": -147.416,
+      "severity": 0.0,
+      "match_radius_km": 54.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqjaca",
+      "details": {
+        "magnitude": 1.8,
+        "depth_km": 17.6
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjbu",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.2 - 2 km E of Saint-Donat-de-Montcalm, Canada",
+      "occurred_utc": "2026-08-09T00:04:45.211000+00:00",
+      "lat": 46.3197,
+      "lon": -74.1937,
+      "severity": 0.0,
+      "match_radius_km": 66.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjbu",
+      "details": {
+        "magnitude": 2.2,
+        "depth_km": 2.15
+      }
+    },
+    {
+      "event_id": "usgs-nc75414312",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.8 - 5 km NW of Pinnacles, CA",
+      "occurred_utc": "2026-08-08T23:58:47.090000+00:00",
+      "lat": 36.5631675720215,
+      "lon": -121.178001403809,
+      "severity": 0.0,
+      "match_radius_km": 83.1,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414312",
+      "details": {
+        "magnitude": 2.77,
+        "depth_km": 2.35999989509583
+      }
+    },
+    {
+      "event_id": "usgs-ci40669042",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 9 km NNW of Cabazon, CA",
+      "occurred_utc": "2026-08-08T23:53:15.710000+00:00",
+      "lat": 33.9941666666667,
+      "lon": -116.8115,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669042",
+      "details": {
+        "magnitude": 1.11,
+        "depth_km": 16.84
+      }
+    },
+    {
+      "event_id": "usgs-nc75414307",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.1 - 5 km NNW of Pinnacles, CA",
+      "occurred_utc": "2026-08-08T23:51:03.970000+00:00",
+      "lat": 36.5673332214355,
+      "lon": -121.170829772949,
+      "severity": 0.0,
+      "match_radius_km": 63.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414307",
+      "details": {
+        "magnitude": 2.1,
+        "depth_km": 3.89000010490417
+      }
+    },
+    {
+      "event_id": "usgs-nc75414302",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 7 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T23:47:44.020000+00:00",
+      "lat": 38.824333190918,
+      "lon": -122.803833007812,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414302",
+      "details": {
+        "magnitude": 0.67,
+        "depth_km": 2.44000005722046
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjbr",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.3 - 46 km NE of Masjed Soleym\u0101n, Iran",
+      "occurred_utc": "2026-08-08T23:38:30.503000+00:00",
+      "lat": 32.2034,
+      "lon": 49.6839,
+      "severity": 0.25999999999999995,
+      "match_radius_km": 129.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjbr",
+      "details": {
+        "magnitude": 4.3,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-ci40669034",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.4 - 4 km ENE of Borrego Springs, CA",
+      "occurred_utc": "2026-08-08T23:37:58.920000+00:00",
+      "lat": 33.2715,
+      "lon": -116.332833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669034",
+      "details": {
+        "magnitude": 0.44,
+        "depth_km": 2.82
+      }
+    },
+    {
+      "event_id": "usgs-hv75015197",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 26 km NNW of P\u0101hala, Hawaii",
+      "occurred_utc": "2026-08-08T23:24:16.700000+00:00",
+      "lat": 19.4238338470459,
+      "lon": -155.570999145508,
+      "severity": 0.0,
+      "match_radius_km": 56.699999999999996,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015197",
+      "details": {
+        "magnitude": 1.89,
+        "depth_km": 39.189998626709
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjbq",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.5 - 92 km SSW of Sarangani, Philippines",
+      "occurred_utc": "2026-08-08T23:12:22.267000+00:00",
+      "lat": 4.5819,
+      "lon": 125.2976,
+      "severity": 0.3,
+      "match_radius_km": 135.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjbq",
+      "details": {
+        "magnitude": 4.5,
+        "depth_km": 9.688
+      }
+    },
+    {
+      "event_id": "usgs-ci40669026",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.4 - 1 km NW of San Jacinto, CA",
+      "occurred_utc": "2026-08-08T23:11:00.030000+00:00",
+      "lat": 33.7915,
+      "lon": -116.966333333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669026",
+      "details": {
+        "magnitude": 1.35,
+        "depth_km": 12.77
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjbm",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.3 - 16 km E of Amakusa, Japan",
+      "occurred_utc": "2026-08-08T23:02:07.025000+00:00",
+      "lat": 32.4533,
+      "lon": 130.3704,
+      "severity": 0.25999999999999995,
+      "match_radius_km": 129.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjbm",
+      "details": {
+        "magnitude": 4.3,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-ci40669018",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 21 km WNW of Inyokern, CA",
+      "occurred_utc": "2026-08-08T23:01:39.980000+00:00",
+      "lat": 35.7378333333333,
+      "lon": -118.012833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669018",
+      "details": {
+        "magnitude": 0.57,
+        "depth_km": 10.52
+      }
+    },
+    {
+      "event_id": "usgs-ci40669010",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 7 km SW of Holtville, CA",
+      "occurred_utc": "2026-08-08T22:55:54.380000+00:00",
+      "lat": 32.7688333333333,
+      "lon": -115.436833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669010",
+      "details": {
+        "magnitude": 1.52,
+        "depth_km": 17.15
+      }
+    },
+    {
+      "event_id": "usgs-ci40669002",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 5 km NNW of Valle Vista, CA",
+      "occurred_utc": "2026-08-08T22:52:41.820000+00:00",
+      "lat": 33.7871666666667,
+      "lon": -116.9065,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40669002",
+      "details": {
+        "magnitude": 1.18,
+        "depth_km": 10.58
+      }
+    },
+    {
+      "event_id": "usgs-uw714073872",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 9 km ESE of Mossyrock, Washington",
+      "occurred_utc": "2026-08-08T22:51:59.230000+00:00",
+      "lat": 46.4838333129883,
+      "lon": -122.385833740234,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714073872",
+      "details": {
+        "magnitude": 1.62,
+        "depth_km": 19.8999996185303
+      }
+    },
+    {
+      "event_id": "usgs-ci40668994",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.5 - 19 km E of Little Lake, CA",
+      "occurred_utc": "2026-08-08T22:50:10.730000+00:00",
+      "lat": 35.9195,
+      "lon": -117.699,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668994",
+      "details": {
+        "magnitude": 0.46,
+        "depth_km": 9.74
+      }
+    },
+    {
+      "event_id": "usgs-hv75015182",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 1 km S of P\u0101hala, Hawaii",
+      "occurred_utc": "2026-08-08T22:42:57.470000+00:00",
+      "lat": 19.1906661987305,
+      "lon": -155.47917175293,
+      "severity": 0.0,
+      "match_radius_km": 59.1,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015182",
+      "details": {
+        "magnitude": 1.97,
+        "depth_km": 28.9500007629395
+      }
+    },
+    {
+      "event_id": "usgs-ci40668986",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 21 km N of Borrego Springs, CA",
+      "occurred_utc": "2026-08-08T22:29:15.460000+00:00",
+      "lat": 33.4413333333333,
+      "lon": -116.395166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668986",
+      "details": {
+        "magnitude": 0.62,
+        "depth_km": 5.77
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pnslyk",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 20 km SW of Coyanosa, Texas",
+      "occurred_utc": "2026-08-08T22:20:33.880000+00:00",
+      "lat": 31.101,
+      "lon": -103.206,
+      "severity": 0.0,
+      "match_radius_km": 54.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pnslyk",
+      "details": {
+        "magnitude": 1.8,
+        "depth_km": 0
+      }
+    },
+    {
+      "event_id": "usgs-uu80147896",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 16 km NE of Milford, Utah",
+      "occurred_utc": "2026-08-08T22:19:25.990000+00:00",
+      "lat": 38.5008316040039,
+      "lon": -112.883331298828,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80147896",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": -0.129999995231628
+      }
+    },
+    {
+      "event_id": "usgs-nc75414252",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.1 - 2 km SSW of Alamo, CA",
+      "occurred_utc": "2026-08-08T22:18:26.520000+00:00",
+      "lat": 37.8341674804688,
+      "lon": -122.04467010498,
+      "severity": 0.0,
+      "match_radius_km": 63.6,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414252",
+      "details": {
+        "magnitude": 2.12,
+        "depth_km": 12.7600002288818
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjcz",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 2 km NW of Perry, Ohio",
+      "occurred_utc": "2026-08-08T22:12:12.192000+00:00",
+      "lat": 41.7734,
+      "lon": -81.1646,
+      "severity": 0.0,
+      "match_radius_km": 57.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjcz",
+      "details": {
+        "magnitude": 1.9,
+        "depth_km": 10.523
+      }
+    },
+    {
+      "event_id": "usgs-ci40668962",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.4 - 12 km NE of Julian, CA",
+      "occurred_utc": "2026-08-08T22:12:10.100000+00:00",
+      "lat": 33.1603333333333,
+      "lon": -116.5135,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668962",
+      "details": {
+        "magnitude": 0.39,
+        "depth_km": 4.16
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjbg",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.8 - northern Mid-Atlantic Ridge",
+      "occurred_utc": "2026-08-08T22:09:05.164000+00:00",
+      "lat": 33.7777,
+      "lon": -38.0334,
+      "severity": 0.36,
+      "match_radius_km": 144.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjbg",
+      "details": {
+        "magnitude": 4.8,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-ci40668954",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.5 - 6 km NNE of Lake Henshaw, CA",
+      "occurred_utc": "2026-08-08T21:51:39.320000+00:00",
+      "lat": 33.2923333333333,
+      "lon": -116.7325,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668954",
+      "details": {
+        "magnitude": 0.51,
+        "depth_km": 12.27
+      }
+    },
+    {
+      "event_id": "usgs-ci40668938",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.9 - 6 km NNE of Lake Henshaw, CA",
+      "occurred_utc": "2026-08-08T21:38:08.110000+00:00",
+      "lat": 33.2903333333333,
+      "lon": -116.742,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668938",
+      "details": {
+        "magnitude": 0.87,
+        "depth_km": 12.53
+      }
+    },
+    {
+      "event_id": "usgs-nc75414242",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.8 - 6 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T21:31:20.560000+00:00",
+      "lat": 38.8181648254395,
+      "lon": -122.796669006348,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414242",
+      "details": {
+        "magnitude": 0.78,
+        "depth_km": 2.73000001907349
+      }
+    },
+    {
+      "event_id": "usgs-nc75414232",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 4 km NNW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T21:27:26.700000+00:00",
+      "lat": 38.8055000305176,
+      "lon": -122.780334472656,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414232",
+      "details": {
+        "magnitude": 1.02,
+        "depth_km": 2.72000002861023
+      }
+    },
+    {
+      "event_id": "usgs-nc75414227",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 6 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T21:26:55.880000+00:00",
+      "lat": 38.8175010681152,
+      "lon": -122.796836853027,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414227",
+      "details": {
+        "magnitude": 1.54,
+        "depth_km": 2.40000009536743
+      }
+    },
+    {
+      "event_id": "usgs-ci40668930",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.8 - 10 km NNW of Anza, CA",
+      "occurred_utc": "2026-08-08T21:22:54.990000+00:00",
+      "lat": 33.6426666666667,
+      "lon": -116.707333333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668930",
+      "details": {
+        "magnitude": 0.76,
+        "depth_km": 13.39
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqdmdk",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 55 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T21:19:48.561000+00:00",
+      "lat": 62.256,
+      "lon": -152.296,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqdmdk",
+      "details": {
+        "magnitude": 1.3,
+        "depth_km": 0.5
+      }
+    },
+    {
+      "event_id": "usgs-nc75414217",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 4 km NW of Pinnacles, CA",
+      "occurred_utc": "2026-08-08T21:18:46.580000+00:00",
+      "lat": 36.5581665039062,
+      "lon": -121.168334960938,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414217",
+      "details": {
+        "magnitude": 1.61,
+        "depth_km": 3.60999989509583
+      }
+    },
+    {
+      "event_id": "usgs-nc75414212",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.8 - 6 km WNW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T21:13:23.660000+00:00",
+      "lat": 38.8018341064453,
+      "lon": -122.815002441406,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414212",
+      "details": {
+        "magnitude": 0.77,
+        "depth_km": 3.54999995231628
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqcvwz",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.2 - 236 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T21:00:43.362000+00:00",
+      "lat": 51.736,
+      "lon": 176.15,
+      "severity": 0.040000000000000036,
+      "match_radius_km": 96.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqcvwz",
+      "details": {
+        "magnitude": 3.2,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqctzw",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.1 - 235 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T20:58:52.017000+00:00",
+      "lat": 51.728,
+      "lon": 176.124,
+      "severity": 0.020000000000000018,
+      "match_radius_km": 93.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqctzw",
+      "details": {
+        "magnitude": 3.1,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqcqru",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.5 - 237 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T20:54:47.330000+00:00",
+      "lat": 51.78,
+      "lon": 176.199,
+      "severity": 0.0,
+      "match_radius_km": 75.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqcqru",
+      "details": {
+        "magnitude": 2.5,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqcmeq",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 44 km S of Glacier View, Alaska",
+      "occurred_utc": "2026-08-08T20:49:53.480000+00:00",
+      "lat": 61.412,
+      "lon": -147.604,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqcmeq",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 22.1
+      }
+    },
+    {
+      "event_id": "usgs-pr71527898",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.1 - 2 km SSW of Indios, Puerto Rico",
+      "occurred_utc": "2026-08-08T20:39:15.650000+00:00",
+      "lat": 17.9731666666667,
+      "lon": -66.8316666666667,
+      "severity": 0.0,
+      "match_radius_km": 62.400000000000006,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527898",
+      "details": {
+        "magnitude": 2.08,
+        "depth_km": 13.17
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqcbud",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.4 - 232 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T20:37:50.258000+00:00",
+      "lat": 51.87,
+      "lon": 176.203,
+      "severity": 0.0,
+      "match_radius_km": 72.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqcbud",
+      "details": {
+        "magnitude": 2.4,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-ok2026plrk",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 4 km ENE of Wardville, Oklahoma",
+      "occurred_utc": "2026-08-08T20:19:54.688000+00:00",
+      "lat": 34.66363144,
+      "lon": -95.98165131,
+      "severity": 0.0,
+      "match_radius_km": 54.900000000000006,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ok2026plrk",
+      "details": {
+        "magnitude": 1.83,
+        "depth_km": 2.817581415
+      }
+    },
+    {
+      "event_id": "usgs-nc75414187",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 12 km ENE of Cloverdale, CA",
+      "occurred_utc": "2026-08-08T20:18:50.040000+00:00",
+      "lat": 38.843334197998,
+      "lon": -122.881332397461,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414187",
+      "details": {
+        "magnitude": 0.72,
+        "depth_km": 2.54999995231628
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqbkxy",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 37 km W of Valdez, Alaska",
+      "occurred_utc": "2026-08-08T20:18:26.022000+00:00",
+      "lat": 61.199,
+      "lon": -147.04,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqbkxy",
+      "details": {
+        "magnitude": 1.2,
+        "depth_km": 9
+      }
+    },
+    {
+      "event_id": "usgs-nc75414182",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.2 - 4 km NNW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T20:17:08.200000+00:00",
+      "lat": 38.8056678771973,
+      "lon": -122.780502319336,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414182",
+      "details": {
+        "magnitude": 0.24,
+        "depth_km": 3.17000007629395
+      }
+    },
+    {
+      "event_id": "usgs-ok2026plrc",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.7 - 4 km ENE of Wardville, Oklahoma",
+      "occurred_utc": "2026-08-08T20:10:15.400000+00:00",
+      "lat": 34.667,
+      "lon": -95.9815,
+      "severity": 0.0,
+      "match_radius_km": 80.7,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ok2026plrc",
+      "details": {
+        "magnitude": 2.69,
+        "depth_km": 5.31
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pnoatd",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.3 - 17 km SSE of Ackerly, Texas",
+      "occurred_utc": "2026-08-08T20:06:52.480000+00:00",
+      "lat": 32.396,
+      "lon": -101.614,
+      "severity": 0.0,
+      "match_radius_km": 69.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pnoatd",
+      "details": {
+        "magnitude": 2.3,
+        "depth_km": 4.1202
+      }
+    },
+    {
+      "event_id": "usgs-ok2026plqy",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.1 - 7 km NE of Wardville, Oklahoma",
+      "occurred_utc": "2026-08-08T20:05:47.522000+00:00",
+      "lat": 34.70963669,
+      "lon": -95.98177338,
+      "severity": 0.0,
+      "match_radius_km": 62.400000000000006,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ok2026plqy",
+      "details": {
+        "magnitude": 2.08,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-ci40668858",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 17 km WSW of Johannesburg, CA",
+      "occurred_utc": "2026-08-08T20:03:51.290000+00:00",
+      "lat": 35.3075,
+      "lon": -117.799,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668858",
+      "details": {
+        "magnitude": 1.62,
+        "depth_km": 6.35
+      }
+    },
+    {
+      "event_id": "usgs-ci40668850",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 17 km E of California City, CA",
+      "occurred_utc": "2026-08-08T20:03:48.960000+00:00",
+      "lat": 35.1471672058105,
+      "lon": -117.804168701172,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668850",
+      "details": {
+        "magnitude": 1.64040789240163,
+        "depth_km": 18.4899997711182
+      }
+    },
+    {
+      "event_id": "usgs-nc75414162",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 23 km NW of Parkfield, CA",
+      "occurred_utc": "2026-08-08T20:03:33.630000+00:00",
+      "lat": 36.0470008850098,
+      "lon": -120.612503051758,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414162",
+      "details": {
+        "magnitude": 0.74,
+        "depth_km": 4.1100001335144
+      }
+    },
+    {
+      "event_id": "usgs-uw714073682",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 17 km ESE of Sunriver, Oregon",
+      "occurred_utc": "2026-08-08T19:59:08.340000+00:00",
+      "lat": 43.8113333333333,
+      "lon": -121.239833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714073682",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 2.65
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqaubd",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.9 - 70 km WNW of Karluk, Alaska",
+      "occurred_utc": "2026-08-08T19:58:59.652000+00:00",
+      "lat": 57.702,
+      "lon": -155.611,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqaubd",
+      "details": {
+        "magnitude": 0.9,
+        "depth_km": 83.6
+      }
+    },
+    {
+      "event_id": "usgs-ci40668842",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.8 - 11 km NE of Thousand Palms, CA",
+      "occurred_utc": "2026-08-08T19:57:07.180000+00:00",
+      "lat": 33.9013333333333,
+      "lon": -116.320166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668842",
+      "details": {
+        "magnitude": 0.82,
+        "depth_km": 5.36
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pnnrbk",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.3 - 17 km SE of Ackerly, Texas",
+      "occurred_utc": "2026-08-08T19:55:53.586000+00:00",
+      "lat": 32.397,
+      "lon": -101.609,
+      "severity": 0.0,
+      "match_radius_km": 69.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pnnrbk",
+      "details": {
+        "magnitude": 2.3,
+        "depth_km": 2.7352
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pnnrbt",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.3 - 17 km SSE of Ackerly, Texas",
+      "occurred_utc": "2026-08-08T19:55:53.365000+00:00",
+      "lat": 32.395,
+      "lon": -101.614,
+      "severity": 0.0,
+      "match_radius_km": 69.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pnnrbt",
+      "details": {
+        "magnitude": 2.3,
+        "depth_km": 4.0624
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqakkm",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.4 - 235 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T19:47:52.797000+00:00",
+      "lat": 51.848,
+      "lon": 176.23,
+      "severity": 0.0,
+      "match_radius_km": 72.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqakkm",
+      "details": {
+        "magnitude": 2.4,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqadcz",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 11 km ENE of Sterling, Alaska",
+      "occurred_utc": "2026-08-08T19:39:27.496000+00:00",
+      "lat": 60.565,
+      "lon": -150.559,
+      "severity": 0.0,
+      "match_radius_km": 57.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqadcz",
+      "details": {
+        "magnitude": 1.9,
+        "depth_km": 54.2
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pqaapi",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.5 - 235 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T19:36:30.468000+00:00",
+      "lat": 51.825,
+      "lon": 176.211,
+      "severity": 0.0,
+      "match_radius_km": 75.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pqaapi",
+      "details": {
+        "magnitude": 2.5,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-nc75414127",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 4 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T19:30:42.770000+00:00",
+      "lat": 38.8036651611328,
+      "lon": -122.780502319336,
+      "severity": 0.0,
+      "match_radius_km": 55.2,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414127",
+      "details": {
+        "magnitude": 1.84,
+        "depth_km": 2.84999990463257
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pnmmdm",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 15 km SSE of Toyah, Texas",
+      "occurred_utc": "2026-08-08T19:19:53.274000+00:00",
+      "lat": 31.194,
+      "lon": -103.705,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pnmmdm",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 0
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjas",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.7 - Kermadec Islands region",
+      "occurred_utc": "2026-08-08T19:07:57.041000+00:00",
+      "lat": -28.5661,
+      "lon": -176.5182,
+      "severity": 0.34,
+      "match_radius_km": 141.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjas",
+      "details": {
+        "magnitude": 4.7,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-ci40668794",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.5 - 18 km ESE of Little Lake, CA",
+      "occurred_utc": "2026-08-08T19:04:05.110000+00:00",
+      "lat": 35.8961666666667,
+      "lon": -117.718833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668794",
+      "details": {
+        "magnitude": 0.48,
+        "depth_km": 9.36
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppysix",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 66 km W of Karluk, Alaska",
+      "occurred_utc": "2026-08-08T18:57:02.486000+00:00",
+      "lat": 57.639,
+      "lon": -155.553,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppysix",
+      "details": {
+        "magnitude": 1.0,
+        "depth_km": 22.1
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppynvf",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.6 - 59 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T18:51:49.866000+00:00",
+      "lat": 62.246,
+      "lon": -152.396,
+      "severity": 0.0,
+      "match_radius_km": 78.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppynvf",
+      "details": {
+        "magnitude": 2.6,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-ci40668786",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 12 km WSW of Searles Valley, CA",
+      "occurred_utc": "2026-08-08T18:49:22.240000+00:00",
+      "lat": 35.7321666666667,
+      "lon": -117.528833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668786",
+      "details": {
+        "magnitude": 0.63,
+        "depth_km": 1.74
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pnlluv",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 37 km NNW of Toyah, Texas",
+      "occurred_utc": "2026-08-08T18:49:21.321000+00:00",
+      "lat": 31.609,
+      "lon": -103.991,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pnlluv",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 6.1106
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppyhha",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 52 km W of Anchor Point, Alaska",
+      "occurred_utc": "2026-08-08T18:44:47.840000+00:00",
+      "lat": 59.871,
+      "lon": -152.757,
+      "severity": 0.0,
+      "match_radius_km": 51.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppyhha",
+      "details": {
+        "magnitude": 1.7,
+        "depth_km": 105.5
+      }
+    },
+    {
+      "event_id": "usgs-ci40668778",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 2 km ENE of Anza, CA",
+      "occurred_utc": "2026-08-08T18:37:33.770000+00:00",
+      "lat": 33.5645,
+      "lon": -116.656166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668778",
+      "details": {
+        "magnitude": 0.57,
+        "depth_km": 7.78
+      }
+    },
+    {
+      "event_id": "usgs-ci40668770",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 11 km WNW of Big Bear Lake, CA",
+      "occurred_utc": "2026-08-08T18:34:04.810000+00:00",
+      "lat": 34.2881666666667,
+      "lon": -117.013166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668770",
+      "details": {
+        "magnitude": 1.06,
+        "depth_km": 5.3
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjan",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.6 - 47 km WNW of Lata, Solomon Islands",
+      "occurred_utc": "2026-08-08T18:28:26.011000+00:00",
+      "lat": -10.5042,
+      "lon": 165.4256,
+      "severity": 0.31999999999999995,
+      "match_radius_km": 138.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjan",
+      "details": {
+        "magnitude": 4.6,
+        "depth_km": 75.441
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppxiox",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 114 km SSE of Sand Point, Alaska",
+      "occurred_utc": "2026-08-08T18:15:56.425000+00:00",
+      "lat": 54.371,
+      "lon": -159.901,
+      "severity": 0.0,
+      "match_radius_km": 54.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppxiox",
+      "details": {
+        "magnitude": 1.8,
+        "depth_km": 29.3
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppwwng",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.7 - 42 km E of Pedro Bay, Alaska",
+      "occurred_utc": "2026-08-08T18:01:53.273000+00:00",
+      "lat": 59.74,
+      "lon": -153.353,
+      "severity": 0.14000000000000004,
+      "match_radius_km": 111.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppwwng",
+      "details": {
+        "magnitude": 3.7,
+        "depth_km": 130.7
+      }
+    },
+    {
+      "event_id": "usgs-us6000tjaj",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 5.6 - 42 km E of Noda, Japan",
+      "occurred_utc": "2026-08-08T17:57:58.745000+00:00",
+      "lat": 40.1723,
+      "lon": 142.3107,
+      "severity": 0.5199999999999999,
+      "match_radius_km": 168.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjaj",
+      "details": {
+        "magnitude": 5.6,
+        "depth_km": 34
+      }
+    },
+    {
+      "event_id": "usgs-ci40668754",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.3 - 6 km NE of Lake Henshaw, CA",
+      "occurred_utc": "2026-08-08T17:53:10.310000+00:00",
+      "lat": 33.2858333333333,
+      "lon": -116.721,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668754",
+      "details": {
+        "magnitude": 0.32,
+        "depth_km": 13.66
+      }
+    },
+    {
+      "event_id": "usgs-hv75015097",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 6 km SSE of Honoka\u2018a, Hawaii",
+      "occurred_utc": "2026-08-08T17:38:39.340000+00:00",
+      "lat": 20.0240001678467,
+      "lon": -155.445007324219,
+      "severity": 0.0,
+      "match_radius_km": 54.900000000000006,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015097",
+      "details": {
+        "magnitude": 1.83,
+        "depth_km": 21.3400001525879
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppvvmw",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.4 - 40 km WSW of Tyonek, Alaska",
+      "occurred_utc": "2026-08-08T17:30:43.777000+00:00",
+      "lat": 60.96,
+      "lon": -151.843,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppvvmw",
+      "details": {
+        "magnitude": 1.4,
+        "depth_km": 83.8
+      }
+    },
+    {
+      "event_id": "usgs-ci40668746",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 5 km SW of Redlands, CA",
+      "occurred_utc": "2026-08-08T17:29:46.320000+00:00",
+      "lat": 34.0193333333333,
+      "lon": -117.212333333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668746",
+      "details": {
+        "magnitude": 1.0,
+        "depth_km": 15.94
+      }
+    },
+    {
+      "event_id": "usgs-nc75414057",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 10 km WNW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T17:13:22.630000+00:00",
+      "lat": 38.8209991455078,
+      "lon": -122.852996826172,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414057",
+      "details": {
+        "magnitude": 0.73,
+        "depth_km": 2.69000005722046
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pnhzqx",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 5 km NE of Pecos, Texas",
+      "occurred_utc": "2026-08-08T17:04:35.370000+00:00",
+      "lat": 31.453,
+      "lon": -103.451,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pnhzqx",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 0
+      }
+    },
+    {
+      "event_id": "usgs-ci40668738",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.9 - 16 km WSW of Johannesburg, CA",
+      "occurred_utc": "2026-08-08T17:02:56.240000+00:00",
+      "lat": 35.329,
+      "lon": -117.805333333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668738",
+      "details": {
+        "magnitude": 0.86,
+        "depth_km": 6.18
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppukdl",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 26 km SSW of Karluk, Alaska",
+      "occurred_utc": "2026-08-08T16:47:37.029000+00:00",
+      "lat": 57.339,
+      "lon": -154.586,
+      "severity": 0.0,
+      "match_radius_km": 51.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppukdl",
+      "details": {
+        "magnitude": 1.7,
+        "depth_km": 34.6
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppuhsz",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.8 - 234 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T16:44:47.565000+00:00",
+      "lat": 51.774,
+      "lon": 176.141,
+      "severity": 0.0,
+      "match_radius_km": 84.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppuhsz",
+      "details": {
+        "magnitude": 2.8,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-nc75414047",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 16 km W of Petrolia, CA",
+      "occurred_utc": "2026-08-08T16:33:19.170000+00:00",
+      "lat": 40.3191680908203,
+      "lon": -124.478500366211,
+      "severity": 0.0,
+      "match_radius_km": 53.4,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414047",
+      "details": {
+        "magnitude": 1.78,
+        "depth_km": 11.6099996566772
+      }
+    },
+    {
+      "event_id": "usgs-ci40668730",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.1 - 28 km WSW of Olancha, CA",
+      "occurred_utc": "2026-08-08T16:17:44.560000+00:00",
+      "lat": 36.1515,
+      "lon": -118.2775,
+      "severity": 0.0,
+      "match_radius_km": 62.400000000000006,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668730",
+      "details": {
+        "magnitude": 2.08,
+        "depth_km": 7.71
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pptjxg",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 1 km E of Susitna North, Alaska",
+      "occurred_utc": "2026-08-08T16:17:20.345000+00:00",
+      "lat": 62.16,
+      "lon": -149.822,
+      "severity": 0.0,
+      "match_radius_km": 57.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pptjxg",
+      "details": {
+        "magnitude": 1.9,
+        "depth_km": 11.4
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pptfhu",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 55 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T16:12:00.722000+00:00",
+      "lat": 62.244,
+      "lon": -152.317,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pptfhu",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-nc75414032",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 11 km SE of Pinnacles, CA",
+      "occurred_utc": "2026-08-08T16:11:57.290000+00:00",
+      "lat": 36.4506683349609,
+      "lon": -121.066329956055,
+      "severity": 0.0,
+      "match_radius_km": 56.1,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414032",
+      "details": {
+        "magnitude": 1.87,
+        "depth_km": 0.0900000035762787
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pptdbo",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.2 - 234 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T16:09:28.969000+00:00",
+      "lat": 51.809,
+      "lon": 176.184,
+      "severity": 0.040000000000000036,
+      "match_radius_km": 96.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pptdbo",
+      "details": {
+        "magnitude": 3.2,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppszms",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.1 - 227 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T16:05:07.936000+00:00",
+      "lat": 52.007,
+      "lon": 176.244,
+      "severity": 0.020000000000000018,
+      "match_radius_km": 93.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppszms",
+      "details": {
+        "magnitude": 3.1,
+        "depth_km": 1.8
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppssfl",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 Landslide - 67 km WNW of Happy Valley, Alaska",
+      "occurred_utc": "2026-08-08T15:56:57.616000+00:00",
+      "lat": 60.114,
+      "lon": -152.891,
+      "severity": 0.0,
+      "match_radius_km": 57.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppssfl",
+      "details": {
+        "magnitude": 1.9,
+        "depth_km": 0
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppsghz",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.4 - 44 km E of Port Alsworth, Alaska",
+      "occurred_utc": "2026-08-08T15:43:14.453000+00:00",
+      "lat": 60.167,
+      "lon": -153.513,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppsghz",
+      "details": {
+        "magnitude": 1.4,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-nc75414027",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.4 - 31 km NNW of Covelo, CA",
+      "occurred_utc": "2026-08-08T15:33:22.210000+00:00",
+      "lat": 40.0276679992676,
+      "lon": -123.442665100098,
+      "severity": 0.07599999999999998,
+      "match_radius_km": 101.39999999999999,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414027",
+      "details": {
+        "magnitude": 3.38,
+        "depth_km": 8.52000045776367
+      }
+    },
+    {
+      "event_id": "usgs-pr71527893",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.6 - 25 km W of Puerto Real, Puerto Rico",
+      "occurred_utc": "2026-08-08T15:26:15.410000+00:00",
+      "lat": 18.0918333333333,
+      "lon": -67.4288333333333,
+      "severity": 0.0,
+      "match_radius_km": 78.60000000000001,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527893",
+      "details": {
+        "magnitude": 2.62,
+        "depth_km": 16.72
+      }
+    },
+    {
+      "event_id": "usgs-hv75015062",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 6 km SSW of P\u0101hala, Hawaii",
+      "occurred_utc": "2026-08-08T15:16:08.700000+00:00",
+      "lat": 19.150333404541,
+      "lon": -155.503173828125,
+      "severity": 0.0,
+      "match_radius_km": 58.8,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015062",
+      "details": {
+        "magnitude": 1.96,
+        "depth_km": 32.7000007629395
+      }
+    },
+    {
+      "event_id": "usgs-ci40668706",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 9 km S of Idyllwild, CA",
+      "occurred_utc": "2026-08-08T15:00:16.300000+00:00",
+      "lat": 33.6586666666667,
+      "lon": -116.731166666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668706",
+      "details": {
+        "magnitude": 1.56,
+        "depth_km": 14.16
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppqsor",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 52 km E of Pedro Bay, Alaska",
+      "occurred_utc": "2026-08-08T14:57:26.326000+00:00",
+      "lat": 59.796,
+      "lon": -153.171,
+      "severity": 0.0,
+      "match_radius_km": 54.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppqsor",
+      "details": {
+        "magnitude": 1.8,
+        "depth_km": 124
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppqqmf",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.7 - 232 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T14:54:38.148000+00:00",
+      "lat": 51.872,
+      "lon": 176.211,
+      "severity": 0.0,
+      "match_radius_km": 81.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppqqmf",
+      "details": {
+        "magnitude": 2.7,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-nc75414017",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 22 km SW of New Idria, CA",
+      "occurred_utc": "2026-08-08T14:44:59.320000+00:00",
+      "lat": 36.2620010375977,
+      "lon": -120.826499938965,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75414017",
+      "details": {
+        "magnitude": 1.51,
+        "depth_km": 9.89999961853027
+      }
+    },
+    {
+      "event_id": "usgs-hv75015037",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 8 km SSW of P\u0101hala, Hawaii",
+      "occurred_utc": "2026-08-08T14:42:12.990000+00:00",
+      "lat": 19.1338329315186,
+      "lon": -155.523498535156,
+      "severity": 0.0,
+      "match_radius_km": 52.2,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75015037",
+      "details": {
+        "magnitude": 1.74,
+        "depth_km": 32.2200012207031
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pppzgk",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 51 km SW of Tatitlek, Alaska",
+      "occurred_utc": "2026-08-08T14:35:07.489000+00:00",
+      "lat": 60.498,
+      "lon": -147.265,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pppzgk",
+      "details": {
+        "magnitude": 1.1,
+        "depth_km": 18
+      }
+    },
+    {
+      "event_id": "usgs-ci40668690",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 22 km NE of Pine Valley, CA",
+      "occurred_utc": "2026-08-08T14:33:00.830000+00:00",
+      "lat": 32.939,
+      "lon": -116.335666666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668690",
+      "details": {
+        "magnitude": 0.73,
+        "depth_km": 8.33
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppptuy",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.0 - 231 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T14:28:50.351000+00:00",
+      "lat": 51.906,
+      "lon": 176.225,
+      "severity": 0.0,
+      "match_radius_km": 90.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppptuy",
+      "details": {
+        "magnitude": 3.0,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-ci40668682",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.8 - 18 km E of Ridgecrest, CA",
+      "occurred_utc": "2026-08-08T14:18:11.640000+00:00",
+      "lat": 35.6018333333333,
+      "lon": -117.483,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668682",
+      "details": {
+        "magnitude": 0.75,
+        "depth_km": 4.69
+      }
+    },
+    {
+      "event_id": "usgs-ci40668674",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 6 km SE of Ontario, CA",
+      "occurred_utc": "2026-08-08T14:13:47.240000+00:00",
+      "lat": 34.023,
+      "lon": -117.5795,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668674",
+      "details": {
+        "magnitude": 1.09,
+        "depth_km": 11.19
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pppdip",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 53 km ENE of Chenega, Alaska",
+      "occurred_utc": "2026-08-08T14:09:50.747000+00:00",
+      "lat": 60.308,
+      "lon": -147.17,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pppdip",
+      "details": {
+        "magnitude": 1.0,
+        "depth_km": 20.9
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pppbru",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.0 - 232 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T14:07:53.039000+00:00",
+      "lat": 51.909,
+      "lon": 176.244,
+      "severity": 0.0,
+      "match_radius_km": 90.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pppbru",
+      "details": {
+        "magnitude": 3.0,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppozmr",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.0 - 237 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T14:05:22.197000+00:00",
+      "lat": 51.725,
+      "lon": 176.15,
+      "severity": 0.0,
+      "match_radius_km": 90.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppozmr",
+      "details": {
+        "magnitude": 3.0,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-pr71527888",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.1 - 2 km W of Indios, Puerto Rico",
+      "occurred_utc": "2026-08-08T14:04:02.450000+00:00",
+      "lat": 17.9965,
+      "lon": -66.8391666666667,
+      "severity": 0.0,
+      "match_radius_km": 63.3,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527888",
+      "details": {
+        "magnitude": 2.11,
+        "depth_km": 15.45
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pposea",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 56 km SSE of Tanana, Alaska",
+      "occurred_utc": "2026-08-08T13:56:57.005000+00:00",
+      "lat": 64.694,
+      "lon": -151.669,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pposea",
+      "details": {
+        "magnitude": 1.2,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-ci40668666",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.9 - 1 km E of Bloomington, CA",
+      "occurred_utc": "2026-08-08T13:38:25.570000+00:00",
+      "lat": 34.0711666666667,
+      "lon": -117.389833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668666",
+      "details": {
+        "magnitude": 0.86,
+        "depth_km": 22.3
+      }
+    },
+    {
+      "event_id": "usgs-ci40668650",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.5 - 4 km ENE of Borrego Springs, CA",
+      "occurred_utc": "2026-08-08T13:04:22.650000+00:00",
+      "lat": 33.267,
+      "lon": -116.3345,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668650",
+      "details": {
+        "magnitude": 0.48,
+        "depth_km": 3.6
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppmvcv",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.4 - 142 km SE of Perryville, Alaska",
+      "occurred_utc": "2026-08-08T13:00:14.893000+00:00",
+      "lat": 54.939,
+      "lon": -157.682,
+      "severity": 0.07999999999999999,
+      "match_radius_km": 102.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppmvcv",
+      "details": {
+        "magnitude": 3.4,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-nc75413997",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.1 - 7 km ESE of Cloverdale, CA",
+      "occurred_utc": "2026-08-08T12:58:10.030000+00:00",
+      "lat": 38.7756652832031,
+      "lon": -122.948165893555,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413997",
+      "details": {
+        "magnitude": 1.14,
+        "depth_km": 5.78999996185303
+      }
+    },
+    {
+      "event_id": "usgs-hv75014997",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 16 km SSW of Honaunau-Napoopoo, Hawaii",
+      "occurred_utc": "2026-08-08T12:50:18.180000+00:00",
+      "lat": 19.3226661682129,
+      "lon": -155.942504882812,
+      "severity": 0.0,
+      "match_radius_km": 54.900000000000006,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75014997",
+      "details": {
+        "magnitude": 1.83,
+        "depth_km": -0.310000002384186
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj96",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.6 - 77 km WSW of San Antonio de los Cobres, Argentina",
+      "occurred_utc": "2026-08-08T12:44:22.647000+00:00",
+      "lat": -24.392,
+      "lon": -67.0572,
+      "severity": 0.31999999999999995,
+      "match_radius_km": 138.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj96",
+      "details": {
+        "magnitude": 4.6,
+        "depth_km": 163.582
+      }
+    },
+    {
+      "event_id": "usgs-ci40668642",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 19 km SSE of San Pedro, CA",
+      "occurred_utc": "2026-08-08T12:43:17.340000+00:00",
+      "lat": 33.5738333333333,
+      "lon": -118.215333333333,
+      "severity": 0.0,
+      "match_radius_km": 61.2,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668642",
+      "details": {
+        "magnitude": 2.04,
+        "depth_km": 0.42
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmzghs",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.2 - 45 km NW of Toyah, Texas",
+      "occurred_utc": "2026-08-08T12:40:44.544000+00:00",
+      "lat": 31.611,
+      "lon": -104.127,
+      "severity": 0.0,
+      "match_radius_km": 66.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmzghs",
+      "details": {
+        "magnitude": 2.2,
+        "depth_km": 4.0159
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppmdsa",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 32 km S of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T12:40:17.758000+00:00",
+      "lat": 61.701,
+      "lon": -151.491,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppmdsa",
+      "details": {
+        "magnitude": 1.6,
+        "depth_km": 94.4
+      }
+    },
+    {
+      "event_id": "usgs-ci40668634",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 15 km NE of Borrego Springs, CA",
+      "occurred_utc": "2026-08-08T12:36:05.590000+00:00",
+      "lat": 33.3625,
+      "lon": -116.282666666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668634",
+      "details": {
+        "magnitude": 0.59,
+        "depth_km": 10.77
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj8z",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.2 - 16 km ESE of Magdalena, New Mexico",
+      "occurred_utc": "2026-08-08T12:30:42.526000+00:00",
+      "lat": 34.0527,
+      "lon": -107.0853,
+      "severity": 0.040000000000000036,
+      "match_radius_km": 96.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj8z",
+      "details": {
+        "magnitude": 3.2,
+        "depth_km": 11.49
+      }
+    },
+    {
+      "event_id": "usgs-ci40668626",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.1 - 5 km WSW of Anza, CA",
+      "occurred_utc": "2026-08-08T12:27:25.060000+00:00",
+      "lat": 33.5285,
+      "lon": -116.723666666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668626",
+      "details": {
+        "magnitude": 0.05,
+        "depth_km": 6.74
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pplenn",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.7 - 9 km W of Susitna North, Alaska",
+      "occurred_utc": "2026-08-08T12:11:16.981000+00:00",
+      "lat": 62.161,
+      "lon": -150.034,
+      "severity": 0.0,
+      "match_radius_km": 51.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pplenn",
+      "details": {
+        "magnitude": 1.7,
+        "depth_km": 12.5
+      }
+    },
+    {
+      "event_id": "usgs-hv75014992",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 36 km SSE of Volcano, Hawaii",
+      "occurred_utc": "2026-08-08T12:07:59.080000+00:00",
+      "lat": 19.1313323974609,
+      "lon": -155.13200378418,
+      "severity": 0.0,
+      "match_radius_km": 54.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75014992",
+      "details": {
+        "magnitude": 1.8,
+        "depth_km": 38.1199989318848
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmxyvr",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 55 km SSW of Whites City, New Mexico",
+      "occurred_utc": "2026-08-08T12:01:53.727000+00:00",
+      "lat": 31.705,
+      "lon": -104.583,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmxyvr",
+      "details": {
+        "magnitude": 1.6,
+        "depth_km": 2.8232
+      }
+    },
+    {
+      "event_id": "usgs-hv75014987",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 6 km SSW of P\u0101hala, Hawaii",
+      "occurred_utc": "2026-08-08T11:57:33.550000+00:00",
+      "lat": 19.1533336639404,
+      "lon": -155.508163452148,
+      "severity": 0.0,
+      "match_radius_km": 53.7,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75014987",
+      "details": {
+        "magnitude": 1.79,
+        "depth_km": 31.1599998474121
+      }
+    },
+    {
+      "event_id": "usgs-nc75413982",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 2 km SW of Alamo, CA",
+      "occurred_utc": "2026-08-08T11:49:25.870000+00:00",
+      "lat": 37.835334777832,
+      "lon": -122.049667358398,
+      "severity": 0.0,
+      "match_radius_km": 54.300000000000004,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413982",
+      "details": {
+        "magnitude": 1.81,
+        "depth_km": 12.0500001907349
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj8t",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 5.6 - southeast of Easter Island",
+      "occurred_utc": "2026-08-08T11:41:27.702000+00:00",
+      "lat": -41.4826,
+      "lon": -90.0796,
+      "severity": 0.5199999999999999,
+      "match_radius_km": 168.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj8t",
+      "details": {
+        "magnitude": 5.6,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmxbel",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 54 km NW of Toyah, Texas",
+      "occurred_utc": "2026-08-08T11:35:58.974000+00:00",
+      "lat": 31.648,
+      "lon": -104.222,
+      "severity": 0.0,
+      "match_radius_km": 57.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmxbel",
+      "details": {
+        "magnitude": 1.9,
+        "depth_km": 4.676
+      }
+    },
+    {
+      "event_id": "usgs-uw714073392",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.9 - 45 km ESE of Sunriver, Oregon",
+      "occurred_utc": "2026-08-08T11:18:50.240000+00:00",
+      "lat": 43.7378333333333,
+      "lon": -120.916666666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714073392",
+      "details": {
+        "magnitude": 0.85,
+        "depth_km": 5.68
+      }
+    },
+    {
+      "event_id": "usgs-uw714073372",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.0 - 41 km ESE of Three Rivers, Oregon",
+      "occurred_utc": "2026-08-08T11:14:15.290000+00:00",
+      "lat": 43.692,
+      "lon": -120.982,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714073372",
+      "details": {
+        "magnitude": 1.03,
+        "depth_km": -1.77
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppjazs",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.5 - 238 km SE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T11:07:33.857000+00:00",
+      "lat": 51.636,
+      "lon": 176.062,
+      "severity": 0.0,
+      "match_radius_km": 75.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppjazs",
+      "details": {
+        "magnitude": 2.5,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-hv75014972",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.2 - 11 km E of P\u0101hala, Hawaii",
+      "occurred_utc": "2026-08-08T11:04:01.040000+00:00",
+      "lat": 19.1968326568604,
+      "lon": -155.372329711914,
+      "severity": 0.0,
+      "match_radius_km": 66.3,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75014972",
+      "details": {
+        "magnitude": 2.21,
+        "depth_km": 29.9200000762939
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmvznt",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.4 - 59 km S of Whites City, New Mexico",
+      "occurred_utc": "2026-08-08T11:02:31.521000+00:00",
+      "lat": 31.65,
+      "lon": -104.479,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmvznt",
+      "details": {
+        "magnitude": 1.4,
+        "depth_km": 9.6654
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmvwej",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.4 - 55 km NW of Toyah, Texas",
+      "occurred_utc": "2026-08-08T10:58:28.553000+00:00",
+      "lat": 31.65,
+      "lon": -104.227,
+      "severity": 0.0,
+      "match_radius_km": 72.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmvwej",
+      "details": {
+        "magnitude": 2.4,
+        "depth_km": 4.2786
+      }
+    },
+    {
+      "event_id": "usgs-ci40668618",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 18 km SSW of Trona, CA",
+      "occurred_utc": "2026-08-08T10:57:40.460000+00:00",
+      "lat": 35.6021666666667,
+      "lon": -117.419833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668618",
+      "details": {
+        "magnitude": 0.69,
+        "depth_km": 6.54
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmvvip",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 55 km NW of Toyah, Texas",
+      "occurred_utc": "2026-08-08T10:57:29.981000+00:00",
+      "lat": 31.648,
+      "lon": -104.228,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmvvip",
+      "details": {
+        "magnitude": 1.6,
+        "depth_km": 4.2894
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj8n",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.6 - Vanuatu region",
+      "occurred_utc": "2026-08-08T10:56:06.170000+00:00",
+      "lat": -17.3821,
+      "lon": 172.8279,
+      "severity": 0.31999999999999995,
+      "match_radius_km": 138.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj8n",
+      "details": {
+        "magnitude": 4.6,
+        "depth_km": 10
+      }
+    },
+    {
+      "event_id": "usgs-hv75014962",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 9 km SE of P\u0101hala, Hawaii",
+      "occurred_utc": "2026-08-08T10:40:39.590000+00:00",
+      "lat": 19.1523342132568,
+      "lon": -155.401672363281,
+      "severity": 0.0,
+      "match_radius_km": 61.2,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75014962",
+      "details": {
+        "magnitude": 2.04,
+        "depth_km": 40.5400009155273
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppidfb",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 53 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T10:39:47.286000+00:00",
+      "lat": 62.244,
+      "lon": -152.267,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppidfb",
+      "details": {
+        "magnitude": 1.2,
+        "depth_km": 25.5
+      }
+    },
+    {
+      "event_id": "usgs-ci40668610",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.5 - 18 km E of Ridgecrest, CA",
+      "occurred_utc": "2026-08-08T10:36:03.380000+00:00",
+      "lat": 35.605,
+      "lon": -117.482833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668610",
+      "details": {
+        "magnitude": 0.52,
+        "depth_km": 7.41
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pphysq",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 9 km NW of Four Mile Road, Alaska",
+      "occurred_utc": "2026-08-08T10:34:37.141000+00:00",
+      "lat": 64.667,
+      "lon": -149.242,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pphysq",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 9.9
+      }
+    },
+    {
+      "event_id": "usgs-nc75413962",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.2 - 6 km E of Hidden Valley Lake, CA",
+      "occurred_utc": "2026-08-08T10:33:27.280000+00:00",
+      "lat": 38.8136672973633,
+      "lon": -122.494003295898,
+      "severity": 0.0,
+      "match_radius_km": 65.1,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413962",
+      "details": {
+        "magnitude": 2.17,
+        "depth_km": 8.39999961853027
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj8e",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.8 - 54 km SW of Sarangani, Philippines",
+      "occurred_utc": "2026-08-08T10:20:46.908000+00:00",
+      "lat": 5.095,
+      "lon": 125.0834,
+      "severity": 0.36,
+      "match_radius_km": 144.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj8e",
+      "details": {
+        "magnitude": 4.8,
+        "depth_km": 10.022
+      }
+    },
+    {
+      "event_id": "usgs-aka2026pphjnm",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 72 km ENE of Kodiak, Alaska",
+      "occurred_utc": "2026-08-08T10:17:08.406000+00:00",
+      "lat": 57.959,
+      "lon": -151.22,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026pphjnm",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 28.8
+      }
+    },
+    {
+      "event_id": "usgs-ci40668602",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.6 - 4 km ENE of Borrego Springs, CA",
+      "occurred_utc": "2026-08-08T10:11:09.720000+00:00",
+      "lat": 33.2666666666667,
+      "lon": -116.334666666667,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668602",
+      "details": {
+        "magnitude": 0.63,
+        "depth_km": 4.58
+      }
+    },
+    {
+      "event_id": "usgs-pr71527878",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.8 - 6 km ENE of La Parguera, Puerto Rico",
+      "occurred_utc": "2026-08-08T09:59:19.110000+00:00",
+      "lat": 17.99,
+      "lon": -66.9855,
+      "severity": 0.0,
+      "match_radius_km": 54.6,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527878",
+      "details": {
+        "magnitude": 1.82,
+        "depth_km": 10.76
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppgrzw",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 42 km WNW of Clam Gulch, Alaska",
+      "occurred_utc": "2026-08-08T09:56:54.059000+00:00",
+      "lat": 60.371,
+      "lon": -152.113,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppgrzw",
+      "details": {
+        "magnitude": 1.6,
+        "depth_km": 83.5
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmtuhl",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 23 km E of Forsan, Texas",
+      "occurred_utc": "2026-08-08T09:55:56.697000+00:00",
+      "lat": 32.113,
+      "lon": -101.118,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmtuhl",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 2.5051
+      }
+    },
+    {
+      "event_id": "usgs-us6000tja7",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.9 - 231 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T09:47:40.295000+00:00",
+      "lat": 51.8848,
+      "lon": 176.2026,
+      "severity": 0.0,
+      "match_radius_km": 87.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tja7",
+      "details": {
+        "magnitude": 2.9,
+        "depth_km": 16.099
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmtmqj",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 54 km S of Whites City, New Mexico",
+      "occurred_utc": "2026-08-08T09:47:03.548000+00:00",
+      "lat": 31.68,
+      "lon": -104.365,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmtmqj",
+      "details": {
+        "magnitude": 1.6,
+        "depth_km": 4.9447
+      }
+    },
+    {
+      "event_id": "usgs-pr71527868",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.2 - 11 km SSE of Punta Santiago, Puerto Rico",
+      "occurred_utc": "2026-08-08T09:45:12.610000+00:00",
+      "lat": 18.0623333333333,
+      "lon": -65.7201666666667,
+      "severity": 0.046,
+      "match_radius_km": 96.9,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71527868",
+      "details": {
+        "magnitude": 3.23,
+        "depth_km": 10.28
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj85",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.6 - 134 km E of Chalkyitsik, Alaska",
+      "occurred_utc": "2026-08-08T09:43:10.066000+00:00",
+      "lat": 66.5967,
+      "lon": -140.6997,
+      "severity": 0.0,
+      "match_radius_km": 78.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj85",
+      "details": {
+        "magnitude": 2.6,
+        "depth_km": 7.318
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppgcri",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 1 km NNE of Big Lake, Alaska",
+      "occurred_utc": "2026-08-08T09:39:12.809000+00:00",
+      "lat": 61.533,
+      "lon": -149.944,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppgcri",
+      "details": {
+        "magnitude": 1.3,
+        "depth_km": 29.7
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppgbha",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.4 - 172 km SSE of Adak, Alaska",
+      "occurred_utc": "2026-08-08T09:37:34.074000+00:00",
+      "lat": 50.526,
+      "lon": -175.425,
+      "severity": 0.0,
+      "match_radius_km": 72.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppgbha",
+      "details": {
+        "magnitude": 2.4,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmtcym",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 41 km NW of Toyah, Texas",
+      "occurred_utc": "2026-08-08T09:35:49.937000+00:00",
+      "lat": 31.53,
+      "lon": -104.155,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmtcym",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 4.3808
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppfmsq",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 54 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T09:20:48.338000+00:00",
+      "lat": 62.25,
+      "lon": -152.287,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppfmsq",
+      "details": {
+        "magnitude": 1.3,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj80",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.2 - 81 km SW of Puerto Madero, Mexico",
+      "occurred_utc": "2026-08-08T09:13:43.869000+00:00",
+      "lat": 14.2442,
+      "lon": -92.9921,
+      "severity": 0.24000000000000005,
+      "match_radius_km": 126.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj80",
+      "details": {
+        "magnitude": 4.2,
+        "depth_km": 42.381
+      }
+    },
+    {
+      "event_id": "usgs-ci40668594",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.5 - 15 km SE of Julian, CA",
+      "occurred_utc": "2026-08-08T09:08:58.750000+00:00",
+      "lat": 33.0056666666667,
+      "lon": -116.471833333333,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40668594",
+      "details": {
+        "magnitude": 0.47,
+        "depth_km": 8.47
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmsehq",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 56 km SSE of Whites City, New Mexico",
+      "occurred_utc": "2026-08-08T09:07:14.420000+00:00",
+      "lat": 31.681,
+      "lon": -104.238,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmsehq",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 4.451
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmsant",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 55 km SSW of Whites City, New Mexico",
+      "occurred_utc": "2026-08-08T09:02:49.393000+00:00",
+      "lat": 31.7,
+      "lon": -104.574,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmsant",
+      "details": {
+        "magnitude": 1.5,
+        "depth_km": 3.3055
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppelkz",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 3.0 - 236 km S of Sand Point, Alaska",
+      "occurred_utc": "2026-08-08T08:49:18.679000+00:00",
+      "lat": 53.224,
+      "lon": -160.148,
+      "severity": 0.0,
+      "match_radius_km": 90.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppelkz",
+      "details": {
+        "magnitude": 3.0,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-nc75413952",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.2 - 7 km ESE of Cloverdale, CA",
+      "occurred_utc": "2026-08-08T08:48:48.140000+00:00",
+      "lat": 38.7693328857422,
+      "lon": -122.9443359375,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413952",
+      "details": {
+        "magnitude": 1.18,
+        "depth_km": 1.99000000953674
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppedws",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.6 - 229 km ESE of Attu Station, Alaska",
+      "occurred_utc": "2026-08-08T08:40:39.690000+00:00",
+      "lat": 51.966,
+      "lon": 176.244,
+      "severity": 0.0,
+      "match_radius_km": 78.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppedws",
+      "details": {
+        "magnitude": 2.6,
+        "depth_km": 20
+      }
+    },
+    {
+      "event_id": "usgs-nc75413947",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 7 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T08:36:49.540000+00:00",
+      "lat": 38.8273315429688,
+      "lon": -122.814163208008,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413947",
+      "details": {
+        "magnitude": 1.64,
+        "depth_km": 2.01999998092651
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppdvsn",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.9 - 52 km E of Denali National Park, Alaska",
+      "occurred_utc": "2026-08-08T08:31:12.631000+00:00",
+      "lat": 63.562,
+      "lon": -150.662,
+      "severity": 0.0,
+      "match_radius_km": 57.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppdvsn",
+      "details": {
+        "magnitude": 1.9,
+        "depth_km": 2.2
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppdtwl",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.9 - 30 km ENE of Igiugig, Alaska",
+      "occurred_utc": "2026-08-08T08:29:05.157000+00:00",
+      "lat": 59.475,
+      "lon": -155.44,
+      "severity": 0.0,
+      "match_radius_km": 87.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppdtwl",
+      "details": {
+        "magnitude": 2.9,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppdspw",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.2 - 53 km WNW of Anchor Point, Alaska",
+      "occurred_utc": "2026-08-08T08:27:34.242000+00:00",
+      "lat": 59.945,
+      "lon": -152.732,
+      "severity": 0.0,
+      "match_radius_km": 66.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppdspw",
+      "details": {
+        "magnitude": 2.2,
+        "depth_km": 92.9
+      }
+    },
+    {
+      "event_id": "usgs-nc75413942",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 5 km NNW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T08:26:34.380000+00:00",
+      "lat": 38.8194999694824,
+      "lon": -122.788497924805,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413942",
+      "details": {
+        "magnitude": 0.73,
+        "depth_km": 2.5
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppdoyq",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.3 - 23 km WNW of Cantwell, Alaska",
+      "occurred_utc": "2026-08-08T08:23:20.158000+00:00",
+      "lat": 63.443,
+      "lon": -149.41,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppdoyq",
+      "details": {
+        "magnitude": 1.3,
+        "depth_km": 92.4
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppdgts",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.0 - 57 km WNW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T08:13:57.640000+00:00",
+      "lat": 62.263,
+      "lon": -152.328,
+      "severity": 0.0,
+      "match_radius_km": 60.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppdgts",
+      "details": {
+        "magnitude": 2.0,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-us6000tj7q",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 4.2 - 14 km SSW of Imabetsu, Japan",
+      "occurred_utc": "2026-08-08T08:07:30.115000+00:00",
+      "lat": 41.0624,
+      "lon": 140.3905,
+      "severity": 0.24000000000000005,
+      "match_radius_km": 126.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tj7q",
+      "details": {
+        "magnitude": 4.2,
+        "depth_km": 137.959
+      }
+    },
+    {
+      "event_id": "usgs-aka2026ppczja",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.6 - 50 km NW of Skwentna, Alaska",
+      "occurred_utc": "2026-08-08T08:05:27.219000+00:00",
+      "lat": 62.341,
+      "lon": -152.021,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ppczja",
+      "details": {
+        "magnitude": 1.6,
+        "depth_km": 5
+      }
+    },
+    {
+      "event_id": "usgs-nc75413927",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 0.7 - 8 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T07:55:52.840000+00:00",
+      "lat": 38.8279991149902,
+      "lon": -122.81600189209,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413927",
+      "details": {
+        "magnitude": 0.74,
+        "depth_km": 2.17000007629395
+      }
+    },
+    {
+      "event_id": "usgs-nc75413922",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 1.5 - 8 km NW of The Geysers, CA",
+      "occurred_utc": "2026-08-08T07:53:42.540000+00:00",
+      "lat": 38.8279991149902,
+      "lon": -122.815002441406,
+      "severity": 0.0,
+      "match_radius_km": 50.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75413922",
+      "details": {
+        "magnitude": 1.49,
+        "depth_km": 2.00999999046326
+      }
+    },
+    {
+      "event_id": "usgs-tx2026pmpsus",
+      "source": "USGS",
+      "hazard": "earthquake",
+      "title": "M 2.6 - 59 km S of Whites City, New Mexico",
+      "occurred_utc": "2026-08-08T07:53:32.208000+00:00",
+      "lat": 31.641,
+      "lon": -104.383,
+      "severity": 0.0,
+      "match_radius_km": 78.0,
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026pmpsus",
+      "details": {
+        "magnitude": 2.6,
+        "depth_km": 6.4075
+      }
+    },
+    {
+      "event_id": "nws-urn:oid:2.49.0.1.840.0.803366b8311b64b4eb11e51512f390e0c383e4e9.001.1",
+      "source": "NWS",
+      "hazard": "marine weather statement",
+      "title": "Marine Weather Statement issued August 9 at 3:44AM EDT by NWS Jacksonville FL",
+      "occurred_utc": "2026-08-09T03:44:00-04:00",
+      "expires_utc": "2026-08-09T04:45:00-04:00",
+      "lat": 30.191249999999997,
+      "lon": -80.3975,
+      "severity": 0.4,
+      "match_radius_km": 100.0,
+      "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.803366b8311b64b4eb11e51512f390e0c383e4e9.001.1",
+      "details": {
+        "event": "Marine Weather Statement",
+        "severity": "Minor",
+        "urgency": "Expected",
+        "certainty": "Observed"
+      }
+    },
+    {
+      "event_id": "nws-urn:oid:2.49.0.1.840.0.81d2e3d2de133ca2e9ca46a6e2d4c8704a789d48.001.1",
+      "source": "NWS",
+      "hazard": "special weather statement",
+      "title": "Special Weather Statement issued August 9 at 2:31AM CDT by NWS Twin Cities/Chanhassen MN",
+      "occurred_utc": "2026-08-09T02:31:00-05:00",
+      "expires_utc": "2026-08-09T03:00:00-05:00",
+      "lat": 45.15,
+      "lon": -93.15166666666669,
+      "severity": 0.6,
+      "match_radius_km": 100.0,
+      "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.81d2e3d2de133ca2e9ca46a6e2d4c8704a789d48.001.1",
+      "details": {
+        "event": "Special Weather Statement",
+        "severity": "Moderate",
+        "urgency": "Expected",
+        "certainty": "Observed"
+      }
+    },
+    {
+      "event_id": "nws-urn:oid:2.49.0.1.840.0.ae3f2e710f577eaf7df8ad4df690e73973ee64d1.001.1",
+      "source": "NWS",
+      "hazard": "special weather statement",
+      "title": "Special Weather Statement issued August 9 at 2:29AM CDT by NWS Twin Cities/Chanhassen MN",
+      "occurred_utc": "2026-08-09T02:29:00-05:00",
+      "expires_utc": "2026-08-09T03:00:00-05:00",
+      "lat": 45.64666666666667,
+      "lon": -94.04199999999999,
+      "severity": 0.6,
+      "match_radius_km": 100.0,
+      "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ae3f2e710f577eaf7df8ad4df690e73973ee64d1.001.1",
+      "details": {
+        "event": "Special Weather Statement",
+        "severity": "Moderate",
+        "urgency": "Expected",
+        "certainty": "Observed"
+      }
+    },
+    {
+      "event_id": "nws-urn:oid:2.49.0.1.840.0.47d5972b8342a85d920f8db123fd44d832027673.001.1",
+      "source": "NWS",
+      "hazard": "severe thunderstorm warning",
+      "title": "Severe Thunderstorm Warning issued August 9 at 2:25AM CDT until August 9 at 3:15AM CDT by NWS Aberdeen SD",
+      "occurred_utc": "2026-08-09T02:25:00-05:00",
+      "expires_utc": "2026-08-09T03:15:00-05:00",
+      "lat": 45.13999999999999,
+      "lon": -98.93499999999999,
+      "severity": 0.8,
+      "match_radius_km": 100.0,
+      "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.47d5972b8342a85d920f8db123fd44d832027673.001.1",
+      "details": {
+        "event": "Severe Thunderstorm Warning",
+        "severity": "Severe",
+        "urgency": "Immediate",
+        "certainty": "Observed"
+      }
+    },
+    {
+      "event_id": "nws-urn:oid:2.49.0.1.840.0.a708772ef5a447dbb665c45b86e26916ebee853c.001.1",
+      "source": "NWS",
+      "hazard": "special weather statement",
+      "title": "Special Weather Statement issued August 9 at 3:08AM EDT by NWS Baltimore MD/Washington DC",
+      "occurred_utc": "2026-08-09T03:08:00-04:00",
+      "expires_utc": "2026-08-09T04:00:00-04:00",
+      "lat": 39.56333333333333,
+      "lon": -79.34166666666667,
+      "severity": 0.6,
+      "match_radius_km": 100.0,
+      "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a708772ef5a447dbb665c45b86e26916ebee853c.001.1",
+      "details": {
+        "event": "Special Weather Statement",
+        "severity": "Moderate",
+        "urgency": "Expected",
+        "certainty": "Observed"
+      }
+    },
+    {
+      "event_id": "nws-urn:oid:2.49.0.1.840.0.7e5fc424cf17d33594c9e8732f4a6e0710b93af2.001.1",
+      "source": "NWS",
+      "hazard": "flood warning",
+      "title": "Flood Warning issued August 8 at 8:13PM CDT until August 9 at 3:35PM CDT by NWS Corpus Christi TX",
+      "occurred_utc": "2026-08-08T20:13:00-05:00",
+      "expires_utc": "2026-08-09T11:15:00-05:00",
+      "lat": 28.25857142857143,
+      "lon": -98.59857142857142,
+      "severity": 0.8,
+      "match_radius_km": 100.0,
+      "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7e5fc424cf17d33594c9e8732f4a6e0710b93af2.001.1",
+      "details": {
+        "event": "Flood Warning",
+        "severity": "Severe",
+        "urgency": "Immediate",
+        "certainty": "Observed"
+      }
+    }
+  ],
+  "action_count": 0,
+  "actions": [],
+  "formula": "priority = 0.45 event_severity + 0.35 asset_criticality + 0.20 proximity; confidence combines source reliability and match proximity",
+  "claim_boundary": "Decision support only. WAIFINDERS is not an official warning authority. All recommended actions require trained human review and approval; source links must be checked before action."
+}
