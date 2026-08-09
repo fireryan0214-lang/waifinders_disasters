@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WAIFINDERS Sentinel — Multi-Hazard Demo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1a202c;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:20px}
+h1{font-size:22px;font-weight:700;letter-spacing:0.05em;color:#fff}
+h2{font-size:14px;font-weight:600;letter-spacing:0.08em;color:#90cdf4;text-transform:uppercase;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px}
+.card{background:#2d3748;border-radius:8px;padding:16px}
+.card-full{background:#2d3748;border-radius:8px;padding:16px;grid-column:1/-1}
+table{width:100%;border-collapse:collapse}
+th{font-size:11px;color:#718096;text-align:left;padding:5px 8px;border-bottom:1px solid #4a5568;letter-spacing:0.05em}
+tr:hover td{background:#374151}
+.disclaimer{background:#1a202c;border:1px solid #4a5568;border-radius:6px;padding:12px;margin-top:20px;font-size:11px;color:#718096;line-height:1.6}
+.wise-box{border:2px solid #e53e3e;border-radius:8px;padding:20px;background:#2d3748}
+.wise-label{font-size:32px;font-weight:900;color:#e53e3e;letter-spacing:0.05em}
+.data-badge{display:inline-block;background:#2d3748;border:1px solid #4a5568;border-radius:4px;padding:2px 8px;font-size:10px;color:#718096;margin-top:4px}
+</style>
+</head>
+<body>
+
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+  <div>
+    <h1>WAIFINDERS Sentinel</h1>
+    <div style="font-size:12px;color:#718096;margin-top:4px">Multi-Hazard Operational Intelligence Demo &nbsp;·&nbsp; 2026-08-09T06:40:53 UTC</div>
+    <div class="data-badge">Real data: USGS · NOAA NCEI · NOAA CO-OPS · NY State DOT</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:11px;color:#718096;margin-bottom:4px">WISE DECISION</div>
+    <div class="wise-label">EMERGENCY</div>
+    <div style="font-size:11px;color:#718096;margin-top:4px">Compound event &nbsp;·&nbsp; $1B–$10B+ est.</div>
+  </div>
+</div>
+
+<div class="grid">
+
+<!-- WISE Engine -->
+<div class="wise-box">
+  <h2>WISE — Decision Engine</h2>
+  <div style="background:#2d3748;border-left:3px solid #ed8936;padding:10px 14px;margin:12px 0;font-size:13px;color:#fed7aa">⚠ Compound event: <strong>earthquake, tsunami, flood_surge</strong> — decision escalated one level above worst individual hazard</div>
+  <table>
+    <thead><tr><th>HAZARD</th><th style="width:55%">WARN SCORE</th><th>TIER</th></tr></thead>
+    <tbody><tr>
+      <td style="padding:8px;font-size:13px;color:#ddd">Wildfire</td>
+      <td style="padding:8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#48bb78;width:0%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.000</span></td>
+      <td style="padding:8px"><span style="background:#48bb78;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">NORMAL</span></td>
+    </tr><tr>
+      <td style="padding:8px;font-size:13px;color:#ddd">Earthquake</td>
+      <td style="padding:8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:39%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.399</span></td>
+      <td style="padding:8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:8px;font-size:13px;color:#ddd">Tsunami</td>
+      <td style="padding:8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:97%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.970</span></td>
+      <td style="padding:8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:8px;font-size:13px;color:#ddd">Flood Surge</td>
+      <td style="padding:8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ed8936;width:54%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.549</span></td>
+      <td style="padding:8px"><span style="background:#ed8936;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MITIGATE</span></td>
+    </tr><tr>
+  <td style="padding:8px;font-size:13px;color:#ddd">PULSE Infra</td>
+  <td style="padding:8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#48bb78;width:4%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">97 RED of 2000</span></td>
+  <td style="padding:8px"><span style="background:#48bb78;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">NORMAL</span></td>
+</tr></tbody>
+  </table>
+  <div style="margin-top:14px">
+    <div style="font-size:11px;color:#718096;margin-bottom:6px">RECOMMENDED ACTIONS</div>
+    <ul style="padding-left:18px"><li style="margin:5px 0;font-size:13px;color:#e2e8f0">Activate full emergency operations protocol</li><li style="margin:5px 0;font-size:13px;color:#e2e8f0">Coordinate with municipal, provincial/state, and federal emergency management</li><li style="margin:5px 0;font-size:13px;color:#e2e8f0">Execute pre-ranked PULSE priority list — do not wait for damage reports</li><li style="margin:5px 0;font-size:13px;color:#e2e8f0">Restrict access to PULSE RED-band bridges and tunnels pending inspection</li><li style="margin:5px 0;font-size:13px;color:#e2e8f0">Issue public emergency notification for all affected communities</li><li style="margin:5px 0;font-size:13px;color:#e2e8f0">Activate mutual-aid agreements with neighbouring utilities/operators</li></ul>
+  </div>
+  <div style="margin-top:10px;font-size:10px;color:#4a5568">Cost: $1B–$10B+ — ILLUSTRATIVE. Major disaster — historical range from NOAA damage records</div>
+</div>
+
+<!-- PULSE -->
+<div class="card">
+  <h2>PULSE — Infrastructure Risk</h2>
+  <div style="font-size:12px;color:#718096;margin-bottom:10px">NY State Bridges (n=2000) · Source: NY DOT data.ny.gov · Real poor_status + age scoring</div>
+  <div style="display:flex;align-items:center;gap:10px;margin:4px 0">
+      <span style="width:60px;font-size:12px;font-weight:700;color:#e53e3e">RED</span>
+      <div style="flex:1;background:#333;border-radius:3px;height:10px">
+        <div style="background:#e53e3e;width:4.9%;height:10px;border-radius:3px"></div>
+      </div>
+      <span style="font-size:12px;color:#aaa;width:60px">97 (4.9%)</span>
+    </div><div style="display:flex;align-items:center;gap:10px;margin:4px 0">
+      <span style="width:60px;font-size:12px;font-weight:700;color:#ed8936">AMBER</span>
+      <div style="flex:1;background:#333;border-radius:3px;height:10px">
+        <div style="background:#ed8936;width:8.1%;height:10px;border-radius:3px"></div>
+      </div>
+      <span style="font-size:12px;color:#aaa;width:60px">162 (8.1%)</span>
+    </div><div style="display:flex;align-items:center;gap:10px;margin:4px 0">
+      <span style="width:60px;font-size:12px;font-weight:700;color:#ecc94b">YELLOW</span>
+      <div style="flex:1;background:#333;border-radius:3px;height:10px">
+        <div style="background:#ecc94b;width:66.8%;height:10px;border-radius:3px"></div>
+      </div>
+      <span style="font-size:12px;color:#aaa;width:60px">1336 (66.8%)</span>
+    </div><div style="display:flex;align-items:center;gap:10px;margin:4px 0">
+      <span style="width:60px;font-size:12px;font-weight:700;color:#48bb78">GREEN</span>
+      <div style="flex:1;background:#333;border-radius:3px;height:10px">
+        <div style="background:#48bb78;width:20.2%;height:10px;border-radius:3px"></div>
+      </div>
+      <span style="font-size:12px;color:#aaa;width:60px">405 (20.2%)</span>
+    </div>
+  <div style="margin-top:14px">
+    <div style="font-size:11px;color:#718096;margin-bottom:6px">TOP PRIORITY — RED BAND IN HAZARD ZONE</div>
+    <table>
+      <thead><tr><th>BIN</th><th>COUNTY</th><th>SEISMIC</th><th>TSUNAMI</th><th>BAND</th><th>SCORE</th></tr></thead>
+      <tbody><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">2066720</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">1.000</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">2241740</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">1.000</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">2241810</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">1.000</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">2240200</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">1.000</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">7702320</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">1.000</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">2241460</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">1.000</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">2241590</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">0.998</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">1067452</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">0.944</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">2229530</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">0.927</td>
+    </tr><tr>
+      <td style="padding:5px 8px;font-size:11px;color:#ccc">1066790</td>
+      <td style="padding:5px 8px;font-size:11px;color:#eee">Bronx</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">LOW</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">No</td>
+      <td style="padding:5px 8px;font-size:12px;font-weight:700;color:#e53e3e">RED</td>
+      <td style="padding:5px 8px;font-size:11px;color:#aaa">0.924</td>
+    </tr></tbody>
+    </table>
+  </div>
+  <div style="margin-top:10px;font-size:10px;color:#4a5568">Hazard zones: simplified proximity proxies — not authoritative FEMA/USGS boundaries</div>
+</div>
+
+</div><!-- /grid -->
+
+<div class="grid3" style="margin-top:16px">
+
+<!-- Earthquake WARN -->
+<div class="card">
+  <h2>WARN — Earthquake</h2>
+  <div style="font-size:11px;color:#718096;margin-bottom:8px">USGS FDSN Event API · Cascadia M6.0+ 2000-2024 · 31 events</div>
+  <table>
+    <thead><tr><th>DATE</th><th>LOCATION</th><th>MAG</th><th>DEPTH</th><th style="width:30%">SCORE</th><th>TIER</th></tr></thead>
+    <tbody><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2005-06-15</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">153 km W of Big Lagoon, California</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">7.2</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">16 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:39%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.399</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2024-12-05</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">2024 Offshore Cape Mendocino, California Eart</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">7.0</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">10 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:38%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.386</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2018-10-22</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">210 km SW of Port McNeill, Canada</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">6.8</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">10 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:35%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.352</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2001-02-28</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">7 km SSE of Longbranch, Washington</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">6.8</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">52 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:34%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.349</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2004-11-02</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">189 km SW of Port McNeill, Canada</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">6.7</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">10 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:33%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.335</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2014-03-10</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">77 km WNW of Indianola, California</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">6.8</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">16 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:32%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.329</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2016-12-08</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">164 km W of Ferndale, California</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">6.6</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">8 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:32%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.323</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2005-06-17</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">196 km W of Ferndale, California</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">6.6</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">12 km</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:31%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.310</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+    </tr><tr style="border-top:1px solid #555">
+  <td style="padding:6px 8px;font-size:12px;color:#888">1700-01-26</td>
+  <td style="padding:6px 8px;font-size:12px;color:#ffd700">&#9733; Cascadia 1700 (M9.0 analogue)</td>
+  <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#ffd700">9.0</td>
+  <td style="padding:6px 8px;font-size:12px;color:#ccc">20 km</td>
+  <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:74%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.748</span></td>
+  <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+</tr></tbody>
+  </table>
+  <div style="margin-top:8px;font-size:10px;color:#4a5568">Formula: 0.55×mag_norm + 0.25×shallowness + 0.20×pop_exposure</div>
+</div>
+
+<!-- Tsunami WARN -->
+<div class="card">
+  <h2>WARN — Tsunami</h2>
+  <div style="font-size:11px;color:#718096;margin-bottom:8px">NOAA NCEI Global Tsunami DB · 1101 events · 1900-2024</div>
+  <table>
+    <thead><tr><th>YEAR</th><th>LOCATION</th><th>COUNTRY</th><th>WAVE</th><th>SRC MAG</th><th style="width:25%">SCORE</th><th>TIER</th></tr></thead>
+    <tbody><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">1964</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">PRINCE WILLIAM SOUND, AK</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">USA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">51.8 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">9.2</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:97%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.970</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2004</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">OFF W. COAST OF SUMATRA</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">INDONESIA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">50.9 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">9.1</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:96%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.960</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">2011</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">HONSHU ISLAND</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">JAPAN</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">39.26 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">9.1</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:95%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.951</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">1946</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">UNIMAK ISLAND, AK</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">USA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">42.0 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">8.6</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:90%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.910</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">1958</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">SE. ALASKA, AK</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">USA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">524.6 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">7.8</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:83%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.830</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">1957</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">ANDREANOF ISLANDS, AK</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">USA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">32.0 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">8.6</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:80%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.807</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">1930</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">KRAKATAU</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">INDONESIA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">500.0 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc"></td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:79%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.790</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">1936</td>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">LITUYA BAY, AK</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">USA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">149.35 m</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc"></td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#e53e3e;width:79%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.790</span></td>
+      <td style="padding:6px 8px"><span style="background:#e53e3e;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">EMERGENCY</span></td>
+    </tr></tbody>
+  </table>
+  <div style="margin-top:8px;font-size:10px;color:#4a5568">Formula: 0.50×wave_norm + 0.30×mag_norm + 0.20×reach_norm</div>
+</div>
+
+<!-- Flood Surge WARN -->
+<div class="card">
+  <h2>WARN — Flood Surge</h2>
+  <div style="font-size:11px;color:#718096;margin-bottom:8px">NOAA CO-OPS Tide Gauges · 4 real storm events · datum: MHHW</div>
+  <table>
+    <thead><tr><th>STORM</th><th>STATION</th><th>SURGE</th><th style="width:28%">SCORE</th><th>TIER</th><th>DATA</th></tr></thead>
+    <tbody><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">Hurricane Sandy 2012</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">The Battery, NY</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">2.743 m</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ed8936;width:54%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.549</span></td>
+      <td style="padding:6px 8px"><span style="background:#ed8936;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MITIGATE</span></td>
+      <td style="padding:6px 8px;font-size:10px;color:#888">live</td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">Hurricane Harvey 2017</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">Rockport, TX</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">0.566 m</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#48bb78;width:11%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.113</span></td>
+      <td style="padding:6px 8px"><span style="background:#48bb78;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">NORMAL</span></td>
+      <td style="padding:6px 8px;font-size:10px;color:#888">live</td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">Hurricane Ida 2021</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">Grand Isle, LA</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">1.489 m</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:29%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.298</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+      <td style="padding:6px 8px;font-size:10px;color:#888">live</td>
+    </tr><tr>
+      <td style="padding:6px 8px;font-size:12px;color:#eee">Hurricane Ian 2022</td>
+      <td style="padding:6px 8px;font-size:12px;color:#ccc">Fort Myers, FL</td>
+      <td style="padding:6px 8px;font-size:13px;font-weight:700;color:#fff">2.212 m</td>
+      <td style="padding:6px 8px"><div style="background:#333;border-radius:3px;height:6px;width:100%"><div style="background:#ecc94b;width:44%;height:6px;border-radius:3px"></div></div><span style="font-size:11px;color:#aaa">0.442</span></td>
+      <td style="padding:6px 8px"><span style="background:#ecc94b;color:#000;padding:2px 7px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:0.04em">MONITOR</span></td>
+      <td style="padding:6px 8px;font-size:10px;color:#888">live</td>
+    </tr></tbody>
+  </table>
+  <div style="margin-top:8px;font-size:10px;color:#4a5568">Harvey gauge went offline at peak — observed 0.57m vs 3.96m documented surge (real data artifact)</div>
+</div>
+
+</div><!-- /grid3 -->
+
+<!-- System mechanism diagram -->
+<div class="card-full" style="margin-top:16px;background:#2d3748">
+  <h2>How the Engines Connect</h2>
+  <div style="display:flex;align-items:center;gap:6px;margin-top:10px;flex-wrap:wrap">
+    <div style="background:#1a365d;border:1px solid #2b6cb0;border-radius:6px;padding:10px 14px;font-size:12px">
+      <div style="font-weight:700;color:#90cdf4">WARN</div>
+      <div style="color:#a0aec0;font-size:11px;margin-top:3px">Earthquake · Tsunami<br>Flood Surge · Wildfire</div>
+      <div style="color:#718096;font-size:10px;margin-top:3px">External conditions</div>
+    </div>
+    <div style="font-size:20px;color:#4a5568">→</div>
+    <div style="background:#1c4532;border:1px solid #276749;border-radius:6px;padding:10px 14px;font-size:12px">
+      <div style="font-weight:700;color:#9ae6b4">PULSE</div>
+      <div style="color:#a0aec0;font-size:11px;margin-top:3px">Bridges · Rail · Roads<br>Water Mains · Sewer</div>
+      <div style="color:#718096;font-size:10px;margin-top:3px">Infrastructure stress</div>
+    </div>
+    <div style="font-size:20px;color:#4a5568">→</div>
+    <div style="background:#322659;border:1px solid #553c9a;border-radius:6px;padding:10px 14px;font-size:12px">
+      <div style="font-weight:700;color:#d6bcfa">WISE</div>
+      <div style="color:#a0aec0;font-size:11px;margin-top:3px">Decision state<br>Compound escalation<br>Cost estimate</div>
+      <div style="color:#718096;font-size:10px;margin-top:3px">Signal synthesis</div>
+    </div>
+    <div style="font-size:20px;color:#4a5568">→</div>
+    <div style="background:#2d3748;border:1px solid #718096;border-radius:6px;padding:10px 14px;font-size:12px">
+      <div style="font-weight:700;color:#e2e8f0">SENTINEL</div>
+      <div style="color:#a0aec0;font-size:11px;margin-top:3px">This view<br>Visual + audit layer<br>Cascading risk map</div>
+      <div style="color:#718096;font-size:10px;margin-top:3px">Render + evidence</div>
+    </div>
+    <div style="margin-left:auto;background:#744210;border:1px solid #c05621;border-radius:6px;padding:10px 14px;font-size:12px">
+      <div style="font-weight:700;color:#fbd38d">WISE Compound Rule</div>
+      <div style="color:#a0aec0;font-size:11px;margin-top:3px">If 2+ hazards ≥ MONITOR:<br>final tier = max + 1 level</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:10px;color:#4a5568">
+    WARN cross-references PULSE: hazard zone (seismic/tsunami/flood) × PULSE infrastructure risk score = compound exposure priority list
+  </div>
+</div>
+
+<div class="disclaimer">
+  <strong>RESEARCH PROTOTYPE — NOT FOR OPERATIONAL USE</strong><br>
+  All WARN, PULSE, WISE, and Sentinel outputs are experimental. No component has been validated for emergency management, evacuation, public-health, or infrastructure decision use.
+  Hazard zones (seismic, tsunami, flood) are simplified geographic proxies — not authoritative FEMA/USGS/NRCan boundaries.
+  PULSE bridge scoring uses publicly available poor_status and year_built fields — no structural engineering assessment.
+  Cost estimates are illustrative only; no real repair-cost, traffic, or ridership data is embedded.
+  Data sources: USGS FDSN Event API (public domain) · NOAA NCEI Tsunami Database (public domain) · NOAA CO-OPS Tides &amp; Currents (public domain) · NY State DOT Bridge Conditions (data.ny.gov, public domain).
+  External peer review not complete. No production claim is approved.
+</div>
+
+</body>
+</html>

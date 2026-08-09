@@ -1,0 +1,87 @@
+{
+  "source": "NOAA CO-OPS Tides & Currents API \u2014 public domain (tidesandcurrents.noaa.gov)",
+  "fetched_utc": "2026-08-09T06:38:05.978663+00:00",
+  "datum": "MHHW (Mean Higher High Water)",
+  "units": "metres",
+  "formula": {
+    "surge_norm": "peak_water_level_m / 5.0 (capped at 1.0)",
+    "warn_score": "surge_norm",
+    "tiers": {
+      "EMERGENCY_RESPONSE": "\u22650.70 (\u22653.5m above MHHW)",
+      "MITIGATION_REQUIRED": "\u22650.45 (\u22652.25m)",
+      "MONITOR": "\u22650.20 (\u22651.0m)",
+      "NORMAL_OPERATION": "<0.20"
+    }
+  },
+  "claim_boundary": "EXPERIMENTAL research prototype. Not validated for emergency decision use.",
+  "events": [
+    {
+      "name": "Hurricane Sandy 2012",
+      "station": "8518750",
+      "label": "The Battery, NY",
+      "start": "20121029",
+      "end": "20121031",
+      "known_surge_m": 3.33,
+      "lat": 40.7,
+      "lon": -74.01,
+      "region": "Northeast USA",
+      "peak_water_level_m_above_mhhw": 2.743,
+      "surge_norm": 0.5486,
+      "warn_score": 0.5486,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "fetch_status": "live",
+      "data_source": "NOAA CO-OPS Tides & Currents API \u2014 public domain"
+    },
+    {
+      "name": "Hurricane Harvey 2017",
+      "station": "8774770",
+      "label": "Rockport, TX",
+      "start": "20170825",
+      "end": "20170827",
+      "known_surge_m": 3.96,
+      "lat": 28.02,
+      "lon": -97.05,
+      "region": "Gulf Coast",
+      "peak_water_level_m_above_mhhw": 0.566,
+      "surge_norm": 0.1132,
+      "warn_score": 0.1132,
+      "warn_tier": "NORMAL_OPERATION",
+      "fetch_status": "live",
+      "data_source": "NOAA CO-OPS Tides & Currents API \u2014 public domain"
+    },
+    {
+      "name": "Hurricane Ida 2021",
+      "station": "8761724",
+      "label": "Grand Isle, LA",
+      "start": "20210829",
+      "end": "20210831",
+      "known_surge_m": 4.27,
+      "lat": 29.26,
+      "lon": -89.96,
+      "region": "Gulf Coast",
+      "peak_water_level_m_above_mhhw": 1.489,
+      "surge_norm": 0.2978,
+      "warn_score": 0.2978,
+      "warn_tier": "MONITOR",
+      "fetch_status": "live",
+      "data_source": "NOAA CO-OPS Tides & Currents API \u2014 public domain"
+    },
+    {
+      "name": "Hurricane Ian 2022",
+      "station": "8725520",
+      "label": "Fort Myers, FL",
+      "start": "20220928",
+      "end": "20220930",
+      "known_surge_m": 4.57,
+      "lat": 26.65,
+      "lon": -81.87,
+      "region": "Southeast USA",
+      "peak_water_level_m_above_mhhw": 2.212,
+      "surge_norm": 0.4424,
+      "warn_score": 0.4424,
+      "warn_tier": "MONITOR",
+      "fetch_status": "live",
+      "data_source": "NOAA CO-OPS Tides & Currents API \u2014 public domain"
+    }
+  ]
+}

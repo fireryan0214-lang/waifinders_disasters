@@ -1,0 +1,52 @@
+{
+  "generated_utc": "2026-08-09T06:40:53.475001+00:00",
+  "wise_decision": "EMERGENCY_RESPONSE",
+  "compound_event": true,
+  "elevated_hazards": [
+    "earthquake",
+    "tsunami",
+    "flood_surge"
+  ],
+  "hazard_signals": {
+    "wildfire": {
+      "score": 0.0,
+      "tier": "NORMAL_OPERATION"
+    },
+    "earthquake": {
+      "score": 0.399,
+      "tier": "MONITOR"
+    },
+    "tsunami": {
+      "score": 0.97,
+      "tier": "EMERGENCY_RESPONSE"
+    },
+    "flood_surge": {
+      "score": 0.549,
+      "tier": "MITIGATION_REQUIRED"
+    }
+  },
+  "pulse_state": {
+    "tier": "NORMAL_OPERATION",
+    "red_band_count": 97,
+    "amber_band_count": 162,
+    "red_band_pct": 0.0485
+  },
+  "cost_estimate_illustrative": {
+    "label": "$1B\u2013$10B+",
+    "note": "Major disaster \u2014 historical range from NOAA damage records"
+  },
+  "recommended_actions": [
+    "Activate full emergency operations protocol",
+    "Coordinate with municipal, provincial/state, and federal emergency management",
+    "Execute pre-ranked PULSE priority list \u2014 do not wait for damage reports",
+    "Restrict access to PULSE RED-band bridges and tunnels pending inspection",
+    "Issue public emergency notification for all affected communities",
+    "Activate mutual-aid agreements with neighbouring utilities/operators"
+  ],
+  "claim_boundary": "WISE decision is a research prototype combining experimental WARN signals and PULSE infrastructure scores. Not validated for emergency management use. Cost estimates are illustrative only \u2014 no real cost data is embedded.",
+  "formula": {
+    "base_tier": "max(tier_int) across all hazard signals",
+    "compound_escalation": "+1 tier if 2+ hazards at MONITOR or above",
+    "final_tier": "min(EMERGENCY_RESPONSE, base_tier + compound_boost)"
+  }
+}

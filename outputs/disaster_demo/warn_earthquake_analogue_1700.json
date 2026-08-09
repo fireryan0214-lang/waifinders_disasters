@@ -1,0 +1,15 @@
+{
+  "event_id": "cascadia-1700-historical",
+  "time_utc": "1700-01-26T09:00:00Z (estimated)",
+  "magnitude": 9.0,
+  "depth_km": 20.0,
+  "lat": 46.5,
+  "lon": -124.0,
+  "place": "Cascadia Subduction Zone \u2014 historical analogue",
+  "mag_norm": 0.9375000000000002,
+  "shallow_norm": 0.7142857142857143,
+  "pop_exposure": 0.27005535771539824,
+  "warn_score": 0.7482,
+  "warn_tier": "EMERGENCY_RESPONSE",
+  "source": "USGS/PNSN historical record \u2014 not from API"
+}
