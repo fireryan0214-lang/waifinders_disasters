@@ -1,0 +1,1002 @@
+{
+  "source_power_status": "NRC Power Reactor Status Report (daily, public)",
+  "source_plant_data": "NRC/IAEA operating reactor inventory \u2014 compiled from public NRC records",
+  "nrc_status_url": "https://www.nrc.gov/reading-rm/doc-collections/event-status/reactor-status/powerreactorstatusforlast365days.txt",
+  "nrc_report_date": "8/7/2026 12:00:00 AM",
+  "nrc_fetch_status": "live",
+  "fetched_utc": "2026-08-09T07:23:29.651373+00:00",
+  "plants_scored": 67,
+  "formula": {
+    "warn_score": "0.45 \u00d7 capacity_norm + 0.35 \u00d7 epz_pop_norm + 0.20 \u00d7 power_norm",
+    "capacity_norm": "net_capacity_mwe / 1299 (largest US unit), clamp [0,1]",
+    "epz_pop_norm": "epz_population_10mi / 350000, clamp [0,1]",
+    "power_norm": "current_power_pct / 100, clamp [0,1]",
+    "epz_definition": "NRC 10-mile Plume Exposure Pathway Emergency Planning Zone"
+  },
+  "tiers": {
+    "EMERGENCY_RESPONSE": "\u2265 0.65 \u2014 high-capacity plant, dense EPZ, at power",
+    "MITIGATION_REQUIRED": "\u2265 0.40 \u2014 significant exposure",
+    "MONITOR": "\u2265 0.20 \u2014 moderate baseline risk",
+    "NORMAL_OPERATION": "< 0.20 \u2014 low-capacity or remote plant"
+  },
+  "claim_boundary": "WARN_nuclear scores BASELINE proximity risk from licensed operating plants \u2014 not a real-time incident alert. EPZ population figures are estimates from NRC/census data, not modelled plume dispersion. Power output from NRC daily status; 100% assumed for plants not in current report. This module does NOT model radiation release, dose rates, or dispersion. For incident response, use NRC event notification system and state radiological emergency plans directly. Not validated for emergency management use.",
+  "plants": [
+    {
+      "plant": "Indian Point",
+      "state": "NY",
+      "lat": 41.27,
+      "lon": -73.95,
+      "capacity_mwe": 1041,
+      "epz_pop_est": 310000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.8706,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Limerick",
+      "state": "PA",
+      "lat": 40.22,
+      "lon": -75.59,
+      "capacity_mwe": 1134,
+      "epz_pop_est": 178000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Limerick 1",
+        "Limerick 2"
+      ],
+      "warn_score": 0.7708,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Seabrook",
+      "state": "NH",
+      "lat": 42.9,
+      "lon": -70.85,
+      "capacity_mwe": 1246,
+      "epz_pop_est": 101000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Seabrook 1"
+      ],
+      "warn_score": 0.7326,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Fermi",
+      "state": "MI",
+      "lat": 41.96,
+      "lon": -83.26,
+      "capacity_mwe": 1122,
+      "epz_pop_est": 136000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Fermi 2"
+      ],
+      "warn_score": 0.7247,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Peach Bottom",
+      "state": "PA",
+      "lat": 39.76,
+      "lon": -76.27,
+      "capacity_mwe": 1112,
+      "epz_pop_est": 112000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Peach Bottom 2",
+        "Peach Bottom 3"
+      ],
+      "warn_score": 0.6972,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "San Onofre",
+      "state": "CA",
+      "lat": 33.37,
+      "lon": -117.56,
+      "capacity_mwe": 1127,
+      "epz_pop_est": 104000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.6944,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Catawba",
+      "state": "SC",
+      "lat": 35.06,
+      "lon": -81.07,
+      "capacity_mwe": 1129,
+      "epz_pop_est": 88000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Catawba 1",
+        "Catawba 2"
+      ],
+      "warn_score": 0.6791,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "McGuire",
+      "state": "NC",
+      "lat": 35.43,
+      "lon": -80.95,
+      "capacity_mwe": 1100,
+      "epz_pop_est": 97000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "McGuire 1",
+        "McGuire 2"
+      ],
+      "warn_score": 0.6781,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Susquehanna",
+      "state": "PA",
+      "lat": 41.1,
+      "lon": -76.15,
+      "capacity_mwe": 1257,
+      "epz_pop_est": 43000,
+      "power_pct": 99.0,
+      "nrc_units": [
+        "Susquehanna 1",
+        "Susquehanna 2"
+      ],
+      "warn_score": 0.6765,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Millstone",
+      "state": "CT",
+      "lat": 41.31,
+      "lon": -72.17,
+      "capacity_mwe": 1227,
+      "epz_pop_est": 46000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Millstone 2",
+        "Millstone 3"
+      ],
+      "warn_score": 0.6711,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Zion",
+      "state": "IL",
+      "lat": 42.45,
+      "lon": -87.8,
+      "capacity_mwe": 1040,
+      "epz_pop_est": 108000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.6683,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Nine Mile Point",
+      "state": "NY",
+      "lat": 43.52,
+      "lon": -76.41,
+      "capacity_mwe": 1299,
+      "epz_pop_est": 18000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Nine Mile Point 1",
+        "Nine Mile Point 2"
+      ],
+      "warn_score": 0.668,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Perry",
+      "state": "OH",
+      "lat": 41.8,
+      "lon": -81.15,
+      "capacity_mwe": 1261,
+      "epz_pop_est": 31000,
+      "power_pct": 96.0,
+      "nrc_units": [
+        "Perry 1"
+      ],
+      "warn_score": 0.6598,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Grand Gulf",
+      "state": "MS",
+      "lat": 32.01,
+      "lon": -90.96,
+      "capacity_mwe": 1297,
+      "epz_pop_est": 9000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Grand Gulf 1"
+      ],
+      "warn_score": 0.6583,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    },
+    {
+      "plant": "Vogtle",
+      "state": "GA",
+      "lat": 33.14,
+      "lon": -81.76,
+      "capacity_mwe": 1254,
+      "epz_pop_est": 15000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Vogtle 1",
+        "Vogtle 2",
+        "Vogtle 3",
+        "Vogtle 4"
+      ],
+      "warn_score": 0.6494,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "South Texas",
+      "state": "TX",
+      "lat": 28.79,
+      "lon": -96.05,
+      "capacity_mwe": 1280,
+      "epz_pop_est": 3500,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "South Texas 1",
+        "South Texas 2"
+      ],
+      "warn_score": 0.6469,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Quad Cities",
+      "state": "IL",
+      "lat": 41.73,
+      "lon": -90.33,
+      "capacity_mwe": 908,
+      "epz_pop_est": 129000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Quad Cities 1",
+        "Quad Cities 2"
+      ],
+      "warn_score": 0.6435,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Palo Verde",
+      "state": "AZ",
+      "lat": 33.39,
+      "lon": -112.86,
+      "capacity_mwe": 1270,
+      "epz_pop_est": 1500,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Palo Verde 1",
+        "Palo Verde 2",
+        "Palo Verde 3"
+      ],
+      "warn_score": 0.6415,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Callaway",
+      "state": "MO",
+      "lat": 38.77,
+      "lon": -91.78,
+      "capacity_mwe": 1236,
+      "epz_pop_est": 9000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Callaway"
+      ],
+      "warn_score": 0.6372,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Salem",
+      "state": "NJ",
+      "lat": 39.47,
+      "lon": -75.54,
+      "capacity_mwe": 1174,
+      "epz_pop_est": 30000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Salem 1",
+        "Salem 2"
+      ],
+      "warn_score": 0.6367,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Hope Creek",
+      "state": "NJ",
+      "lat": 39.47,
+      "lon": -75.54,
+      "capacity_mwe": 1172,
+      "epz_pop_est": 30000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Hope Creek 1"
+      ],
+      "warn_score": 0.636,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Comanche Peak",
+      "state": "TX",
+      "lat": 32.3,
+      "lon": -97.79,
+      "capacity_mwe": 1200,
+      "epz_pop_est": 19000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Comanche Peak 1",
+        "Comanche Peak 2"
+      ],
+      "warn_score": 0.6347,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Braidwood",
+      "state": "IL",
+      "lat": 41.24,
+      "lon": -88.23,
+      "capacity_mwe": 1178,
+      "epz_pop_est": 18000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Braidwood 1",
+        "Braidwood 2"
+      ],
+      "warn_score": 0.6261,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Watts Bar",
+      "state": "TN",
+      "lat": 35.6,
+      "lon": -84.79,
+      "capacity_mwe": 1173,
+      "epz_pop_est": 19000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Watts Bar 1",
+        "Watts Bar 2"
+      ],
+      "warn_score": 0.6254,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Byron",
+      "state": "IL",
+      "lat": 42.08,
+      "lon": -89.28,
+      "capacity_mwe": 1164,
+      "epz_pop_est": 22000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Byron 1",
+        "Byron 2"
+      ],
+      "warn_score": 0.6252,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Wolf Creek",
+      "state": "KS",
+      "lat": 38.24,
+      "lon": -96.09,
+      "capacity_mwe": 1200,
+      "epz_pop_est": 7000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Wolf Creek 1"
+      ],
+      "warn_score": 0.6227,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Sequoyah",
+      "state": "TN",
+      "lat": 35.23,
+      "lon": -85.09,
+      "capacity_mwe": 1148,
+      "epz_pop_est": 22000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Sequoyah 1",
+        "Sequoyah 2"
+      ],
+      "warn_score": 0.6197,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Waterford",
+      "state": "LA",
+      "lat": 29.99,
+      "lon": -90.48,
+      "capacity_mwe": 1075,
+      "epz_pop_est": 46000,
+      "power_pct": 97.0,
+      "nrc_units": [
+        "Waterford 3"
+      ],
+      "warn_score": 0.6124,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "LaSalle",
+      "state": "IL",
+      "lat": 41.24,
+      "lon": -88.67,
+      "capacity_mwe": 1137,
+      "epz_pop_est": 10000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "LaSalle 1",
+        "LaSalle 2"
+      ],
+      "warn_score": 0.6039,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Clinton",
+      "state": "IL",
+      "lat": 40.15,
+      "lon": -88.84,
+      "capacity_mwe": 1065,
+      "epz_pop_est": 34000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Clinton"
+      ],
+      "warn_score": 0.6029,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Three Mile Island",
+      "state": "PA",
+      "lat": 40.15,
+      "lon": -76.73,
+      "capacity_mwe": 906,
+      "epz_pop_est": 89000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.6029,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Columbia",
+      "state": "WA",
+      "lat": 46.47,
+      "lon": -119.32,
+      "capacity_mwe": 1131,
+      "epz_pop_est": 7000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Columbia Generating Station"
+      ],
+      "warn_score": 0.5988,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Diablo Canyon",
+      "state": "CA",
+      "lat": 35.21,
+      "lon": -120.85,
+      "capacity_mwe": 1118,
+      "epz_pop_est": 9000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Diablo Canyon 1",
+        "Diablo Canyon 2"
+      ],
+      "warn_score": 0.5963,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Beaver Valley",
+      "state": "PA",
+      "lat": 40.62,
+      "lon": -80.43,
+      "capacity_mwe": 892,
+      "epz_pop_est": 87000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Beaver Valley 1",
+        "Beaver Valley 2"
+      ],
+      "warn_score": 0.596,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Cook",
+      "state": "MI",
+      "lat": 41.97,
+      "lon": -86.57,
+      "capacity_mwe": 1030,
+      "epz_pop_est": 24000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.5808,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Browns Ferry",
+      "state": "AL",
+      "lat": 34.7,
+      "lon": -87.12,
+      "capacity_mwe": 1065,
+      "epz_pop_est": 11000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Browns Ferry 1",
+        "Browns Ferry 2",
+        "Browns Ferry 3"
+      ],
+      "warn_score": 0.5799,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Rancho Seco",
+      "state": "CA",
+      "lat": 38.35,
+      "lon": -121.12,
+      "capacity_mwe": 913,
+      "epz_pop_est": 46000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.5623,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Summer",
+      "state": "SC",
+      "lat": 34.3,
+      "lon": -81.32,
+      "capacity_mwe": 966,
+      "epz_pop_est": 14000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Summer"
+      ],
+      "warn_score": 0.5486,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Shearon Harris",
+      "state": "NC",
+      "lat": 35.63,
+      "lon": -79.1,
+      "capacity_mwe": 900,
+      "epz_pop_est": 36000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.5478,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "St. Lucie",
+      "state": "FL",
+      "lat": 27.35,
+      "lon": -80.25,
+      "capacity_mwe": 839,
+      "epz_pop_est": 53000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.5436,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Dresden",
+      "state": "IL",
+      "lat": 41.39,
+      "lon": -88.27,
+      "capacity_mwe": 867,
+      "epz_pop_est": 41000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Dresden 2",
+        "Dresden 3"
+      ],
+      "warn_score": 0.5413,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "North Anna",
+      "state": "VA",
+      "lat": 38.07,
+      "lon": -77.79,
+      "capacity_mwe": 942,
+      "epz_pop_est": 15000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "North Anna 1",
+        "North Anna 2"
+      ],
+      "warn_score": 0.5413,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Brunswick",
+      "state": "NC",
+      "lat": 33.96,
+      "lon": -78.02,
+      "capacity_mwe": 938,
+      "epz_pop_est": 16000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Brunswick 1",
+        "Brunswick 2"
+      ],
+      "warn_score": 0.5409,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Davis-Besse",
+      "state": "OH",
+      "lat": 41.6,
+      "lon": -83.09,
+      "capacity_mwe": 894,
+      "epz_pop_est": 21000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Davis-Besse"
+      ],
+      "warn_score": 0.5307,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Surry",
+      "state": "VA",
+      "lat": 37.17,
+      "lon": -76.7,
+      "capacity_mwe": 799,
+      "epz_pop_est": 44000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Surry 1",
+        "Surry 2"
+      ],
+      "warn_score": 0.5208,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Oconee",
+      "state": "SC",
+      "lat": 34.79,
+      "lon": -82.9,
+      "capacity_mwe": 846,
+      "epz_pop_est": 26000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Oconee 1",
+        "Oconee 2",
+        "Oconee 3"
+      ],
+      "warn_score": 0.5191,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Calvert Cliffs",
+      "state": "MD",
+      "lat": 38.43,
+      "lon": -76.44,
+      "capacity_mwe": 873,
+      "epz_pop_est": 14000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Calvert Cliffs 1",
+        "Calvert Cliffs 2"
+      ],
+      "warn_score": 0.5164,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Fitzpatrick",
+      "state": "NY",
+      "lat": 43.52,
+      "lon": -76.4,
+      "capacity_mwe": 852,
+      "epz_pop_est": 18000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.5132,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Hatch",
+      "state": "GA",
+      "lat": 31.93,
+      "lon": -82.35,
+      "capacity_mwe": 876,
+      "epz_pop_est": 8000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Hatch 1",
+        "Hatch 2"
+      ],
+      "warn_score": 0.5115,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Farley",
+      "state": "AL",
+      "lat": 31.22,
+      "lon": -85.11,
+      "capacity_mwe": 851,
+      "epz_pop_est": 11000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Farley 1",
+        "Farley 2"
+      ],
+      "warn_score": 0.5058,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Joseph M. Farley",
+      "state": "AL",
+      "lat": 31.22,
+      "lon": -85.11,
+      "capacity_mwe": 851,
+      "epz_pop_est": 11000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.5058,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Turkey Point",
+      "state": "FL",
+      "lat": 25.43,
+      "lon": -80.33,
+      "capacity_mwe": 693,
+      "epz_pop_est": 58000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Turkey Point 3",
+        "Turkey Point 4"
+      ],
+      "warn_score": 0.4981,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Arkansas Nuclear",
+      "state": "AR",
+      "lat": 35.31,
+      "lon": -93.23,
+      "capacity_mwe": 836,
+      "epz_pop_est": 8400,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Arkansas Nuclear 1",
+        "Arkansas Nuclear 2"
+      ],
+      "warn_score": 0.498,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Cooper",
+      "state": "NE",
+      "lat": 40.36,
+      "lon": -95.64,
+      "capacity_mwe": 769,
+      "epz_pop_est": 5000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Cooper"
+      ],
+      "warn_score": 0.4714,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Robinson",
+      "state": "SC",
+      "lat": 34.4,
+      "lon": -80.16,
+      "capacity_mwe": 710,
+      "epz_pop_est": 20000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Robinson 2"
+      ],
+      "warn_score": 0.466,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Pilgrim",
+      "state": "MA",
+      "lat": 41.94,
+      "lon": -70.58,
+      "capacity_mwe": 677,
+      "epz_pop_est": 24000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.4585,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Duane Arnold",
+      "state": "IA",
+      "lat": 42.1,
+      "lon": -91.78,
+      "capacity_mwe": 601,
+      "epz_pop_est": 48000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.4562,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Oyster Creek",
+      "state": "NJ",
+      "lat": 39.81,
+      "lon": -74.21,
+      "capacity_mwe": 619,
+      "epz_pop_est": 31000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.4454,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Vermont Yankee",
+      "state": "VT",
+      "lat": 42.78,
+      "lon": -72.52,
+      "capacity_mwe": 620,
+      "epz_pop_est": 16000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.4308,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Ginna",
+      "state": "NY",
+      "lat": 43.28,
+      "lon": -77.31,
+      "capacity_mwe": 498,
+      "epz_pop_est": 38000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Ginna"
+      ],
+      "warn_score": 0.4105,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Fort Calhoun",
+      "state": "NE",
+      "lat": 41.52,
+      "lon": -96.08,
+      "capacity_mwe": 478,
+      "epz_pop_est": 41000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.4066,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Kewaunee",
+      "state": "WI",
+      "lat": 44.34,
+      "lon": -87.54,
+      "capacity_mwe": 556,
+      "epz_pop_est": 14000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "not_in_nrc_status"
+      ],
+      "warn_score": 0.4066,
+      "warn_tier": "MITIGATION_REQUIRED"
+    },
+    {
+      "plant": "Prairie Island",
+      "state": "MN",
+      "lat": 44.62,
+      "lon": -92.63,
+      "capacity_mwe": 520,
+      "epz_pop_est": 14000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Prairie Island 1",
+        "Prairie Island 2"
+      ],
+      "warn_score": 0.3941,
+      "warn_tier": "MONITOR"
+    },
+    {
+      "plant": "Point Beach",
+      "state": "WI",
+      "lat": 44.28,
+      "lon": -87.54,
+      "capacity_mwe": 512,
+      "epz_pop_est": 14000,
+      "power_pct": 100.0,
+      "nrc_units": [
+        "Point Beach 1",
+        "Point Beach 2"
+      ],
+      "warn_score": 0.3914,
+      "warn_tier": "MONITOR"
+    },
+    {
+      "plant": "Monticello",
+      "state": "MN",
+      "lat": 45.33,
+      "lon": -93.85,
+      "capacity_mwe": 671,
+      "epz_pop_est": 40000,
+      "power_pct": 50.0,
+      "nrc_units": [
+        "Monticello"
+      ],
+      "warn_score": 0.3724,
+      "warn_tier": "MONITOR"
+    },
+    {
+      "plant": "River Bend",
+      "state": "LA",
+      "lat": 30.76,
+      "lon": -91.33,
+      "capacity_mwe": 967,
+      "epz_pop_est": 21000,
+      "power_pct": 0.0,
+      "nrc_units": [
+        "River Bend Station 1"
+      ],
+      "warn_score": 0.356,
+      "warn_tier": "MONITOR"
+    },
+    {
+      "plant": "Palisades",
+      "state": "MI",
+      "lat": 42.32,
+      "lon": -86.31,
+      "capacity_mwe": 805,
+      "epz_pop_est": 18000,
+      "power_pct": 0.0,
+      "nrc_units": [
+        "Palisades"
+      ],
+      "warn_score": 0.2969,
+      "warn_tier": "MONITOR"
+    }
+  ],
+  "blake3": "20e748a2b77257a632ac2f1d1f95dc896f248e0fcc44a01806efd5c04ac66a29"
+}

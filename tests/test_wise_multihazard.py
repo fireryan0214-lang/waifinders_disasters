@@ -176,3 +176,13 @@ class TestOutputFile:
         assert output["hazard_signals"]["hurricane"]["tier"] in {
             "NORMAL_OPERATION","MONITOR","MITIGATION_REQUIRED","EMERGENCY_RESPONSE"
         }
+
+    def test_nuclear_domain_present(self, output):
+        assert "nuclear" in output["hazard_signals"]
+        assert output["hazard_signals"]["nuclear"]["tier"] in {
+            "NORMAL_OPERATION","MONITOR","MITIGATION_REQUIRED","EMERGENCY_RESPONSE"
+        }
+
+    def test_nuclear_score_is_bounded(self, output):
+        s = output["hazard_signals"]["nuclear"]["score"]
+        assert 0.0 <= s <= 1.0

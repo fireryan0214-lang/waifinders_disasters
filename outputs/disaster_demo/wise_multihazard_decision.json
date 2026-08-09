@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-09T07:17:09.503424+00:00",
+  "generated_utc": "2026-08-09T07:24:52.037522+00:00",
   "wise_decision": "EMERGENCY_RESPONSE",
   "compound_event": true,
   "elevated_hazards": [
@@ -7,6 +7,7 @@
     "tsunami",
     "flood_surge",
     "hurricane",
+    "nuclear",
     "pulse"
   ],
   "hazard_signals": {
@@ -28,6 +29,10 @@
     },
     "hurricane": {
       "score": 0.814,
+      "tier": "EMERGENCY_RESPONSE"
+    },
+    "nuclear": {
+      "score": 0.871,
       "tier": "EMERGENCY_RESPONSE"
     }
   },

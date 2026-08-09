@@ -32,11 +32,12 @@ def load(fname):
     p = OUT_DIR / fname
     return json.loads(p.read_text()) if p.exists() else {}
 
-eq_data    = load("warn_earthquake_events.json")
-tsun_data  = load("warn_tsunami_events.json")
-flood_data = load("warn_flood_surge_events.json")
-hurr_data  = load("warn_hurricane_events.json")
-pulse_data = load("pulse_disaster_exposure.json")
+eq_data     = load("warn_earthquake_events.json")
+tsun_data   = load("warn_tsunami_events.json")
+flood_data  = load("warn_flood_surge_events.json")
+hurr_data   = load("warn_hurricane_events.json")
+nuke_data   = load("warn_nuclear_plants.json")
+pulse_data  = load("pulse_disaster_exposure.json")
 
 # Wildfire WARN — pull from wildfire repo outputs if available
 wildfire_path = Path(__file__).parent.parent / "outputs" / "wildfire" / "sentinel" / "ontario_sentinel_intelligence.json"
@@ -67,6 +68,12 @@ def peak_hurr_score(data):
     top = max(storms, key=lambda s: float(s.get("warn_score", 0)))
     return float(top.get("warn_score", 0)), top.get("warn_tier", "NORMAL_OPERATION")
 
+def peak_nuke_score(data):
+    plants = data.get("plants", [])
+    if not plants: return 0.0, "NORMAL_OPERATION"
+    top = max(plants, key=lambda p: float(p.get("warn_score", 0)))
+    return float(top.get("warn_score", 0)), top.get("warn_tier", "NORMAL_OPERATION")
+
 def wildfire_tier(data):
     # Pull from ontario sentinel if available
     fwi = data.get("fire_weather", {}).get("fwi", {})
@@ -78,6 +85,7 @@ eq_score,    eq_tier    = peak_eq_score(eq_data)
 tsun_score,  tsun_tier  = peak_tsun_score(tsun_data)
 flood_score, flood_tier = peak_flood_score(flood_data)
 hurr_score,  hurr_tier  = peak_hurr_score(hurr_data)
+nuke_score,  nuke_tier  = peak_nuke_score(nuke_data)
 wf_score,    wf_tier    = wildfire_tier(wildfire_data)
 
 # PULSE state
@@ -97,6 +105,7 @@ print(f"  Earthquake WARN:    score={eq_score:.3f}  tier={eq_tier}")
 print(f"  Tsunami WARN:       score={tsun_score:.3f}  tier={tsun_tier}")
 print(f"  Flood Surge WARN:   score={flood_score:.3f}  tier={flood_tier}")
 print(f"  Hurricane WARN:     score={hurr_score:.3f}  tier={hurr_tier}")
+print(f"  Nuclear WARN:       score={nuke_score:.3f}  tier={nuke_tier}")
 print(f"  PULSE infra:        RED={pulse_red} ({pulse_red_pct:.1%})  tier={pulse_tier}")
 
 # ── WISE decision logic ───────────────────────────────────────────────────────
@@ -106,6 +115,7 @@ hazard_tiers = {
     "tsunami":    tsun_tier,
     "flood_surge":flood_tier,
     "hurricane":  hurr_tier,
+    "nuclear":    nuke_tier,
     "pulse":      pulse_tier,
 }
 
@@ -177,6 +187,7 @@ decision = {
         "tsunami":     {"score": round(tsun_score,3),  "tier": tsun_tier},
         "flood_surge": {"score": round(flood_score,3), "tier": flood_tier},
         "hurricane":   {"score": round(hurr_score,3),  "tier": hurr_tier},
+        "nuclear":     {"score": round(nuke_score,3),  "tier": nuke_tier},
     },
     "pulse_state": {
         "tier": pulse_tier,
