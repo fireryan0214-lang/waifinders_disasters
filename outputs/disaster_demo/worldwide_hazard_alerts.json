@@ -1,0 +1,9 @@
+{
+  "generated_utc": "2026-08-09T17:37:14.908103+00:00",
+  "mode": "WORLDWIDE_EVENT_ALERTS",
+  "initialization": true,
+  "relevant_events_seen": 242,
+  "new_alert_count": 0,
+  "alerts": [],
+  "claim_boundary": "Decision support only. These are not official warnings and every action requires trained human review."
+}
