@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
-from live_incident_exposure import CRITICALITY, haversine_km, rank_exposures
+from live_incident_exposure import CRITICALITY, apply_reviews, haversine_km, rank_exposures
 
 
 def event():
@@ -41,3 +41,10 @@ def test_action_has_authoritative_source_link():
 
 def test_criticality_constants_are_bounded():
     assert all(0 <= value <= 1 for value in CRITICALITY.values())
+
+
+def test_human_review_overlays_only_named_action():
+    actions = rank_exposures([event()], [asset()])
+    reviewed = apply_reviews(actions, {actions[0]["action_id"]: {"decision": "APPROVED", "reviewer": "Alex", "note": "Verified", "reviewed_utc": "2026-08-09T00:00:00Z"}})
+    assert reviewed[0]["approval_status"] == "APPROVED"
+    assert reviewed[0]["human_review"]["reviewer"] == "Alex"

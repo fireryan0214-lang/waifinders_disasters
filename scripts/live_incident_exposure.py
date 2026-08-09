@@ -15,6 +15,7 @@ import requests
 
 ROOT = Path(__file__).parent.parent
 OUT_PATH = ROOT / "outputs" / "disaster_demo" / "live_incident_exposure.json"
+REVIEW_PATH = ROOT / "outputs" / "disaster_demo" / "live_incident_action_reviews.json"
 DEFAULT_ASSETS = ROOT / "inputs" / "assets.csv"
 USER_AGENT = "WAIFINDERS-Sentinel/0.1 contact: operations@example.invalid"
 
@@ -182,6 +183,23 @@ def suggested_action(asset_type, hazard):
     return f"Review site status and assign an operator for {hazard}."
 
 
+def load_reviews(path=REVIEW_PATH):
+    if not Path(path).exists():
+        return {}
+    records = json.loads(Path(path).read_text())
+    return {record["action_id"]: record for record in records}
+
+
+def apply_reviews(actions, reviews):
+    """Overlay the most recent human review without ever auto-approving an action."""
+    for action in actions:
+        review = reviews.get(action["action_id"])
+        if review:
+            action["approval_status"] = review["decision"]
+            action["human_review"] = {key: review[key] for key in ("reviewer", "note", "reviewed_utc")}
+    return actions
+
+
 def rank_exposures(events, assets):
     ranked = []
     for event in events:
@@ -215,7 +233,7 @@ def build(assets_path=DEFAULT_ASSETS):
     for fetcher, args in ((fetch_usgs_earthquakes, ()), (fetch_nws_alerts, ()), (fetch_nhc_advisories, ()), (fetch_usgs_gauges, (assets,)), (fetch_nrc_notifications, ())):
         events, source = safe_fetch(fetcher, *args)
         batches.extend(events); sources.append(source)
-    actions = rank_exposures(batches, assets)
+    actions = apply_reviews(rank_exposures(batches, assets), load_reviews())
     payload = {
         "generated_utc": datetime.now(timezone.utc).isoformat(), "mode": "LIVE_DECISION_SUPPORT", "asset_input": {"path": str(Path(assets_path)), "status": asset_status, "asset_count": len(assets)},
         "source_refreshes": sources, "live_event_count": len(batches), "events": batches, "action_count": len(actions), "actions": actions,

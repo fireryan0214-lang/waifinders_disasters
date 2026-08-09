@@ -10,4 +10,6 @@ Required fields: `asset_id`, `name`, `asset_type`, `lat`, `lon`, `criticality`, 
 
 Run `python scripts/live_incident_exposure.py` after replacing the template with the customer inventory, then `python scripts/build_sentinel_live_operations.py` to render Sentinel.
 
+To record a human decision, copy an action ID from the current output and run `python scripts/review_live_action.py --action-id "..." --decision APPROVED --reviewer "Name" --note "Verified against official source"`. Refresh the live output and dashboard to show the auditable decision.
+
 Do not put credentials, personal health information, or evacuation lists in this file.
