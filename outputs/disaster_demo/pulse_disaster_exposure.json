@@ -1,7 +1,7 @@
 {
   "source": "NY State DOT bridge inventory (data.ny.gov) + WARN hazard zone overlays",
   "bridge_fetch_status": "live",
-  "fetched_utc": "2026-08-09T06:40:53.172556+00:00",
+  "fetched_utc": "2026-08-09T07:11:41.574614+00:00",
   "bridge_count": 2000,
   "formula": {
     "pulse_base_score": "mean(deck_condition_risk, superstructure_condition_risk, substructure_condition_risk)",
@@ -14,27 +14,128 @@
       "GREEN": "<0.25"
     }
   },
+  "seismic_source": "USGS NSHM 2014 (E2014R1) \u2014 2%/50yr PGA at Vs30=760m/s, queried per county centroid via hazws API",
   "hazard_zones": {
-    "seismic_HIGH": "Pacific NW: lat 42-50, lon -125 to -120 (Cascadia zone)",
-    "tsunami": "Coastal proximity proxy: Pacific coast lon<-117 or Gulf/Atlantic lat<35",
-    "flood": "Low-latitude coastal proxy (lat<35 or Gulf/SE Atlantic)"
+    "seismic_HIGH": "USGS NSHM 2%/50yr PGA > 0.10g (10 of 13 NY counties including NYC metro)",
+    "seismic_MEDIUM": "USGS NSHM 2%/50yr PGA 0.04\u20130.10g (Suffolk, Erie, Monroe)",
+    "tsunami": "Coastal proximity proxy: Long Island / NYC metro lon>-74.5, lat<41.5",
+    "flood": "NY tidal/coastal elevation proxy: lat<41.0"
   },
-  "claim_boundary": "EXPERIMENTAL prototype. Hazard zones are simplified proxies, not authoritative FEMA/USGS boundaries.",
+  "claim_boundary": "EXPERIMENTAL prototype. Seismic hazard uses USGS NSHM 2014 (E2014R1) 2%/50yr PGA \u2014 authoritative for county-level classification. Tsunami and flood zones remain proximity proxies; replace with NOAA inundation maps and FEMA FIRM for production. Hazard zone assignment uses county centroid, not individual bridge coordinates.",
   "risk_summary": {
-    "RED": 97,
-    "AMBER": 162,
-    "YELLOW": 1336,
-    "GREEN": 405
+    "RED": 196,
+    "AMBER": 276,
+    "YELLOW": 1194,
+    "GREEN": 334
   },
   "priority_bridges": [
+    {
+      "bin": "1025260",
+      "county": "Albany",
+      "pulse_score": 0.82375,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "1038070",
+      "county": "Albany",
+      "pulse_score": 0.82375,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "3301340",
+      "county": "Albany",
+      "pulse_score": 0.9025,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "3301400",
+      "county": "Albany",
+      "pulse_score": 0.8120833333333333,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "3301370",
+      "county": "Albany",
+      "pulse_score": 0.9025,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "1067979",
+      "county": "Bronx",
+      "pulse_score": 0.7391666666666666,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
+    },
+    {
+      "bin": "1067452",
+      "county": "Bronx",
+      "pulse_score": 0.8208333333333333,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
+    },
+    {
+      "bin": "1067451",
+      "county": "Bronx",
+      "pulse_score": 0.7537499999999999,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
+    },
+    {
+      "bin": "1066419",
+      "county": "Bronx",
+      "pulse_score": 0.7654166666666666,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
+    },
+    {
+      "bin": "106685B",
+      "county": "Bronx",
+      "pulse_score": 0.7275,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
+    },
+    {
+      "bin": "1066790",
+      "county": "Bronx",
+      "pulse_score": 0.8033333333333332,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
+    },
     {
       "bin": "2066720",
       "county": "Bronx",
       "pulse_score": 0.8879166666666667,
       "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
       "bin": "2241740",
@@ -42,170 +143,71 @@
       "pulse_score": 0.9025,
       "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
-      "bin": "2241810",
+      "bin": "1066669",
       "county": "Bronx",
-      "pulse_score": 0.9025,
+      "pulse_score": 0.7391666666666666,
       "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "2240200",
-      "county": "Bronx",
-      "pulse_score": 0.8966666666666666,
-      "compound_score": 1.0,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "7702320",
-      "county": "Bronx",
-      "pulse_score": 0.89375,
-      "compound_score": 1.0,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "2241460",
-      "county": "Bronx",
-      "pulse_score": 0.8966666666666666,
-      "compound_score": 1.0,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "2241590",
-      "county": "Bronx",
-      "pulse_score": 0.8674999999999999,
-      "compound_score": 0.9976249999999999,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "1067452",
-      "county": "Bronx",
-      "pulse_score": 0.8208333333333333,
-      "compound_score": 0.9439583333333332,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "2229530",
-      "county": "Bronx",
-      "pulse_score": 0.8062499999999999,
-      "compound_score": 0.9271874999999998,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "1066790",
-      "county": "Bronx",
-      "pulse_score": 0.8033333333333332,
-      "compound_score": 0.9238333333333332,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
       "bin": "2266540",
       "county": "Bronx",
       "pulse_score": 0.8033333333333332,
-      "compound_score": 0.9238333333333332,
+      "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "2075837",
-      "county": "Bronx",
-      "pulse_score": 0.7975,
-      "compound_score": 0.917125,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
       "bin": "2075849",
       "county": "Bronx",
       "pulse_score": 0.7916666666666666,
-      "compound_score": 0.9104166666666665,
+      "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "1066419",
-      "county": "Bronx",
-      "pulse_score": 0.7654166666666666,
-      "compound_score": 0.8802291666666665,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
       "bin": "1076729",
       "county": "Bronx",
       "pulse_score": 0.7654166666666666,
-      "compound_score": 0.8802291666666665,
+      "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
       "bin": "1067109",
       "county": "Bronx",
       "pulse_score": 0.7654166666666666,
-      "compound_score": 0.8802291666666665,
+      "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
       "bin": "1067099",
       "county": "Bronx",
       "pulse_score": 0.7654166666666666,
-      "compound_score": 0.8802291666666665,
+      "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     },
     {
       "bin": "1075049",
       "county": "Bronx",
       "pulse_score": 0.7625,
-      "compound_score": 0.8768749999999998,
+      "compound_score": 1.0,
       "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "1067451",
-      "county": "Bronx",
-      "pulse_score": 0.7537499999999999,
-      "compound_score": 0.8668124999999999,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
-    },
-    {
-      "bin": "1066350",
-      "county": "Bronx",
-      "pulse_score": 0.745,
-      "compound_score": 0.8567499999999999,
-      "risk_band": "RED",
-      "seismic_zone": "LOW",
-      "tsunami_zone": false
+      "seismic_zone": "HIGH",
+      "tsunami_zone": true
     }
   ]
 }

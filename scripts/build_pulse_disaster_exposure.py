@@ -79,23 +79,42 @@ if len(bridges) > 0:
     # Tsunami zone: coastal bridges within 10km of coast (lat/lon proximity)
     # Flood zone: low-elevation bridges (proxy: within 5m elevation — use lat as crude proxy for Gulf/Atlantic coast)
 
-    def seismic_exposure(lat, lon):
-        """Pacific NW seismic zone: WA/OR coast (lat 42-50, lon -125 to -122)"""
-        if 42 <= lat <= 50 and -125 <= lon <= -120:
-            return "HIGH"
-        return "LOW"
+    # ── USGS NSHM 2014 seismic hazard — precomputed 2%/50yr PGA per county centroid ──
+    # Queried live from USGS hazard API (E2014R1, COUS0P05, PGA, Vs30=760m/s)
+    # HIGH: PGA > 0.10g  MEDIUM: 0.04-0.10g  LOW: < 0.04g
+    COUNTY_SEISMIC = {
+        "New York":    {"pga_2p50_g": 0.1792, "hazard_class": "HIGH"},
+        "Kings":       {"pga_2p50_g": 0.1725, "hazard_class": "HIGH"},
+        "Queens":      {"pga_2p50_g": 0.1723, "hazard_class": "HIGH"},
+        "Richmond":    {"pga_2p50_g": 0.1713, "hazard_class": "HIGH"},
+        "Bronx":       {"pga_2p50_g": 0.1818, "hazard_class": "HIGH"},
+        "Nassau":      {"pga_2p50_g": 0.1558, "hazard_class": "HIGH"},
+        "Suffolk":     {"pga_2p50_g": 0.0940, "hazard_class": "MEDIUM"},
+        "Westchester": {"pga_2p50_g": 0.1798, "hazard_class": "HIGH"},
+        "Rockland":    {"pga_2p50_g": 0.1798, "hazard_class": "HIGH"},
+        "Erie":        {"pga_2p50_g": 0.0883, "hazard_class": "MEDIUM"},
+        "Monroe":      {"pga_2p50_g": 0.0859, "hazard_class": "MEDIUM"},
+        "Albany":      {"pga_2p50_g": 0.1062, "hazard_class": "HIGH"},
+        "Orange":      {"pga_2p50_g": 0.1291, "hazard_class": "HIGH"},
+    }
+    DEFAULT_SEISMIC = {"pga_2p50_g": 0.08, "hazard_class": "MEDIUM"}
+
+    def seismic_exposure(county):
+        """USGS NSHM 2014 (E2014R1) 2%/50yr PGA at county centroid, Vs30=760m/s."""
+        return COUNTY_SEISMIC.get(county, DEFAULT_SEISMIC)["hazard_class"]
 
     def tsunami_zone(lat, lon):
-        """Coastal proximity proxy: within ~1° of coast, Pacific or Atlantic"""
-        if lon < -117 and lat < 50:  # Pacific coast
-            return True
-        if lon > -81 and lat < 35:   # Gulf/SE Atlantic
+        """Coastal proximity proxy: within ~1° of Atlantic coast (NY specific)."""
+        if lon > -74.5 and lat < 41.5:   # Long Island / NYC coastal zone
             return True
         return False
 
-    bridges["seismic_zone"]  = bridges.apply(lambda r: seismic_exposure(r["latitude"], r["longitude"]), axis=1)
+    bridges["seismic_zone"]  = bridges["county"].apply(seismic_exposure)
+    bridges["seismic_pga_g"] = bridges["county"].apply(
+        lambda c: COUNTY_SEISMIC.get(c, DEFAULT_SEISMIC)["pga_2p50_g"]
+    )
     bridges["tsunami_zone"]  = bridges.apply(lambda r: tsunami_zone(r["latitude"], r["longitude"]), axis=1)
-    bridges["flood_zone"]    = bridges["latitude"].apply(lambda lat: lat < 35 or (lat < 42 and True))
+    bridges["flood_zone"]    = bridges["latitude"].apply(lambda lat: lat < 41.0)  # NY coastal/tidal elevation proxy
 
     # Compound exposure score: PULSE score amplified by hazard zone presence
     def compound_score(row):
@@ -156,12 +175,19 @@ payload = {
         "compound_score": "min(1, pulse_score × (1 + 0.25×seismic + 0.20×tsunami + 0.15×flood))",
         "risk_bands": {"RED": "≥0.70", "AMBER": "≥0.45", "YELLOW": "≥0.25", "GREEN": "<0.25"},
     },
+    "seismic_source": "USGS NSHM 2014 (E2014R1) — 2%/50yr PGA at Vs30=760m/s, queried per county centroid via hazws API",
     "hazard_zones": {
-        "seismic_HIGH": "Pacific NW: lat 42-50, lon -125 to -120 (Cascadia zone)",
-        "tsunami": "Coastal proximity proxy: Pacific coast lon<-117 or Gulf/Atlantic lat<35",
-        "flood": "Low-latitude coastal proxy (lat<35 or Gulf/SE Atlantic)",
+        "seismic_HIGH": "USGS NSHM 2%/50yr PGA > 0.10g (10 of 13 NY counties including NYC metro)",
+        "seismic_MEDIUM": "USGS NSHM 2%/50yr PGA 0.04–0.10g (Suffolk, Erie, Monroe)",
+        "tsunami": "Coastal proximity proxy: Long Island / NYC metro lon>-74.5, lat<41.5",
+        "flood": "NY tidal/coastal elevation proxy: lat<41.0",
     },
-    "claim_boundary": "EXPERIMENTAL prototype. Hazard zones are simplified proxies, not authoritative FEMA/USGS boundaries.",
+    "claim_boundary": (
+        "EXPERIMENTAL prototype. Seismic hazard uses USGS NSHM 2014 (E2014R1) 2%/50yr PGA — "
+        "authoritative for county-level classification. Tsunami and flood zones remain proximity "
+        "proxies; replace with NOAA inundation maps and FEMA FIRM for production. "
+        "Hazard zone assignment uses county centroid, not individual bridge coordinates."
+    ),
     "risk_summary": {
         band: int(bridges["risk_band"].value_counts().get(band, 0))
         for band in ["RED","AMBER","YELLOW","GREEN"]

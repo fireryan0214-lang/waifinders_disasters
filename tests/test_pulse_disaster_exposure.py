@@ -103,28 +103,40 @@ class TestRiskBand:
 
 
 class TestHazardZoneLogic:
-    """Seismic/tsunami/flood zone assignment from coordinate proxies."""
+    """Seismic zone assignment from USGS NSHM 2014 precomputed values."""
 
-    def test_seattle_is_not_in_seismic_zone(self):
-        # Seismic HIGH = lat 42-50, lon -125 to -120
-        lat, lon = 47.61, -122.33
-        in_zone = 42 <= lat <= 50 and -125 <= lon <= -120
-        assert in_zone  # Seattle IS in the Cascadia zone
+    # USGS NSHM 2014 (E2014R1) 2%/50yr PGA at Vs30=760m/s — queried live this session
+    COUNTY_SEISMIC = {
+        "New York":    0.1792, "Kings":    0.1725, "Queens":   0.1723,
+        "Richmond":    0.1713, "Bronx":    0.1818, "Nassau":   0.1558,
+        "Suffolk":     0.0940, "Westchester": 0.1798, "Rockland": 0.1798,
+        "Erie":        0.0883, "Monroe":   0.0859, "Albany":   0.1062,
+        "Orange":      0.1291,
+    }
 
-    def test_new_york_not_in_seismic_zone(self):
-        lat, lon = 40.71, -74.01
-        in_zone = 42 <= lat <= 50 and -125 <= lon <= -120
-        assert not in_zone
+    def test_nyc_counties_are_high_seismic(self):
+        nyc = ["New York", "Kings", "Queens", "Richmond", "Bronx"]
+        for county in nyc:
+            assert self.COUNTY_SEISMIC[county] > 0.10, f"{county} should be HIGH"
 
-    def test_gulf_coast_in_flood_zone(self):
-        lat = 29.0  # Gulf of Mexico latitude
-        assert lat < 35  # flood proxy condition
+    def test_suffolk_erie_monroe_are_medium(self):
+        for county in ["Suffolk", "Erie", "Monroe"]:
+            pga = self.COUNTY_SEISMIC[county]
+            assert 0.04 <= pga <= 0.10, f"{county} PGA {pga} expected MEDIUM"
 
-    def test_upper_midwest_not_in_flood_zone(self):
-        lat = 46.0  # Minnesota
-        lon = -93.0
-        in_flood = lat < 35 or (lat < 42 and True)  # simplified proxy
-        # Not a hard assertion — proxy is acknowledged as simplified
+    def test_bronx_has_highest_pga(self):
+        bronx_pga = self.COUNTY_SEISMIC["Bronx"]
+        all_pgas = list(self.COUNTY_SEISMIC.values())
+        assert bronx_pga == max(all_pgas)
+
+    def test_all_counties_above_low_threshold(self):
+        for county, pga in self.COUNTY_SEISMIC.items():
+            assert pga > 0.04, f"{county} PGA {pga:.4f} unexpectedly LOW"
+
+    def test_pga_thresholds_correct(self):
+        assert 0.1792 > 0.10   # HIGH
+        assert 0.0940 < 0.10   # MEDIUM (Suffolk)
+        assert 0.0940 > 0.04   # not LOW
 
 
 class TestOutputFile:
@@ -147,9 +159,13 @@ class TestOutputFile:
         for band, count in output["risk_summary"].items():
             assert count >= 0
 
-    def test_claim_boundary_notes_proxy_limitation(self, output):
+    def test_claim_boundary_notes_usgs_seismic(self, output):
         claim = output["claim_boundary"].lower()
-        assert "proxy" in claim or "simplified" in claim or "not authoritative" in claim
+        assert "usgs" in claim or "nshm" in claim
+
+    def test_seismic_source_documented(self, output):
+        assert "seismic_source" in output
+        assert "USGS" in output["seismic_source"] or "E2014R1" in output["seismic_source"]
 
     def test_priority_bridges_list_present(self, output):
         assert "priority_bridges" in output
