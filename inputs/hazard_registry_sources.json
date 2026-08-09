@@ -1,0 +1,6 @@
+[
+  {"source_id":"usgs_quaternary_faults","name":"USGS Quaternary Fault and Fold Database","authority":"U.S. Geological Survey","hazard_type":"earthquake_fault","url":"https://www.usgs.gov/programs/earthquake-hazards/faults","license_note":"USGS source data are public domain; retain source attribution and retrieval date."},
+  {"source_id":"noaa_ncei_tsunami","name":"NOAA/NCEI Global Historical Tsunami Data","authority":"NOAA National Centers for Environmental Information","hazard_type":"tsunami_risk","url":"https://www.ncei.noaa.gov/products/natural-hazards/tsunamis-earthquakes-volcanoes/tsunamis/global-historical-data","license_note":"Historical-event and runup data are screening evidence, not a real-time tsunami warning layer."},
+  {"source_id":"noaa_ibtracs","name":"NOAA/NCEI IBTrACS","authority":"NOAA National Centers for Environmental Information","hazard_type":"hurricane_risk","url":"https://www.ncei.noaa.gov/products/international-best-track-archive","license_note":"Historical tracks support risk screening; current advisories must come from official warning agencies."},
+  {"source_id":"fema_nri","name":"FEMA National Risk Index","authority":"Federal Emergency Management Agency","hazard_type":"hurricane_risk","url":"https://hazards.fema.gov/nri/","license_note":"Use as U.S. community-level risk screening, not asset-specific loss prediction."}
+]
