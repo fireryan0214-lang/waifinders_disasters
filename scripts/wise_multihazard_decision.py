@@ -1,6 +1,6 @@
 """
 WAIFINDERS WISE — Multi-Hazard Decision Engine
-Combines all WARN signals (wildfire, earthquake, tsunami, flood surge) and PULSE
+Combines all WARN signals (wildfire, earthquake, tsunami, flood surge, hurricane) and PULSE
 infrastructure exposure into a single operational decision state.
 
 Decision states (from project archive):
@@ -35,6 +35,7 @@ def load(fname):
 eq_data    = load("warn_earthquake_events.json")
 tsun_data  = load("warn_tsunami_events.json")
 flood_data = load("warn_flood_surge_events.json")
+hurr_data  = load("warn_hurricane_events.json")
 pulse_data = load("pulse_disaster_exposure.json")
 
 # Wildfire WARN — pull from wildfire repo outputs if available
@@ -60,6 +61,12 @@ def peak_flood_score(data):
     top = max(events, key=lambda e: float(e.get("warn_score", 0)))
     return float(top.get("warn_score", 0)), top.get("warn_tier", "NORMAL_OPERATION")
 
+def peak_hurr_score(data):
+    storms = data.get("storms", [])
+    if not storms: return 0.0, "NORMAL_OPERATION"
+    top = max(storms, key=lambda s: float(s.get("warn_score", 0)))
+    return float(top.get("warn_score", 0)), top.get("warn_tier", "NORMAL_OPERATION")
+
 def wildfire_tier(data):
     # Pull from ontario sentinel if available
     fwi = data.get("fire_weather", {}).get("fwi", {})
@@ -70,6 +77,7 @@ def wildfire_tier(data):
 eq_score,    eq_tier    = peak_eq_score(eq_data)
 tsun_score,  tsun_tier  = peak_tsun_score(tsun_data)
 flood_score, flood_tier = peak_flood_score(flood_data)
+hurr_score,  hurr_tier  = peak_hurr_score(hurr_data)
 wf_score,    wf_tier    = wildfire_tier(wildfire_data)
 
 # PULSE state
@@ -88,6 +96,7 @@ print(f"  Wildfire WARN:      score={wf_score:.3f}  tier={wf_tier}")
 print(f"  Earthquake WARN:    score={eq_score:.3f}  tier={eq_tier}")
 print(f"  Tsunami WARN:       score={tsun_score:.3f}  tier={tsun_tier}")
 print(f"  Flood Surge WARN:   score={flood_score:.3f}  tier={flood_tier}")
+print(f"  Hurricane WARN:     score={hurr_score:.3f}  tier={hurr_tier}")
 print(f"  PULSE infra:        RED={pulse_red} ({pulse_red_pct:.1%})  tier={pulse_tier}")
 
 # ── WISE decision logic ───────────────────────────────────────────────────────
@@ -96,6 +105,7 @@ hazard_tiers = {
     "earthquake": eq_tier,
     "tsunami":    tsun_tier,
     "flood_surge":flood_tier,
+    "hurricane":  hurr_tier,
     "pulse":      pulse_tier,
 }
 
@@ -166,6 +176,7 @@ decision = {
         "earthquake":  {"score": round(eq_score,3),    "tier": eq_tier},
         "tsunami":     {"score": round(tsun_score,3),  "tier": tsun_tier},
         "flood_surge": {"score": round(flood_score,3), "tier": flood_tier},
+        "hurricane":   {"score": round(hurr_score,3),  "tier": hurr_tier},
     },
     "pulse_state": {
         "tier": pulse_tier,

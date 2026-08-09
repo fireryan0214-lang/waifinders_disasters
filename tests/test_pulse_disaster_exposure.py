@@ -167,6 +167,14 @@ class TestOutputFile:
         assert "seismic_source" in output
         assert "USGS" in output["seismic_source"] or "E2014R1" in output["seismic_source"]
 
+    def test_tsunami_zone_uses_noaa_coastal_classification(self, output):
+        zones = output["hazard_zones"]
+        assert "NOAA" in zones["tsunami"] or "CO-OPS" in zones["tsunami"]
+
+    def test_flood_zone_uses_fema_sfha(self, output):
+        zones = output["hazard_zones"]
+        assert "FEMA" in zones["flood"] or "SFHA" in zones["flood"] or "NFHL" in zones["flood"]
+
     def test_priority_bridges_list_present(self, output):
         assert "priority_bridges" in output
         assert isinstance(output["priority_bridges"], list)

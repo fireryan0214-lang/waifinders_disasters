@@ -1,11 +1,13 @@
 {
-  "generated_utc": "2026-08-09T06:40:53.475001+00:00",
+  "generated_utc": "2026-08-09T07:17:09.503424+00:00",
   "wise_decision": "EMERGENCY_RESPONSE",
   "compound_event": true,
   "elevated_hazards": [
     "earthquake",
     "tsunami",
-    "flood_surge"
+    "flood_surge",
+    "hurricane",
+    "pulse"
   ],
   "hazard_signals": {
     "wildfire": {
@@ -23,13 +25,17 @@
     "flood_surge": {
       "score": 0.549,
       "tier": "MITIGATION_REQUIRED"
+    },
+    "hurricane": {
+      "score": 0.814,
+      "tier": "EMERGENCY_RESPONSE"
     }
   },
   "pulse_state": {
-    "tier": "NORMAL_OPERATION",
-    "red_band_count": 97,
-    "amber_band_count": 162,
-    "red_band_pct": 0.0485
+    "tier": "MITIGATION_REQUIRED",
+    "red_band_count": 200,
+    "amber_band_count": 340,
+    "red_band_pct": 0.1
   },
   "cost_estimate_illustrative": {
     "label": "$1B\u2013$10B+",

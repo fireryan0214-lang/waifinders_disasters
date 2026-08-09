@@ -170,3 +170,9 @@ class TestOutputFile:
     def test_formula_documents_compound_rule(self, output):
         formula = output["formula"]
         assert "compound" in str(formula).lower() or "2+" in str(formula)
+
+    def test_hurricane_domain_present(self, output):
+        assert "hurricane" in output["hazard_signals"]
+        assert output["hazard_signals"]["hurricane"]["tier"] in {
+            "NORMAL_OPERATION","MONITOR","MITIGATION_REQUIRED","EMERGENCY_RESPONSE"
+        }

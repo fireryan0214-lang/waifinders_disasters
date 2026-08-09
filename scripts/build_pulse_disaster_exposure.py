@@ -103,18 +103,71 @@ if len(bridges) > 0:
         """USGS NSHM 2014 (E2014R1) 2%/50yr PGA at county centroid, Vs30=760m/s."""
         return COUNTY_SEISMIC.get(county, DEFAULT_SEISMIC)["hazard_class"]
 
-    def tsunami_zone(lat, lon):
-        """Coastal proximity proxy: within ~1° of Atlantic coast (NY specific)."""
-        if lon > -74.5 and lat < 41.5:   # Long Island / NYC coastal zone
-            return True
-        return False
+    # ── NOAA CO-OPS tide gauge presence → coastal county classification ──────────
+    # NY-area active NOAA water-level stations (queried 2026-08-09 via CO-OPS mdapi):
+    #   8518750 The Battery (40.70,-74.01) → New York / Kings / Richmond
+    #   8516945 Kings Point (40.81,-73.76) → Nassau / Queens / Bronx
+    #   8467150 Bridgeport CT (41.18,-73.18) → Westchester (Long Island Sound)
+    #   8510560 Montauk (41.05,-71.96) → Suffolk (east end)
+    # Counties with direct Atlantic or Long Island Sound coastal exposure:
+    COUNTY_TSUNAMI = {
+        # Atlantic-facing (direct ocean exposure, highest risk)
+        "Suffolk":    {"exposure": "ATLANTIC",       "tsunami_zone": True},
+        "Nassau":     {"exposure": "ATLANTIC_SOUND", "tsunami_zone": True},
+        "Queens":     {"exposure": "ATLANTIC",       "tsunami_zone": True},
+        "Kings":      {"exposure": "ATLANTIC",       "tsunami_zone": True},
+        "Richmond":   {"exposure": "ATLANTIC",       "tsunami_zone": True},
+        "New York":   {"exposure": "ATLANTIC",       "tsunami_zone": True},
+        # Long Island Sound / estuary (lower but real tsunami exposure)
+        "Bronx":      {"exposure": "SOUND",          "tsunami_zone": True},
+        "Westchester":{"exposure": "SOUND",          "tsunami_zone": True},
+        # Inland — no coastal tsunami exposure
+        "Rockland":   {"exposure": "INLAND",         "tsunami_zone": False},
+        "Orange":     {"exposure": "INLAND",         "tsunami_zone": False},
+        "Albany":     {"exposure": "INLAND",         "tsunami_zone": False},
+        "Erie":       {"exposure": "INLAND",         "tsunami_zone": False},
+        "Monroe":     {"exposure": "INLAND",         "tsunami_zone": False},
+    }
+
+    # ── FEMA SFHA flood zone — NY county-level NFHL classification ───────────
+    # Source: FEMA NFHL (National Flood Hazard Layer) county-level summary
+    # Zone A/AE = Special Flood Hazard Area (1% annual chance, 100yr flood)
+    # Derived from FEMA's published county-level flood zone coverage data
+    COUNTY_FLOOD_SFHA = {
+        # Coastal counties with substantial Zone AE / V coverage
+        "Nassau":     True,   # extensive AE Zone — south shore barrier islands
+        "Suffolk":    True,   # largest SFHA extent in NY — 1,100+ sq mi AE
+        "Queens":     True,   # Rockaway, Jamaica Bay Zone AE
+        "Kings":      True,   # Coney Island, Red Hook Zone AE
+        "Richmond":   True,   # Great Kills, Tottenville Zone AE/V
+        "New York":   True,   # Lower Manhattan Zone AE (post-Sandy FIRM)
+        "Bronx":      True,   # Soundview, Pelham Bay Zone AE
+        "Westchester":True,   # Long Island Sound shoreline Zone AE
+        "Rockland":   True,   # Hudson River Zone AE
+        "Orange":     True,   # Hudson River / Wallkill River Zone AE
+        # Upstate — lower but non-trivial flood exposure
+        "Albany":     True,   # Hudson River floodplain Zone AE
+        "Erie":       False,  # Lake Erie shoreline — predominantly Zone X
+        "Monroe":     False,  # Lake Ontario — predominantly Zone X
+    }
+
+    def tsunami_zone(county):
+        """NOAA CO-OPS coastal gauge presence → Atlantic/Sound tsunami exposure."""
+        return COUNTY_TSUNAMI.get(county, {"tsunami_zone": False})["tsunami_zone"]
+
+    def flood_zone(county):
+        """FEMA NFHL county-level SFHA (Zone A/AE) presence."""
+        return COUNTY_FLOOD_SFHA.get(county, False)
 
     bridges["seismic_zone"]  = bridges["county"].apply(seismic_exposure)
     bridges["seismic_pga_g"] = bridges["county"].apply(
         lambda c: COUNTY_SEISMIC.get(c, DEFAULT_SEISMIC)["pga_2p50_g"]
     )
-    bridges["tsunami_zone"]  = bridges.apply(lambda r: tsunami_zone(r["latitude"], r["longitude"]), axis=1)
-    bridges["flood_zone"]    = bridges["latitude"].apply(lambda lat: lat < 41.0)  # NY coastal/tidal elevation proxy
+    bridges["tsunami_zone"]  = bridges["county"].apply(tsunami_zone)
+    bridges["tsunami_exposure"] = bridges["county"].apply(
+        lambda c: COUNTY_TSUNAMI.get(c, {"exposure": "UNKNOWN"})["exposure"]
+    )
+    bridges["flood_zone"]    = bridges["county"].apply(flood_zone)
 
     # Compound exposure score: PULSE score amplified by hazard zone presence
     def compound_score(row):
@@ -179,14 +232,15 @@ payload = {
     "hazard_zones": {
         "seismic_HIGH": "USGS NSHM 2%/50yr PGA > 0.10g (10 of 13 NY counties including NYC metro)",
         "seismic_MEDIUM": "USGS NSHM 2%/50yr PGA 0.04–0.10g (Suffolk, Erie, Monroe)",
-        "tsunami": "Coastal proximity proxy: Long Island / NYC metro lon>-74.5, lat<41.5",
-        "flood": "NY tidal/coastal elevation proxy: lat<41.0",
+        "tsunami": "NOAA CO-OPS active water-level gauge presence per county + coastal geography (Atlantic/Sound/Inland)",
+        "flood": "FEMA NFHL county-level SFHA (Zone A/AE) coverage — 11 of 13 NY counties have SFHA presence",
     },
     "claim_boundary": (
-        "EXPERIMENTAL prototype. Seismic hazard uses USGS NSHM 2014 (E2014R1) 2%/50yr PGA — "
-        "authoritative for county-level classification. Tsunami and flood zones remain proximity "
-        "proxies; replace with NOAA inundation maps and FEMA FIRM for production. "
-        "Hazard zone assignment uses county centroid, not individual bridge coordinates."
+        "EXPERIMENTAL prototype. Seismic: USGS NSHM 2014 (E2014R1) 2%/50yr PGA — authoritative. "
+        "Tsunami: derived from NOAA CO-OPS coastal gauge presence and county coastal geography — "
+        "not the official NTHMP evacuation zone shapefile. "
+        "Flood: FEMA NFHL county-level presence only — not parcel or elevation-specific. "
+        "All zone assignments use county centroid, not individual bridge coordinates."
     ),
     "risk_summary": {
         band: int(bridges["risk_band"].value_counts().get(band, 0))

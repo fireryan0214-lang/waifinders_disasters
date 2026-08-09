@@ -1,7 +1,7 @@
 {
   "source": "NY State DOT bridge inventory (data.ny.gov) + WARN hazard zone overlays",
   "bridge_fetch_status": "live",
-  "fetched_utc": "2026-08-09T07:11:41.574614+00:00",
+  "fetched_utc": "2026-08-09T07:16:28.394674+00:00",
   "bridge_count": 2000,
   "formula": {
     "pulse_base_score": "mean(deck_condition_risk, superstructure_condition_risk, substructure_condition_risk)",
@@ -18,17 +18,26 @@
   "hazard_zones": {
     "seismic_HIGH": "USGS NSHM 2%/50yr PGA > 0.10g (10 of 13 NY counties including NYC metro)",
     "seismic_MEDIUM": "USGS NSHM 2%/50yr PGA 0.04\u20130.10g (Suffolk, Erie, Monroe)",
-    "tsunami": "Coastal proximity proxy: Long Island / NYC metro lon>-74.5, lat<41.5",
-    "flood": "NY tidal/coastal elevation proxy: lat<41.0"
+    "tsunami": "NOAA CO-OPS active water-level gauge presence per county + coastal geography (Atlantic/Sound/Inland)",
+    "flood": "FEMA NFHL county-level SFHA (Zone A/AE) coverage \u2014 11 of 13 NY counties have SFHA presence"
   },
-  "claim_boundary": "EXPERIMENTAL prototype. Seismic hazard uses USGS NSHM 2014 (E2014R1) 2%/50yr PGA \u2014 authoritative for county-level classification. Tsunami and flood zones remain proximity proxies; replace with NOAA inundation maps and FEMA FIRM for production. Hazard zone assignment uses county centroid, not individual bridge coordinates.",
+  "claim_boundary": "EXPERIMENTAL prototype. Seismic: USGS NSHM 2014 (E2014R1) 2%/50yr PGA \u2014 authoritative. Tsunami: derived from NOAA CO-OPS coastal gauge presence and county coastal geography \u2014 not the official NTHMP evacuation zone shapefile. Flood: FEMA NFHL county-level presence only \u2014 not parcel or elevation-specific. All zone assignments use county centroid, not individual bridge coordinates.",
   "risk_summary": {
-    "RED": 196,
-    "AMBER": 276,
-    "YELLOW": 1194,
-    "GREEN": 334
+    "RED": 200,
+    "AMBER": 340,
+    "YELLOW": 1141,
+    "GREEN": 319
   },
   "priority_bridges": [
+    {
+      "bin": "1015980",
+      "county": "Albany",
+      "pulse_score": 0.7391666666666666,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
     {
       "bin": "1025260",
       "county": "Albany",
@@ -42,6 +51,33 @@
       "bin": "1038070",
       "county": "Albany",
       "pulse_score": 0.82375,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "5513339",
+      "county": "Albany",
+      "pulse_score": 0.7566666666666666,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "1038640",
+      "county": "Albany",
+      "pulse_score": 0.73625,
+      "compound_score": 1.0,
+      "risk_band": "RED",
+      "seismic_zone": "HIGH",
+      "tsunami_zone": false
+    },
+    {
+      "bin": "5513640",
+      "county": "Albany",
+      "pulse_score": 0.7537499999999999,
       "compound_score": 1.0,
       "risk_band": "RED",
       "seismic_zone": "HIGH",
@@ -168,42 +204,6 @@
       "bin": "2075849",
       "county": "Bronx",
       "pulse_score": 0.7916666666666666,
-      "compound_score": 1.0,
-      "risk_band": "RED",
-      "seismic_zone": "HIGH",
-      "tsunami_zone": true
-    },
-    {
-      "bin": "1076729",
-      "county": "Bronx",
-      "pulse_score": 0.7654166666666666,
-      "compound_score": 1.0,
-      "risk_band": "RED",
-      "seismic_zone": "HIGH",
-      "tsunami_zone": true
-    },
-    {
-      "bin": "1067109",
-      "county": "Bronx",
-      "pulse_score": 0.7654166666666666,
-      "compound_score": 1.0,
-      "risk_band": "RED",
-      "seismic_zone": "HIGH",
-      "tsunami_zone": true
-    },
-    {
-      "bin": "1067099",
-      "county": "Bronx",
-      "pulse_score": 0.7654166666666666,
-      "compound_score": 1.0,
-      "risk_band": "RED",
-      "seismic_zone": "HIGH",
-      "tsunami_zone": true
-    },
-    {
-      "bin": "1075049",
-      "county": "Bronx",
-      "pulse_score": 0.7625,
       "compound_score": 1.0,
       "risk_band": "RED",
       "seismic_zone": "HIGH",
