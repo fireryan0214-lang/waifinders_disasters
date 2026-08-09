@@ -1,0 +1,54 @@
+{
+  "generated_utc": "2026-08-09T19:28:30.218802+00:00",
+  "mode": "LIVE_WISE",
+  "operational_status": "EMERGENCY_RESPONSE",
+  "compound_event": true,
+  "elevated_hazards": [
+    "earthquake",
+    "flood"
+  ],
+  "live_warn_signals": {
+    "earthquake": {
+      "score": 0.5323,
+      "tier": "MITIGATION_REQUIRED",
+      "event_count": 255,
+      "representative_event": {
+        "event_id": "usgs-us6000tjen",
+        "title": "M 5.2 - Galapagos Triple Junction region",
+        "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjen",
+        "occurred_utc": "2026-08-09T11:57:33.237000+00:00"
+      }
+    },
+    "hurricane": {
+      "score": 0.0,
+      "tier": "NORMAL_OPERATION",
+      "event_count": 0,
+      "representative_event": null
+    },
+    "flood": {
+      "score": 0.355,
+      "tier": "MONITOR",
+      "event_count": 5,
+      "representative_event": {
+        "event_id": "nws-urn:oid:2.49.0.1.840.0.6009a4d20efe9ccdada59c53a622fc10876e623a.001.1",
+        "title": "Flood Advisory issued August 9 at 2:14PM CDT until August 9 at 4:30PM CDT by NWS Chicago IL",
+        "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6009a4d20efe9ccdada59c53a622fc10876e623a.001.1",
+        "occurred_utc": "2026-08-09T14:14:00-05:00"
+      }
+    },
+    "wildfire": {
+      "score": 0.0,
+      "tier": "NORMAL_OPERATION",
+      "event_count": 0,
+      "representative_event": null
+    },
+    "tornado": {
+      "score": 0.0,
+      "tier": "NORMAL_OPERATION",
+      "event_count": 0,
+      "representative_event": null
+    }
+  },
+  "pending_human_actions": [],
+  "claim_boundary": "Live decision support only. Historical scenarios are excluded. Verify official sources and require trained human approval before action."
+}
