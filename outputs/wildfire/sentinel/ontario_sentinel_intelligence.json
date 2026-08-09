@@ -1,0 +1,2888 @@
+{
+  "generated_utc": "2026-08-09T22:56:15.922281+00:00",
+  "mode": "LIVE_ONTARIO_WILDFIRE_DECISION_SUPPORT",
+  "fires": [
+    {
+      "fire_id": "THU036",
+      "district": "Thunder Bay",
+      "lat": 50.6828090430043,
+      "lon": -89.46800752022442,
+      "condition": "Not Under Control",
+      "size_hectares": 301240,
+      "warn_score": 0.8492,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "ARM",
+        "distance_km": 58.3,
+        "ffmc": 86.9,
+        "fwi": 12.5,
+        "isi": 6.2,
+        "bui": 33
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "FOR014",
+      "district": "Fort Frances",
+      "lat": 48.89340870044783,
+      "lon": -90.98690767865226,
+      "condition": "Not Under Control",
+      "size_hectares": 51768.5,
+      "warn_score": 0.8467,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "ATI",
+        "distance_km": 48.1,
+        "ffmc": 89,
+        "fwi": 12.200000000000001,
+        "isi": 5.5,
+        "bui": 38
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "FOR015",
+      "district": "Fort Frances",
+      "lat": 48.54290862252619,
+      "lon": -91.41540775020586,
+      "condition": "Not Under Control",
+      "size_hectares": 42273,
+      "warn_score": 0.8467,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "ATI",
+        "distance_km": 33.5,
+        "ffmc": 89,
+        "fwi": 12.200000000000001,
+        "isi": 5.5,
+        "bui": 38
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "FOR013",
+      "district": "Fort Frances",
+      "lat": 48.27680859497379,
+      "lon": -91.30780767345186,
+      "condition": "Not Under Control",
+      "size_hectares": 25279,
+      "warn_score": 0.8467,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "ATI",
+        "distance_km": 63.7,
+        "ffmc": 89,
+        "fwi": 12.200000000000001,
+        "isi": 5.5,
+        "bui": 38
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC043",
+      "district": "Cochrane",
+      "lat": 52.26680973796056,
+      "lon": -82.25510539026882,
+      "condition": "Not Under Control",
+      "size_hectares": 500,
+      "warn_score": 0.7687,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 371.1,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "THU056",
+      "district": "Thunder Bay",
+      "lat": 49.389808805753,
+      "lon": -90.44020759523258,
+      "condition": "Not Under Control",
+      "size_hectares": 7947,
+      "warn_score": 0.7675,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "GLP",
+        "distance_km": 55.0,
+        "ffmc": 79.7,
+        "fwi": 2.7,
+        "isi": 1.4000000000000001,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "DRY034",
+      "district": "Dryden",
+      "lat": 49.98280890210491,
+      "lon": -90.17170761580654,
+      "condition": "Not Under Control",
+      "size_hectares": 45800,
+      "warn_score": 0.7675,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "GLP",
+        "distance_km": 13.9,
+        "ffmc": 79.7,
+        "fwi": 2.7,
+        "isi": 1.4000000000000001,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "DRY035",
+      "district": "Dryden",
+      "lat": 49.630108862169,
+      "lon": -90.09800753049315,
+      "condition": "Not Under Control",
+      "size_hectares": 31487,
+      "warn_score": 0.7675,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "GLP",
+        "distance_km": 26.3,
+        "ffmc": 79.7,
+        "fwi": 2.7,
+        "isi": 1.4000000000000001,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK089",
+      "district": "Sioux Lookout",
+      "lat": 50.58770894028955,
+      "lon": -90.67530788486629,
+      "condition": "Not Under Control",
+      "size_hectares": 7191,
+      "warn_score": 0.7675,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "GLP",
+        "distance_km": 88.0,
+        "ffmc": 79.7,
+        "fwi": 2.7,
+        "isi": 1.4000000000000001,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK071",
+      "district": "Sioux Lookout",
+      "lat": 51.63130894759791,
+      "lon": -92.17570856336596,
+      "condition": "Not Under Control",
+      "size_hectares": 13744,
+      "warn_score": 0.7633,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 26.5,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK072",
+      "district": "Sioux Lookout",
+      "lat": 51.831808970947364,
+      "lon": -92.17350860482503,
+      "condition": "Not Under Control",
+      "size_hectares": 23597,
+      "warn_score": 0.7633,
+      "warn_tier": "EMERGENCY_RESPONSE",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 26.8,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK086",
+      "district": "Sioux Lookout",
+      "lat": 50.93980900174785,
+      "lon": -90.43860787700326,
+      "condition": "Being Held",
+      "size_hectares": 5644,
+      "warn_score": 0.6022,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 58.7,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK084",
+      "district": "Sioux Lookout",
+      "lat": 50.70580894665167,
+      "lon": -90.78280794102129,
+      "condition": "Being Held",
+      "size_hectares": 4796.6,
+      "warn_score": 0.601,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 91.6,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP012",
+      "district": "Nipigon",
+      "lat": 53.581109427347705,
+      "lon": -88.93570792960566,
+      "condition": "Being Held",
+      "size_hectares": 2821,
+      "warn_score": 0.595,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 138.9,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "DRY036",
+      "district": "Dryden",
+      "lat": 49.2371086804728,
+      "lon": -91.85080800216062,
+      "condition": "Under Control",
+      "size_hectares": 1710,
+      "warn_score": 0.5924,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "GRY",
+        "distance_km": 30.6,
+        "ffmc": 89.3,
+        "fwi": 15.4,
+        "isi": 5.9,
+        "bui": 52
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK074",
+      "district": "Sioux Lookout",
+      "lat": 51.202609065356654,
+      "lon": -90.02600779624878,
+      "condition": "Being Held",
+      "size_hectares": 3334,
+      "warn_score": 0.5912,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 30.5,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP016",
+      "district": "Nipigon",
+      "lat": 53.44170943980033,
+      "lon": -88.57250777728797,
+      "condition": "Being Held",
+      "size_hectares": 1474.2,
+      "warn_score": 0.5775,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 166.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "FOR037",
+      "district": "Fort Frances",
+      "lat": 48.24900854755081,
+      "lon": -91.90140784801498,
+      "condition": "Being Observed",
+      "size_hectares": 3448,
+      "warn_score": 0.5518,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "DBY",
+        "distance_km": 46.5,
+        "ffmc": 88.10000000000001,
+        "fwi": 13.3,
+        "isi": 6,
+        "bui": 39
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP013",
+      "district": "Nipigon",
+      "lat": 53.64450945547962,
+      "lon": -88.66470785242454,
+      "condition": "Being Held",
+      "size_hectares": 500.40000000000003,
+      "warn_score": 0.5484,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 154.5,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP070",
+      "district": "Nipigon",
+      "lat": 51.07200913744758,
+      "lon": -88.84910739360342,
+      "condition": "Under Control",
+      "size_hectares": 1200,
+      "warn_score": 0.5111,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 85.1,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP045",
+      "district": "Nipigon",
+      "lat": 51.471109260719864,
+      "lon": -87.84150713994735,
+      "condition": "Being Observed",
+      "size_hectares": 9922,
+      "warn_score": 0.5077,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 11.0,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP018",
+      "district": "Nipigon",
+      "lat": 51.739309224020964,
+      "lon": -88.78790750034233,
+      "condition": "Being Observed",
+      "size_hectares": 24541.7,
+      "warn_score": 0.5077,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 63.9,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "TIM009",
+      "district": "Timmins",
+      "lat": 47.78410914223876,
+      "lon": -81.72680457209412,
+      "condition": "Under Control",
+      "size_hectares": 3151,
+      "warn_score": 0.5055,
+      "warn_tier": "MITIGATION_REQUIRED",
+      "nearest_station": {
+        "code": "BJC",
+        "distance_km": 236.5,
+        "ffmc": 79.4,
+        "fwi": 3,
+        "isi": 1.7,
+        "bui": 24
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC049",
+      "district": "Cochrane",
+      "lat": 51.34480954093745,
+      "lon": -83.4881056634177,
+      "condition": "Being Observed",
+      "size_hectares": 1012.5,
+      "warn_score": 0.4937,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 253.4,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "THU060",
+      "district": "Thunder Bay",
+      "lat": 49.587908943325104,
+      "lon": -88.90170714754044,
+      "condition": "Being Observed",
+      "size_hectares": 388,
+      "warn_score": 0.4862,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ARM",
+        "distance_km": 78.8,
+        "ffmc": 86.9,
+        "fwi": 12.5,
+        "isi": 6.2,
+        "bui": 33
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP069",
+      "district": "Nipigon",
+      "lat": 51.35790919080243,
+      "lon": -88.60640736844864,
+      "condition": "Being Observed",
+      "size_hectares": 2142,
+      "warn_score": 0.4848,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 53.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP032",
+      "district": "Nipigon",
+      "lat": 51.303609215013864,
+      "lon": -88.18410722087873,
+      "condition": "Being Observed",
+      "size_hectares": 1811,
+      "warn_score": 0.4803,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 34.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP037",
+      "district": "Nipigon",
+      "lat": 50.326609117439084,
+      "lon": -87.81130692543468,
+      "condition": "Under Control",
+      "size_hectares": 911.9,
+      "warn_score": 0.4754,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "AUD",
+        "distance_km": 12.3,
+        "ffmc": 81,
+        "fwi": 3.4,
+        "isi": 1.8,
+        "bui": 26
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP025",
+      "district": "Nipigon",
+      "lat": 49.598008955348014,
+      "lon": -88.75160710178952,
+      "condition": "Being Observed",
+      "size_hectares": 254,
+      "warn_score": 0.4748,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ARM",
+        "distance_km": 78.5,
+        "ffmc": 86.9,
+        "fwi": 12.5,
+        "isi": 6.2,
+        "bui": 33
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP048",
+      "district": "Nipigon",
+      "lat": 51.355709278590986,
+      "lon": -87.39270697138203,
+      "condition": "Being Observed",
+      "size_hectares": 1237,
+      "warn_score": 0.47,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 42.3,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED022",
+      "district": "Red Lake",
+      "lat": 51.85250894010502,
+      "lon": -92.58040873712594,
+      "condition": "Being Observed",
+      "size_hectares": 6195,
+      "warn_score": 0.4693,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 53.9,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED019",
+      "district": "Red Lake",
+      "lat": 51.67110892229828,
+      "lon": -92.54370868708034,
+      "condition": "Being Observed",
+      "size_hectares": 8683,
+      "warn_score": 0.4693,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 50.1,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK001",
+      "district": "Sioux Lookout",
+      "lat": 51.71060901343947,
+      "lon": -91.47080835745062,
+      "condition": "Being Observed",
+      "size_hectares": 17248.1,
+      "warn_score": 0.4693,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 24.3,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC040",
+      "district": "Cochrane",
+      "lat": 51.877009736343595,
+      "lon": -81.45820504995001,
+      "condition": "Being Observed",
+      "size_hectares": 400,
+      "warn_score": 0.4687,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 404.8,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP026",
+      "district": "Nipigon",
+      "lat": 52.21610926544086,
+      "lon": -88.99730766293833,
+      "condition": "Being Observed",
+      "size_hectares": 891,
+      "warn_score": 0.4611,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 104.4,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED024",
+      "district": "Red Lake",
+      "lat": 52.25730895125065,
+      "lon": -92.99770895627039,
+      "condition": "Being Observed",
+      "size_hectares": 6414.900000000001,
+      "warn_score": 0.4593,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BAK",
+        "distance_km": 74.6,
+        "ffmc": 64.4,
+        "fwi": 1,
+        "isi": 0.9,
+        "bui": 27
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP038",
+      "district": "Nipigon",
+      "lat": 50.43380915827107,
+      "lon": -87.4287068201385,
+      "condition": "Under Control",
+      "size_hectares": 488.8,
+      "warn_score": 0.4586,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "AUD",
+        "distance_km": 39.9,
+        "ffmc": 81,
+        "fwi": 3.4,
+        "isi": 1.8,
+        "bui": 26
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK064",
+      "district": "Sioux Lookout",
+      "lat": 51.4374089806938,
+      "lon": -91.47860830399067,
+      "condition": "Being Observed",
+      "size_hectares": 3056.3,
+      "warn_score": 0.456,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 40.0,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC045",
+      "district": "Cochrane",
+      "lat": 52.0314096286078,
+      "lon": -83.50510578320434,
+      "condition": "Being Observed",
+      "size_hectares": 243,
+      "warn_score": 0.4553,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 283.9,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "FOR039",
+      "district": "Fort Frances",
+      "lat": 48.33180854941614,
+      "lon": -92.02420789875336,
+      "condition": "Being Observed",
+      "size_hectares": 95.8,
+      "warn_score": 0.4553,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "DBY",
+        "distance_km": 33.7,
+        "ffmc": 88.10000000000001,
+        "fwi": 13.3,
+        "isi": 6,
+        "bui": 39
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK005",
+      "district": "Sioux Lookout",
+      "lat": 51.3787091097159,
+      "lon": -89.72450773369626,
+      "condition": "Being Observed",
+      "size_hectares": 38305.700000000004,
+      "warn_score": 0.4552,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 35.1,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK070",
+      "district": "Sioux Lookout",
+      "lat": 51.776609046525316,
+      "lon": -91.1517082697009,
+      "condition": "Being Observed",
+      "size_hectares": 2575.5,
+      "warn_score": 0.4514,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 46.5,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP052",
+      "district": "Nipigon",
+      "lat": 50.492409237958924,
+      "lon": -86.38600649023053,
+      "condition": "Being Observed",
+      "size_hectares": 200,
+      "warn_score": 0.45,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 41.8,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "WAW015",
+      "district": "Wawa",
+      "lat": 47.27750890011975,
+      "lon": -84.58960543503315,
+      "condition": "Being Held",
+      "size_hectares": 7,
+      "warn_score": 0.4492,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BJC",
+        "distance_km": 268.3,
+        "ffmc": 79.4,
+        "fwi": 3,
+        "isi": 1.7,
+        "bui": 24
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP047",
+      "district": "Nipigon",
+      "lat": 51.34970928572068,
+      "lon": -87.28210693391732,
+      "condition": "Being Observed",
+      "size_hectares": 444.40000000000003,
+      "warn_score": 0.4424,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 49.3,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC047",
+      "district": "Cochrane",
+      "lat": 52.49480957199907,
+      "lon": -85.22420645393512,
+      "condition": "Being Observed",
+      "size_hectares": 395.1,
+      "warn_score": 0.4392,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 210.8,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK092",
+      "district": "Sioux Lookout",
+      "lat": 51.17140908312213,
+      "lon": -89.74150769925205,
+      "condition": "Being Observed",
+      "size_hectares": 2657.8,
+      "warn_score": 0.4381,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 45.3,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC044",
+      "district": "Cochrane",
+      "lat": 51.05060943788501,
+      "lon": -84.48810595327839,
+      "condition": "Being Observed",
+      "size_hectares": 117,
+      "warn_score": 0.4357,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 177.5,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC030",
+      "district": "Cochrane",
+      "lat": 55.12990968960295,
+      "lon": -87.72810786972927,
+      "condition": "Being Observed",
+      "size_hectares": 1584.2,
+      "warn_score": 0.4325,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 248.3,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC038",
+      "district": "Cochrane",
+      "lat": 52.589609779654715,
+      "lon": -82.24370544025862,
+      "condition": "Being Observed",
+      "size_hectares": 100,
+      "warn_score": 0.4315,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 389.5,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC051",
+      "district": "Cochrane",
+      "lat": 54.0830098448475,
+      "lon": -84.01040633530374,
+      "condition": "Being Observed",
+      "size_hectares": 287.6,
+      "warn_score": 0.4306,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 383.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC039",
+      "district": "Cochrane",
+      "lat": 52.62040970106707,
+      "lon": -83.5313058942277,
+      "condition": "Being Observed",
+      "size_hectares": 280,
+      "warn_score": 0.4299,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 321.2,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK066",
+      "district": "Sioux Lookout",
+      "lat": 51.31590898114627,
+      "lon": -91.29020822002775,
+      "condition": "Being Observed",
+      "size_hectares": 1105,
+      "warn_score": 0.4286,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 58.7,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC034",
+      "district": "Cochrane",
+      "lat": 54.809109701051575,
+      "lon": -87.13300758755221,
+      "condition": "Being Observed",
+      "size_hectares": 1356,
+      "warn_score": 0.4283,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 267.1,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC053",
+      "district": "Cochrane",
+      "lat": 52.38260960089722,
+      "lon": -84.5956062186275,
+      "condition": "Being Observed",
+      "size_hectares": 251,
+      "warn_score": 0.427,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 244.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "FOR035",
+      "district": "Fort Frances",
+      "lat": 49.088708717597335,
+      "lon": -91.10090774698746,
+      "condition": "Being Observed",
+      "size_hectares": 45,
+      "warn_score": 0.4261,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ATI",
+        "distance_km": 49.7,
+        "ffmc": 89,
+        "fwi": 12.200000000000001,
+        "isi": 5.5,
+        "bui": 38
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC055",
+      "district": "Cochrane",
+      "lat": 49.16840943744697,
+      "lon": -80.11440420726409,
+      "condition": "Being Held",
+      "size_hectares": 5,
+      "warn_score": 0.4214,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "EBC",
+        "distance_km": 309.4,
+        "ffmc": 64.7,
+        "fwi": 0.6,
+        "isi": 0.7000000000000001,
+        "bui": 18
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP076",
+      "district": "Nipigon",
+      "lat": 51.46130929062129,
+      "lon": -87.40930699614273,
+      "condition": "Being Observed",
+      "size_hectares": 150,
+      "warn_score": 0.4132,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 36.2,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP035",
+      "district": "Nipigon",
+      "lat": 51.14090915771833,
+      "lon": -88.69030735508632,
+      "condition": "Being Observed",
+      "size_hectares": 150,
+      "warn_score": 0.4132,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 71.7,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC028",
+      "district": "Cochrane",
+      "lat": 54.74450958496494,
+      "lon": -88.54330806117113,
+      "condition": "Being Observed",
+      "size_hectares": 763,
+      "warn_score": 0.4128,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 181.7,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK049",
+      "district": "Sioux Lookout",
+      "lat": 54.30790928722095,
+      "lon": -91.62660899502747,
+      "condition": "Being Observed",
+      "size_hectares": 702.3000000000001,
+      "warn_score": 0.4105,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 60.5,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC020",
+      "district": "Cochrane",
+      "lat": 54.71760979208111,
+      "lon": -85.7758070909316,
+      "condition": "Being Observed",
+      "size_hectares": 650,
+      "warn_score": 0.4084,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 348.0,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK021",
+      "district": "Sioux Lookout",
+      "lat": 52.81050931577666,
+      "lon": -89.24700786740057,
+      "condition": "Being Observed",
+      "size_hectares": 858.9,
+      "warn_score": 0.4076,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 165.2,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED023",
+      "district": "Red Lake",
+      "lat": 52.19320896356222,
+      "lon": -92.76370886856357,
+      "condition": "Being Observed",
+      "size_hectares": 638,
+      "warn_score": 0.4038,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BAK",
+        "distance_km": 80.4,
+        "ffmc": 64.4,
+        "fwi": 1,
+        "isi": 0.9,
+        "bui": 27
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "THU059",
+      "district": "Thunder Bay",
+      "lat": 50.25090905543022,
+      "lon": -88.5446071478661,
+      "condition": "Being Observed",
+      "size_hectares": 17,
+      "warn_score": 0.4032,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ARM",
+        "distance_km": 26.6,
+        "ffmc": 86.9,
+        "fwi": 12.5,
+        "isi": 6.2,
+        "bui": 33
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP040",
+      "district": "Nipigon",
+      "lat": 51.20170923053478,
+      "lon": -87.79360707471223,
+      "condition": "Being Observed",
+      "size_hectares": 102,
+      "warn_score": 0.4028,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 40.8,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK046",
+      "district": "Sioux Lookout",
+      "lat": 54.890709311707376,
+      "lon": -92.03560927804841,
+      "condition": "Being Observed",
+      "size_hectares": 442,
+      "warn_score": 0.398,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 127.7,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP081",
+      "district": "Nipigon",
+      "lat": 52.85960958954241,
+      "lon": -85.61040665439873,
+      "condition": "Being Observed",
+      "size_hectares": 80,
+      "warn_score": 0.3963,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 212.9,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED016",
+      "district": "Red Lake",
+      "lat": 53.65850908099127,
+      "lon": -93.24880936280944,
+      "condition": "Being Observed",
+      "size_hectares": 591,
+      "warn_score": 0.395,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "DEE",
+        "distance_km": 123.9,
+        "ffmc": 51.5,
+        "fwi": 0.2,
+        "isi": 0.3,
+        "bui": 16
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC048",
+      "district": "Cochrane",
+      "lat": 51.97450974215174,
+      "lon": -81.57280510525034,
+      "condition": "Being Observed",
+      "size_hectares": 25,
+      "warn_score": 0.3948,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 400.9,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK024",
+      "district": "Sioux Lookout",
+      "lat": 51.59280907076318,
+      "lon": -90.5666080457328,
+      "condition": "Being Observed",
+      "size_hectares": 507.7,
+      "warn_score": 0.3934,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 28.9,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP077",
+      "district": "Nipigon",
+      "lat": 53.25410952169115,
+      "lon": -87.20150727479601,
+      "condition": "Being Observed",
+      "size_hectares": 70,
+      "warn_score": 0.3928,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 194.2,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC052",
+      "district": "Cochrane",
+      "lat": 53.48780972158412,
+      "lon": -84.7897064922848,
+      "condition": "Being Observed",
+      "size_hectares": 69.2,
+      "warn_score": 0.3925,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 300.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC022",
+      "district": "Cochrane",
+      "lat": 55.25310975213763,
+      "lon": -87.08570767353964,
+      "condition": "Being Observed",
+      "size_hectares": 350,
+      "warn_score": 0.3918,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 290.4,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC027",
+      "district": "Cochrane",
+      "lat": 54.04010948553172,
+      "lon": -88.84090800005738,
+      "condition": "Being Observed",
+      "size_hectares": 342,
+      "warn_score": 0.3911,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 139.7,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK051",
+      "district": "Sioux Lookout",
+      "lat": 54.32060941773608,
+      "lon": -90.06850847916729,
+      "condition": "Being Observed",
+      "size_hectares": 323,
+      "warn_score": 0.3896,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 73.3,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK057",
+      "district": "Sioux Lookout",
+      "lat": 51.54590913893112,
+      "lon": -89.60670772829918,
+      "condition": "Under Control",
+      "size_hectares": 82,
+      "warn_score": 0.3865,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 43.7,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK052",
+      "district": "Sioux Lookout",
+      "lat": 54.55450941602444,
+      "lon": -90.390408643687,
+      "condition": "Being Observed",
+      "size_hectares": 240,
+      "warn_score": 0.3816,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 79.5,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP039",
+      "district": "Nipigon",
+      "lat": 50.38790915124675,
+      "lon": -87.44370681713208,
+      "condition": "Under Control",
+      "size_hectares": 24.5,
+      "warn_score": 0.3788,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "AUD",
+        "distance_km": 36.3,
+        "ffmc": 81,
+        "fwi": 3.4,
+        "isi": 1.8,
+        "bui": 26
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP075",
+      "district": "Nipigon",
+      "lat": 51.928709446126135,
+      "lon": -86.03210662365656,
+      "condition": "Being Observed",
+      "size_hectares": 40,
+      "warn_score": 0.3779,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 135.4,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP061",
+      "district": "Nipigon",
+      "lat": 51.15650922274654,
+      "lon": -87.82290707605313,
+      "condition": "Being Observed",
+      "size_hectares": 36,
+      "warn_score": 0.3752,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 45.4,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP078",
+      "district": "Nipigon",
+      "lat": 53.29900952466139,
+      "lon": -87.23170729428693,
+      "condition": "Being Observed",
+      "size_hectares": 35,
+      "warn_score": 0.3744,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 198.6,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK050",
+      "district": "Sioux Lookout",
+      "lat": 54.24870942423188,
+      "lon": -89.89400840349829,
+      "condition": "Being Observed",
+      "size_hectares": 181,
+      "warn_score": 0.374,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 78.8,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP051",
+      "district": "Nipigon",
+      "lat": 50.502009229605704,
+      "lon": -86.52680653794457,
+      "condition": "Being Observed",
+      "size_hectares": 10,
+      "warn_score": 0.3716,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 32.3,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC008",
+      "district": "Cochrane",
+      "lat": 54.791109594559735,
+      "lon": -88.48440805189054,
+      "condition": "Being Observed",
+      "size_hectares": 153,
+      "warn_score": 0.3695,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 187.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK029",
+      "district": "Sioux Lookout",
+      "lat": 52.815309268673744,
+      "lon": -89.85870806978195,
+      "condition": "Being Observed",
+      "size_hectares": 153,
+      "warn_score": 0.3695,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 143.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK099",
+      "district": "Sioux Lookout",
+      "lat": 53.160209197856254,
+      "lon": -91.22520859210086,
+      "condition": "Being Observed",
+      "size_hectares": 136.6,
+      "warn_score": 0.3665,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 86.7,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK025",
+      "district": "Sioux Lookout",
+      "lat": 53.167009260436636,
+      "lon": -90.4620083443831,
+      "condition": "Being Observed",
+      "size_hectares": 134.5,
+      "warn_score": 0.3661,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 90.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC033",
+      "district": "Cochrane",
+      "lat": 54.335109504794204,
+      "lon": -89.00320812267542,
+      "condition": "Being Observed",
+      "size_hectares": 127,
+      "warn_score": 0.3645,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 135.9,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC012",
+      "district": "Cochrane",
+      "lat": 55.31980955671149,
+      "lon": -89.63900857808012,
+      "condition": "Being Observed",
+      "size_hectares": 93,
+      "warn_score": 0.3562,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 177.2,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK039",
+      "district": "Sioux Lookout",
+      "lat": 53.60330921248819,
+      "lon": -91.63150882670462,
+      "condition": "Being Observed",
+      "size_hectares": 85.10000000000001,
+      "warn_score": 0.3538,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 56.4,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK028",
+      "district": "Sioux Lookout",
+      "lat": 53.042709188002384,
+      "lon": -91.18690855318185,
+      "condition": "Being Observed",
+      "size_hectares": 82,
+      "warn_score": 0.3528,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 99.1,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP074",
+      "district": "Nipigon",
+      "lat": 52.67620952638177,
+      "lon": -86.19310681778211,
+      "condition": "Being Observed",
+      "size_hectares": 15,
+      "warn_score": 0.3525,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 170.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK098",
+      "district": "Sioux Lookout",
+      "lat": 52.547709277296704,
+      "lon": -89.35150784690067,
+      "condition": "Being Observed",
+      "size_hectares": 110,
+      "warn_score": 0.3523,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 135.8,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC023",
+      "district": "Cochrane",
+      "lat": 55.704309756250524,
+      "lon": -87.64040797739757,
+      "condition": "Being Observed",
+      "size_hectares": 79,
+      "warn_score": 0.3518,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 290.8,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK038",
+      "district": "Sioux Lookout",
+      "lat": 53.67750922958735,
+      "lon": -91.52160880830886,
+      "condition": "Being Observed",
+      "size_hectares": 77.5,
+      "warn_score": 0.3513,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 45.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK053",
+      "district": "Sioux Lookout",
+      "lat": 54.07630937535495,
+      "lon": -90.26920848855596,
+      "condition": "Being Observed",
+      "size_hectares": 75.7,
+      "warn_score": 0.3507,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 48.7,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK045",
+      "district": "Sioux Lookout",
+      "lat": 54.426109273581915,
+      "lon": -91.93100912488217,
+      "condition": "Being Observed",
+      "size_hectares": 74.4,
+      "warn_score": 0.3502,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 83.9,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP087",
+      "district": "Nipigon",
+      "lat": 49.84990900450827,
+      "lon": -88.52660707301203,
+      "condition": "Being Observed",
+      "size_hectares": 1.5,
+      "warn_score": 0.3499,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ARM",
+        "distance_km": 56.7,
+        "ffmc": 86.9,
+        "fwi": 12.5,
+        "isi": 6.2,
+        "bui": 33
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK054",
+      "district": "Sioux Lookout",
+      "lat": 54.06040937232533,
+      "lon": -90.28550849025548,
+      "condition": "Being Observed",
+      "size_hectares": 73.4,
+      "warn_score": 0.3499,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 47.1,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP080",
+      "district": "Nipigon",
+      "lat": 52.91370959511891,
+      "lon": -85.62360666927893,
+      "condition": "Being Observed",
+      "size_hectares": 10,
+      "warn_score": 0.3424,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 216.3,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP082",
+      "district": "Nipigon",
+      "lat": 52.551009567853875,
+      "lon": -85.38420651893045,
+      "condition": "Being Observed",
+      "size_hectares": 8,
+      "warn_score": 0.337,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 204.6,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP072",
+      "district": "Nipigon",
+      "lat": 52.298509363802154,
+      "lon": -87.81310728842782,
+      "condition": "Being Observed",
+      "size_hectares": 8,
+      "warn_score": 0.337,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 82.2,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP053",
+      "district": "Nipigon",
+      "lat": 50.44800922247743,
+      "lon": -86.5274065290741,
+      "condition": "Being Observed",
+      "size_hectares": 2,
+      "warn_score": 0.3365,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "ANA",
+        "distance_km": 35.5,
+        "ffmc": 86.3,
+        "fwi": 10.3,
+        "isi": 4.1,
+        "bui": 42
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC029",
+      "district": "Cochrane",
+      "lat": 55.66470969798637,
+      "lon": -88.32650820902587,
+      "condition": "Being Observed",
+      "size_hectares": 42.4,
+      "warn_score": 0.3353,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 257.1,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED018",
+      "district": "Red Lake",
+      "lat": 54.06290916623405,
+      "lon": -92.74710930102688,
+      "condition": "Being Observed",
+      "size_hectares": 40,
+      "warn_score": 0.3338,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 117.3,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC025",
+      "district": "Cochrane",
+      "lat": 55.869209730285206,
+      "lon": -88.1817082094203,
+      "condition": "Being Observed",
+      "size_hectares": 39,
+      "warn_score": 0.3331,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 280.1,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK048",
+      "district": "Sioux Lookout",
+      "lat": 54.44810930236538,
+      "lon": -91.61890902727642,
+      "condition": "Being Observed",
+      "size_hectares": 38,
+      "warn_score": 0.3324,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 72.0,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "FOR045",
+      "district": "Fort Frances",
+      "lat": 49.17520854469726,
+      "lon": -93.50690849073813,
+      "condition": "Being Observed",
+      "size_hectares": 1.2,
+      "warn_score": 0.3323,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BPW",
+        "distance_km": 41.2,
+        "ffmc": 87.2,
+        "fwi": 10.8,
+        "isi": 4.4,
+        "bui": 41
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP071",
+      "district": "Nipigon",
+      "lat": 51.9488093315496,
+      "lon": -87.67580717529269,
+      "condition": "Being Observed",
+      "size_hectares": 6,
+      "warn_score": 0.3302,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 45.9,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK056",
+      "district": "Sioux Lookout",
+      "lat": 52.08860921170292,
+      "lon": -89.50400780280745,
+      "condition": "Being Observed",
+      "size_hectares": 43,
+      "warn_score": 0.3274,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 86.4,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC007",
+      "district": "Cochrane",
+      "lat": 55.53150969729235,
+      "lon": -88.16360811893209,
+      "condition": "Being Observed",
+      "size_hectares": 30,
+      "warn_score": 0.3262,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 253.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP079",
+      "district": "Nipigon",
+      "lat": 53.72810964837505,
+      "lon": -86.2186070358716,
+      "condition": "Being Observed",
+      "size_hectares": 5,
+      "warn_score": 0.3261,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 266.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP021",
+      "district": "Nipigon",
+      "lat": 52.79490951535514,
+      "lon": -86.54680696072676,
+      "condition": "Being Observed",
+      "size_hectares": 5,
+      "warn_score": 0.3261,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 165.6,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP042",
+      "district": "Nipigon",
+      "lat": 50.12880910314519,
+      "lon": -87.64700683870548,
+      "condition": "Being Observed",
+      "size_hectares": 15,
+      "warn_score": 0.3242,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "AUD",
+        "distance_km": 20.5,
+        "ffmc": 81,
+        "fwi": 3.4,
+        "isi": 1.8,
+        "bui": 26
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK091",
+      "district": "Sioux Lookout",
+      "lat": 50.704509000118854,
+      "lon": -90.07750771803718,
+      "condition": "Being Observed",
+      "size_hectares": 38,
+      "warn_score": 0.3241,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 83.4,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK047",
+      "district": "Sioux Lookout",
+      "lat": 54.746109313681266,
+      "lon": -91.84330917693315,
+      "condition": "Being Observed",
+      "size_hectares": 27,
+      "warn_score": 0.3235,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 107.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK003",
+      "district": "Sioux Lookout",
+      "lat": 54.49330932834608,
+      "lon": -91.36650895483015,
+      "condition": "Being Observed",
+      "size_hectares": 25,
+      "warn_score": 0.3215,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 68.4,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP029",
+      "district": "Nipigon",
+      "lat": 51.99420925686302,
+      "lon": -88.76010754104585,
+      "condition": "Being Observed",
+      "size_hectares": 3,
+      "warn_score": 0.3151,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 75.9,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC014",
+      "district": "Cochrane",
+      "lat": 56.08820969265013,
+      "lon": -88.91970852532936,
+      "condition": "Being Observed",
+      "size_hectares": 19,
+      "warn_score": 0.3144,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 273.7,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC018",
+      "district": "Cochrane",
+      "lat": 54.923609813570835,
+      "lon": -85.79140714159027,
+      "condition": "Being Observed",
+      "size_hectares": 17,
+      "warn_score": 0.3116,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 352.7,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK026",
+      "district": "Sioux Lookout",
+      "lat": 52.711909184541305,
+      "lon": -90.77130834527213,
+      "condition": "Being Observed",
+      "size_hectares": 12,
+      "warn_score": 0.3086,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 130.9,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC054",
+      "district": "Cochrane",
+      "lat": 54.97530990514281,
+      "lon": -84.59780672778331,
+      "condition": "Being Observed",
+      "size_hectares": 15,
+      "warn_score": 0.3084,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 427.9,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC024",
+      "district": "Cochrane",
+      "lat": 55.85760975626388,
+      "lon": -87.83940808567318,
+      "condition": "Being Observed",
+      "size_hectares": 15,
+      "warn_score": 0.3084,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 293.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED017",
+      "district": "Red Lake",
+      "lat": 53.98230914208506,
+      "lon": -92.93050934036225,
+      "condition": "Being Observed",
+      "size_hectares": 15,
+      "warn_score": 0.3084,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 128.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP073",
+      "district": "Nipigon",
+      "lat": 52.326709382244104,
+      "lon": -87.60820722579308,
+      "condition": "Being Observed",
+      "size_hectares": 2,
+      "warn_score": 0.3073,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 87.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP031",
+      "district": "Nipigon",
+      "lat": 52.6033095183308,
+      "lon": -86.18260680025394,
+      "condition": "Being Observed",
+      "size_hectares": 2,
+      "warn_score": 0.3073,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 165.2,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK044",
+      "district": "Sioux Lookout",
+      "lat": 54.067809233510445,
+      "lon": -91.96620904764278,
+      "condition": "Being Observed",
+      "size_hectares": 14.1,
+      "warn_score": 0.3068,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 67.2,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK083",
+      "district": "Sioux Lookout",
+      "lat": 51.49510915043263,
+      "lon": -89.37330764308348,
+      "condition": "Being Observed",
+      "size_hectares": 15,
+      "warn_score": 0.3,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 58.7,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC050",
+      "district": "Cochrane",
+      "lat": 55.006109879415256,
+      "lon": -85.00710688076954,
+      "condition": "Being Observed",
+      "size_hectares": 10.1,
+      "warn_score": 0.2985,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 403.4,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "RED020",
+      "district": "Red Lake",
+      "lat": 53.67630913230543,
+      "lon": -92.67370918224384,
+      "condition": "Being Observed",
+      "size_hectares": 10,
+      "warn_score": 0.2983,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 115.4,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC021",
+      "district": "Cochrane",
+      "lat": 55.21620974727404,
+      "lon": -87.09820766929904,
+      "condition": "Being Observed",
+      "size_hectares": 10,
+      "warn_score": 0.2983,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 287.8,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK113",
+      "district": "Sioux Lookout",
+      "lat": 51.42050916676106,
+      "lon": -89.03430751910045,
+      "condition": "Being Observed",
+      "size_hectares": 1,
+      "warn_score": 0.2964,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 79.6,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP055",
+      "district": "Nipigon",
+      "lat": 51.25010919915226,
+      "lon": -88.31030725206045,
+      "condition": "Being Observed",
+      "size_hectares": 1,
+      "warn_score": 0.2964,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 44.5,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC010",
+      "district": "Cochrane",
+      "lat": 55.30740957741136,
+      "lon": -89.37020848247265,
+      "condition": "Being Observed",
+      "size_hectares": 9,
+      "warn_score": 0.2957,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 185.0,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK093",
+      "district": "Sioux Lookout",
+      "lat": 52.27440910839217,
+      "lon": -91.0997083572359,
+      "condition": "Being Observed",
+      "size_hectares": 7,
+      "warn_score": 0.2955,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 78.5,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC011",
+      "district": "Cochrane",
+      "lat": 55.2801095734629,
+      "lon": -89.3844084805371,
+      "condition": "Being Observed",
+      "size_hectares": 8,
+      "warn_score": 0.2928,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 182.0,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK027",
+      "district": "Sioux Lookout",
+      "lat": 51.82910909282724,
+      "lon": -90.64240811780307,
+      "condition": "Being Observed",
+      "size_hectares": 10,
+      "warn_score": 0.2899,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 51.4,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK043",
+      "district": "Sioux Lookout",
+      "lat": 53.657709233449765,
+      "lon": -91.4496087800965,
+      "condition": "Being Observed",
+      "size_hectares": 6.3,
+      "warn_score": 0.2872,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 43.4,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "NIP088",
+      "district": "Nipigon",
+      "lat": 51.76080940553559,
+      "lon": -86.31380668748936,
+      "condition": "Being Observed",
+      "size_hectares": 0.3,
+      "warn_score": 0.2848,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "FTH",
+        "distance_km": 112.1,
+        "ffmc": 83.2,
+        "fwi": 6.8,
+        "isi": 3.3000000000000003,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC031",
+      "district": "Cochrane",
+      "lat": 55.1217096960284,
+      "lon": -87.63410783496587,
+      "condition": "Being Observed",
+      "size_hectares": 5.1000000000000005,
+      "warn_score": 0.2823,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 253.0,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC019",
+      "district": "Cochrane",
+      "lat": 54.88130980919142,
+      "lon": -85.78800713106341,
+      "condition": "Being Observed",
+      "size_hectares": 5,
+      "warn_score": 0.2819,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 351.6,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK063",
+      "district": "Sioux Lookout",
+      "lat": 52.255109231865845,
+      "lon": -89.49720783439865,
+      "condition": "Being Observed",
+      "size_hectares": 5,
+      "warn_score": 0.2736,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 102.4,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC015",
+      "district": "Cochrane",
+      "lat": 55.320009721537666,
+      "lon": -87.57430786108233,
+      "condition": "Being Observed",
+      "size_hectares": 1.5,
+      "warn_score": 0.2582,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 267.9,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "THU068",
+      "district": "Thunder Bay",
+      "lat": 49.29900883099345,
+      "lon": -89.93310742208789,
+      "condition": "Being Observed",
+      "size_hectares": 0.5,
+      "warn_score": 0.2544,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "GLP",
+        "distance_km": 65.0,
+        "ffmc": 79.7,
+        "fwi": 2.7,
+        "isi": 1.4000000000000001,
+        "bui": 29
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC013",
+      "district": "Cochrane",
+      "lat": 55.57360968007102,
+      "lon": -88.43450822414006,
+      "condition": "Being Observed",
+      "size_hectares": 1,
+      "warn_score": 0.2522,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 245.0,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK094",
+      "district": "Sioux Lookout",
+      "lat": 52.4655091365659,
+      "lon": -91.02080837270846,
+      "condition": "Being Observed",
+      "size_hectares": 0.5,
+      "warn_score": 0.2503,
+      "warn_tier": "MONITOR",
+      "nearest_station": {
+        "code": "CAT",
+        "distance_km": 98.7,
+        "ffmc": 73.9,
+        "fwi": 2.2,
+        "isi": 1.2,
+        "bui": 32
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "SLK087",
+      "district": "Sioux Lookout",
+      "lat": 49.95470881006129,
+      "lon": -91.34630797655294,
+      "condition": "Being Observed",
+      "size_hectares": 0.2,
+      "warn_score": 0.2476,
+      "warn_tier": "NORMAL_OPERATION",
+      "nearest_station": {
+        "code": "DYM",
+        "distance_km": 77.7,
+        "ffmc": 79.4,
+        "fwi": 2.6,
+        "isi": 1.5,
+        "bui": 27
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC009",
+      "district": "Cochrane",
+      "lat": 55.173609568151534,
+      "lon": -89.31520843023762,
+      "condition": "Being Observed",
+      "size_hectares": 0.5,
+      "warn_score": 0.2444,
+      "warn_tier": "NORMAL_OPERATION",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 175.1,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "COC016",
+      "district": "Cochrane",
+      "lat": 55.908209729664954,
+      "lon": -88.23880823940137,
+      "condition": "Being Observed",
+      "size_hectares": 0.5,
+      "warn_score": 0.2444,
+      "warn_tier": "NORMAL_OPERATION",
+      "nearest_station": {
+        "code": "BKN",
+        "distance_km": 281.2,
+        "ffmc": 61.9,
+        "fwi": 1.5,
+        "isi": 1.2,
+        "bui": 21
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    },
+    {
+      "fire_id": "THU048",
+      "district": "Thunder Bay",
+      "lat": 50.96990904439593,
+      "lon": -89.92620771990455,
+      "condition": "Being Observed",
+      "size_hectares": 0.5,
+      "warn_score": 0.2361,
+      "warn_tier": "NORMAL_OPERATION",
+      "nearest_station": {
+        "code": "PIC",
+        "distance_km": 57.0,
+        "ffmc": 60.800000000000004,
+        "fwi": 0.5,
+        "isi": 0.9,
+        "bui": 8
+      },
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis1/rest/services/MNRF/Ontario_Fires_Map/MapServer/32"
+    }
+  ],
+  "fire_weather": {
+    "fwi": {
+      "fwi_normalized": 0.5133,
+      "score": 0.8492,
+      "warn_tier": "EMERGENCY_RESPONSE"
+    }
+  },
+  "infrastructure": {
+    "status": "UNAVAILABLE",
+    "blocker": "No verified Ontario customer/public infrastructure layer loaded."
+  },
+  "formula": "0.42 official fire condition + 0.23 log-normalized size + 0.25 nearest-station FWI + 0.10 official-source confidence",
+  "claim_boundary": "Experimental decision support only; not an Ontario fire warning. Verify Ontario AFFES sources and require trained human approval before action."
+}

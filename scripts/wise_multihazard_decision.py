@@ -81,7 +81,7 @@ def wildfire_tier(data):
     # Pull from ontario sentinel if available
     fwi = data.get("fire_weather", {}).get("fwi", {})
     tier = fwi.get("warn_tier", "NORMAL_OPERATION")
-    score = float(fwi.get("fwi_normalized", 0.0))
+    score = float(fwi.get("score", fwi.get("fwi_normalized", 0.0)))
     return score, tier
 
 eq_score,    eq_tier    = peak_eq_score(eq_data)
