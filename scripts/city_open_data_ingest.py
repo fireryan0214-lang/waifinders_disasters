@@ -43,9 +43,30 @@ def fetch_socrata(dataset, limit=50_000):
     return response.json().get("features", [])
 
 
+def fetch_arcgis(dataset, limit=None):
+    """Download an official ArcGIS Feature/MapServer layer in bounded pages."""
+    limit = int(limit or dataset.get("page_size", 2_000))
+    features, offset = [], 0
+    while True:
+        params = {"where": "1=1", "outFields": "*", "returnGeometry": "true", "f": "geojson", "outSR": 4326, "resultRecordCount": limit}
+        # Some otherwise valid public MapServer layers treat resultOffset=0 as
+        # an empty query. Only send an offset after the first page.
+        if offset:
+            params["resultOffset"] = offset
+        response = requests.get(dataset["endpoint"].rstrip("/") + "/query", params=params, headers={"User-Agent": USER_AGENT, "Accept": "application/geo+json"}, timeout=60)
+        response.raise_for_status()
+        page = response.json().get("features", [])
+        features.extend(page)
+        if len(page) < limit:
+            return features
+        offset += len(page)
+
+
 def ingest(dataset, database=None, fetcher=fetch_socrata):
-    if dataset.get("portal") != "socrata":
+    if dataset.get("portal") not in {"socrata", "arcgis"}:
         raise ValueError(f"Unsupported portal: {dataset.get('portal')}; add an adapter before enabling this dataset.")
+    if fetcher is fetch_socrata:
+        fetcher = fetch_socrata if dataset["portal"] == "socrata" else fetch_arcgis
     features = fetcher(dataset)
     points = [point for feature in features for point in context_points(feature, dataset)]
     # City centerlines can be large.  Cache in geographic tiles, which makes

@@ -60,10 +60,12 @@ def infrastructure_near(event):
     return {"provider": provider, "lookup_status": "live_fallback_match" if features else "live_fallback_no_features", "radius_km": radius / 1000, "feature_count": len(features), "features": features}
 
 
-def process_event(event, asset_action_count=0):
+def process_event(event, asset_action_count=0, allow_live_fallback=True, unavailable_note=None):
     """Run the public-context stage and retain an auditable result for one event."""
     try:
-        context = infrastructure_near(event)
+        context = infrastructure_near(event) if allow_live_fallback else cached_context(event)
+        if not allow_live_fallback and context["lookup_status"] == "cache_miss":
+            raise ConnectionError(unavailable_note or "public infrastructure provider unavailable")
         if asset_action_count:
             status = "customer_assets_matched"
         elif context.get("feature_count", 0):
@@ -114,13 +116,9 @@ def build_earthquake_audit(live, earthquakes):
         with ThreadPoolExecutor(max_workers=max(1, min(8, len(remaining)))) as pool:
             records.extend(pool.map(lambda event: process_event(event, action_counts.get(event["event_id"], 0)), remaining))
     else:
-        records = [{
-            "alert_id": event["event_id"], "approval_status": "PENDING_HUMAN_APPROVAL",
-            "status": "lookup_unavailable", "event": event,
-            "customer_asset_action_count": action_counts.get(event["event_id"], 0),
-            "public_infrastructure_context": {"feature_count": 0, "features": [], "note": provider_failure},
-            "claim_boundary": "Public OpenStreetMap context only; verify asset ownership, completeness, and event relevance before action.",
-        } for event in earthquakes]
+        # Still run every record through the local cache. Only cache misses are
+        # blocked by the unavailable live provider.
+        records = [process_event(event, action_counts.get(event["event_id"], 0), allow_live_fallback=False, unavailable_note=provider_failure) for event in earthquakes]
     context_ready = sum(record["status"] in {"customer_assets_matched", "public_infrastructure_context_matched", "source_only_event"} for record in records)
     asset_matched = sum(record["customer_asset_action_count"] > 0 for record in records)
     public_features = sum(record["public_infrastructure_context"].get("feature_count", 0) for record in records)
