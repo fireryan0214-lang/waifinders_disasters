@@ -66,7 +66,7 @@ def load_assets(path):
 
 
 def fetch_json(url, params=None):
-    response = requests.get(url, params=params, headers={"User-Agent": USER_AGENT, "Accept": "application/geo+json, application/json"}, timeout=30)
+    response = requests.get(url, params=params, headers={"User-Agent": USER_AGENT, "Accept": "application/geo+json, application/json"}, timeout=8)
     response.raise_for_status()
     return response.json(), response.url
 
@@ -153,7 +153,7 @@ def fetch_usgs_gauges(assets):
 def fetch_nrc_notifications():
     """Ingest the NRC Daily Event Report RSS without guessing event geometry."""
     url = "https://www.nrc.gov/public-involve/rss?feed=event"
-    response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=30)
+    response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=8)
     response.raise_for_status()
     root = ET.fromstring(response.content)
     notifications = []
