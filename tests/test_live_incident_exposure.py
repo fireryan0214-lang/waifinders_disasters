@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
-from live_incident_exposure import CRITICALITY, apply_reviews, haversine_km, rank_exposures
+from live_incident_exposure import CRITICALITY, apply_reviews, haversine_km, rank_exposures, source_health
 
 
 def event():
@@ -48,3 +48,24 @@ def test_human_review_overlays_only_named_action():
     reviewed = apply_reviews(actions, {actions[0]["action_id"]: {"decision": "APPROVED", "reviewer": "Alex", "note": "Verified", "reviewed_utc": "2026-08-09T00:00:00Z"}})
     assert reviewed[0]["approval_status"] == "APPROVED"
     assert reviewed[0]["human_review"]["reviewer"] == "Alex"
+
+
+def test_failed_usgs_feed_is_not_treated_as_normal_conditions():
+    health = source_health([
+        {"source_key": "USGS", "status": "failed"},
+        {"source_key": "NWS", "status": "live"},
+        {"source_key": "NHC", "status": "live"},
+    ])
+    assert health["status"] == "DATA_FEED_UNAVAILABLE"
+    assert health["normal_operation_allowed"] is False
+    assert health["failed_primary_sources"] == ["USGS"]
+
+
+def test_stale_cache_blocks_a_normal_operation_claim():
+    health = source_health([
+        {"source_key": "USGS", "status": "stale_cache"},
+        {"source_key": "NWS", "status": "live"},
+        {"source_key": "NHC", "status": "live"},
+    ])
+    assert health["status"] == "STALE_OFFICIAL_DATA"
+    assert health["normal_operation_allowed"] is False

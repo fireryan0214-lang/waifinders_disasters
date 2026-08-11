@@ -17,12 +17,14 @@ from asset_store import DEFAULT_DB as DEFAULT_ASSET_DB, load_assets as load_asse
 
 ROOT = Path(__file__).parent.parent
 OUT_PATH = ROOT / "outputs" / "disaster_demo" / "live_incident_exposure.json"
+SOURCE_CACHE_PATH = ROOT / "outputs" / "disaster_demo" / "live_incident_source_cache.json"
 REVIEW_PATH = ROOT / "outputs" / "disaster_demo" / "live_incident_action_reviews.json"
 DEFAULT_ASSETS = ROOT / "inputs" / "assets.csv"
 USER_AGENT = "WAIFINDERS-Sentinel/0.1 contact: operations@example.invalid"
 
 SOURCE_RELIABILITY = {"USGS": 0.95, "NWS": 0.95, "NHC": 0.95, "USGS_WATER": 0.90, "NRC": 0.95}
 CRITICALITY = {"low": 0.25, "medium": 0.50, "high": 0.75, "critical": 1.00}
+PRIMARY_LIVE_SOURCES = {"USGS", "NWS", "NHC"}
 
 
 def clamp(value, low=0.0, high=1.0):
@@ -216,18 +218,94 @@ def safe_fetch(fetcher, *args):
         return [], {"source": fetcher.__name__, "status": "failed", "records": 0, "note": f"{exc.__class__.__name__}: {exc}"}
 
 
+def load_source_cache(path=SOURCE_CACHE_PATH):
+    """Read only a cache that was written by a successful source refresh."""
+    if not Path(path).exists():
+        return {"source_events": {}, "source_updated_utc": {}}
+    try:
+        cached = json.loads(Path(path).read_text())
+        if isinstance(cached.get("source_events"), dict):
+            return cached
+    except (OSError, ValueError, TypeError):
+        pass
+    return {"source_events": {}, "source_updated_utc": {}}
+
+
+def source_health(source_refreshes):
+    """Return a fail-closed health decision for the operational layer.
+
+    A network exception must never be represented as an empty, healthy feed.
+    """
+    status_by_source = {item.get("source_key"): item.get("status") for item in source_refreshes}
+    unavailable = sorted(key for key in PRIMARY_LIVE_SOURCES if status_by_source.get(key) == "failed")
+    stale = sorted(key for key in PRIMARY_LIVE_SOURCES if status_by_source.get(key) == "stale_cache")
+    if unavailable:
+        return {
+            "status": "DATA_FEED_UNAVAILABLE",
+            "normal_operation_allowed": False,
+            "failed_primary_sources": unavailable,
+            "stale_primary_sources": stale,
+            "operator_message": "One or more primary official feeds could not be refreshed. Do not interpret an empty event list as normal conditions; verify official sources and require human review.",
+        }
+    if stale:
+        return {
+            "status": "STALE_OFFICIAL_DATA",
+            "normal_operation_allowed": False,
+            "failed_primary_sources": [],
+            "stale_primary_sources": stale,
+            "operator_message": "One or more primary official feeds is serving last-known data. Do not declare normal operations until it refreshes successfully.",
+        }
+    return {
+        "status": "HEALTHY",
+        "normal_operation_allowed": True,
+        "failed_primary_sources": [],
+        "stale_primary_sources": [],
+        "operator_message": "Primary official feeds refreshed successfully.",
+    }
+
+
 def build(assets_path=DEFAULT_ASSETS):
     assets, asset_status = load_assets(Path(assets_path))
     batches, sources = [], []
+    source_cache = load_source_cache()
+    cached_events = source_cache.get("source_events", {})
+    cached_updated = source_cache.get("source_updated_utc", {})
     for fetcher, args in ((fetch_usgs_earthquakes, ()), (fetch_nws_alerts, ()), (fetch_nhc_advisories, ()), (fetch_usgs_gauges, (assets,)), (fetch_nrc_notifications, ())):
         events, source = safe_fetch(fetcher, *args)
-        batches.extend(events); sources.append(source)
+        source_key = events[0]["source"] if events else {
+            "fetch_usgs_earthquakes": "USGS", "fetch_nws_alerts": "NWS", "fetch_nhc_advisories": "NHC",
+            "fetch_usgs_gauges": "USGS_WATER", "fetch_nrc_notifications": "NRC",
+        }[fetcher.__name__]
+        source["source_key"] = source_key
+        if source["status"] == "live":
+            cached_events[source_key] = events
+            cached_updated[source_key] = datetime.now(timezone.utc).isoformat()
+            batches.extend(events)
+        elif source["status"] == "failed" and source_key in cached_events:
+            # Preserve only a known-good snapshot; never cache a failed empty response.
+            events = cached_events[source_key]
+            source["status"] = "stale_cache"
+            source["records"] = len(events)
+            source["cache_updated_utc"] = cached_updated.get(source_key)
+            source["note"] = f"Refresh failed; serving last successful snapshot. {source['note']}"
+            batches.extend(events)
+        else:
+            batches.extend(events)
+        sources.append(source)
+    SOURCE_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    SOURCE_CACHE_PATH.write_text(json.dumps({
+        "updated_utc": datetime.now(timezone.utc).isoformat(),
+        "source_events": cached_events,
+        "source_updated_utc": cached_updated,
+        "claim_boundary": "Cache is populated only from successful official-source refreshes. It is retained solely to prevent a failed refresh from being presented as no events.",
+    }, indent=2))
     actions = apply_reviews(rank_exposures(batches, assets), load_reviews())
+    feed_health = source_health(sources)
     payload = {
         "generated_utc": datetime.now(timezone.utc).isoformat(), "mode": "LIVE_DECISION_SUPPORT", "asset_input": {"path": str(Path(assets_path)), "status": asset_status, "asset_count": len(assets)},
-        "source_refreshes": sources, "live_event_count": len(batches), "events": batches, "action_count": len(actions), "actions": actions,
+        "source_refreshes": sources, "feed_health": feed_health, "live_event_count": len(batches), "events": batches, "action_count": len(actions), "actions": actions,
         "formula": "priority = 0.45 event_severity + 0.35 asset_criticality + 0.20 proximity; confidence combines source reliability and match proximity",
-        "claim_boundary": "Decision support only. WAIFINDERS is not an official warning authority. All recommended actions require trained human review and approval; source links must be checked before action.",
+        "claim_boundary": "Decision support only. WAIFINDERS is not an official warning authority. All recommended actions require trained human review and approval; source links must be checked before action. A failed official feed is an operational data-health incident, not evidence of normal conditions.",
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(payload, indent=2))

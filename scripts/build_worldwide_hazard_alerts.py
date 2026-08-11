@@ -17,6 +17,7 @@ OVERPASS_ENDPOINTS = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
 ]
+LIVE_CONTEXT_LOOKUP_BUDGET = 8
 
 
 def infrastructure_near(event):
@@ -158,6 +159,21 @@ def main():
     parser.add_argument("--offline-cache-only", action="store_true", help="For an audit, use preloaded local infrastructure only and do not probe a live public provider")
     args = parser.parse_args()
     live = build()
+    feed_health = live.get("feed_health", {"status": "DATA_FEED_UNAVAILABLE", "normal_operation_allowed": False})
+    if not feed_health.get("normal_operation_allowed", False):
+        # Do not overwrite the seen-event state with an empty failed refresh. That
+        # would permanently suppress alerts recovered on the next good refresh.
+        payload = {
+            "generated_utc": datetime.now(timezone.utc).isoformat(), "mode": "WORLDWIDE_EVENT_ALERTS",
+            "operational_status": feed_health["status"], "initialization": args.initialize,
+            "relevant_events_seen": None, "new_alert_count": None, "alerts": [],
+            "feed_health": feed_health,
+            "pipeline_metrics": {"new_events_processed": 0, "feed_refresh_failed": True},
+            "claim_boundary": "Decision support only. Live-feed failure is not evidence of no worldwide events. Verify authoritative sources and require trained human approval.",
+        }
+        OUTPUT.write_text(json.dumps(payload, indent=2))
+        print(f"Live feed health: {feed_health['status']}; alerts not evaluated")
+        return
     relevant = [event for event in live["events"] if event["hazard"] in {"earthquake", "tropical cyclone"}]
     earthquakes = [event for event in relevant if event["hazard"] == "earthquake"]
     prior = set(json.loads(STATE.read_text()).get("seen_event_ids", [])) if STATE.exists() else set()
@@ -168,12 +184,32 @@ def main():
         event_id = action["event"]["event_id"]
         action_counts[event_id] = action_counts.get(event_id, 0) + 1
     if not args.initialize:
-        with ThreadPoolExecutor(max_workers=max(1, min(8, len(new_events)))) as pool:
-            alerts = list(pool.map(lambda event: process_event(event, action_counts.get(event["event_id"], 0)), new_events))
+        # Preserve source-event coverage for every event, but bound public-map
+        # work. A single network outage previously consumed the entire cycle
+        # with hundreds of identical Overpass retries and prevented the alert
+        # file from ever being written.
+        ordered_events = sorted(new_events, key=lambda event: (-float(event.get("severity", 0)), event["event_id"]))
+        lookup_events, cache_only_events = ordered_events[:LIVE_CONTEXT_LOOKUP_BUDGET], ordered_events[LIVE_CONTEXT_LOOKUP_BUDGET:]
+        provider_available, provider_failure = True, None
+        if lookup_events:
+            try:
+                infrastructure_near(lookup_events[0])
+            except Exception as exc:
+                provider_available, provider_failure = False, f"Infrastructure provider unavailable: {exc.__class__.__name__}"
+        if provider_available and lookup_events:
+            with ThreadPoolExecutor(max_workers=max(1, min(8, len(lookup_events)))) as pool:
+                alerts.extend(pool.map(lambda event: process_event(event, action_counts.get(event["event_id"], 0)), lookup_events))
+        else:
+            alerts.extend(process_event(event, action_counts.get(event["event_id"], 0), allow_live_fallback=False, unavailable_note=provider_failure) for event in lookup_events)
+        alerts.extend(
+            process_event(event, action_counts.get(event["event_id"], 0), allow_live_fallback=False,
+                          unavailable_note="Live public-context budget exhausted for this cycle; local cache checked.")
+            for event in cache_only_events
+        )
     STATE.write_text(json.dumps({"initialized_utc": datetime.now(timezone.utc).isoformat(), "seen_event_ids": sorted({event["event_id"] for event in relevant})}, indent=2))
     lookup_successes = sum(alert["status"] in {"customer_assets_matched", "public_infrastructure_context_matched", "source_only_event"} for alert in alerts)
-    payload = {"generated_utc": datetime.now(timezone.utc).isoformat(), "mode": "WORLDWIDE_EVENT_ALERTS", "initialization": args.initialize, "relevant_events_seen": len(relevant), "new_alert_count": len(alerts), "alerts": alerts,
-        "pipeline_metrics": {"new_events_processed": len(new_events), "infrastructure_lookup_successes": lookup_successes, "infrastructure_lookup_failures": len(alerts) - lookup_successes, "public_features_found": sum(alert["public_infrastructure_context"].get("feature_count", 0) for alert in alerts), "customer_assets_matched": sum(alert["status"] == "customer_assets_matched" for alert in alerts), "public_infrastructure_context_matched": sum(alert["status"] == "public_infrastructure_context_matched" for alert in alerts), "source_only_events": sum(alert["status"] == "source_only_event" for alert in alerts), "lookup_unavailable": sum(alert["status"] == "lookup_unavailable" for alert in alerts)},
+    payload = {"generated_utc": datetime.now(timezone.utc).isoformat(), "mode": "WORLDWIDE_EVENT_ALERTS", "operational_status": "HEALTHY", "initialization": args.initialize, "relevant_events_seen": len(relevant), "new_alert_count": len(alerts), "alerts": alerts,
+        "pipeline_metrics": {"new_events_processed": len(new_events), "live_context_lookup_budget": LIVE_CONTEXT_LOOKUP_BUDGET, "live_context_lookups_attempted": min(len(new_events), LIVE_CONTEXT_LOOKUP_BUDGET), "events_processed_cache_only": max(0, len(new_events) - LIVE_CONTEXT_LOOKUP_BUDGET), "infrastructure_lookup_successes": lookup_successes, "infrastructure_lookup_failures": len(alerts) - lookup_successes, "public_features_found": sum(alert["public_infrastructure_context"].get("feature_count", 0) for alert in alerts), "customer_assets_matched": sum(alert["status"] == "customer_assets_matched" for alert in alerts), "public_infrastructure_context_matched": sum(alert["status"] == "public_infrastructure_context_matched" for alert in alerts), "source_only_events": sum(alert["status"] == "source_only_event" for alert in alerts), "lookup_unavailable": sum(alert["status"] == "lookup_unavailable" for alert in alerts)},
         "claim_boundary": "Decision support only. These are not official warnings and every action requires trained human review."}
     OUTPUT.write_text(json.dumps(payload, indent=2))
     print(f"Relevant events: {len(relevant)}; new alerts: {len(alerts)}")
